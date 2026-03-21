@@ -16,6 +16,9 @@ export function useScrollReveal(rootMargin = "-60px 0px") {
     const targets = container.querySelectorAll<HTMLElement>(".reveal");
     if (!targets.length) return;
 
+    // Activar modo oculto solo cuando el observer está listo (progressive enhancement)
+    container.classList.add("js-reveal");
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -29,7 +32,10 @@ export function useScrollReveal(rootMargin = "-60px 0px") {
     );
 
     targets.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      container.classList.remove("js-reveal");
+    };
   }, [rootMargin]);
 
   return containerRef;

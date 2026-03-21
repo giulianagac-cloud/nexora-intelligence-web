@@ -27,7 +27,7 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-[85vh] flex items-center overflow-hidden bg-nexora-white"
+      className="relative min-h-[85vh] flex items-center overflow-hidden bg-nexora-white pt-[68px]"
     >
       {/* Fondo: dot pattern sutil */}
       <div

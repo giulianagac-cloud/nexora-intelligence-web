@@ -77,14 +77,22 @@ h1, h2, h3, h4, h5, h6 {
   to   { opacity: 1; }
 }
 
-/* Scroll reveal: clase base (invisible) → .is-visible (visible) */
+/* Scroll reveal — progressive enhancement:
+   Los elementos son visibles por defecto.
+   Solo se ocultan cuando el JS confirma que el observer está activo
+   (el hook agrega .js-reveal al container). Si el JS falla o tarda,
+   el contenido siempre es legible. */
+
 .reveal {
-  opacity: 0;
-  transform: translateY(24px);
   transition: opacity 0.55s ease-out, transform 0.55s ease-out;
 }
 
-.reveal.is-visible {
+.js-reveal .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.js-reveal .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
