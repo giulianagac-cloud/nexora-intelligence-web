@@ -27,7 +27,7 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-[85vh] flex items-center overflow-hidden bg-nexora-white pt-[68px]"
+      className="relative lg:min-h-[85vh] flex items-center overflow-hidden bg-nexora-white pt-[68px]"
     >
       {/* Fondo: dot pattern sutil */}
       <div
@@ -51,7 +51,7 @@ export function Hero() {
         }}
       />
 
-      <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-8 w-full py-28 lg:py-0">
+      <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-8 w-full py-10 lg:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-12 lg:gap-8 items-center">
 
           {/* ── Columna izquierda: texto ── */}
