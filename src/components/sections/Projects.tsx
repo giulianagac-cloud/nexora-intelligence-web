@@ -14,7 +14,7 @@ export function Projects() {
     <section
       id="proyectos"
       ref={sectionRef as React.RefObject<HTMLElement>}
-      className="bg-nexora-white py-[clamp(4rem,8vw,8rem)]"
+      className="bg-nexora-gray-50 py-[clamp(4rem,8vw,8rem)]"
     >
       <div className="max-w-[1200px] mx-auto px-6 lg:px-8">
 

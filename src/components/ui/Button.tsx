@@ -28,12 +28,12 @@ type ButtonProps = ButtonAsButton | ButtonAsAnchor;
 const variantClasses: Record<Variant, string> = {
   primary: [
     "bg-nexora-accent text-nexora-white border border-nexora-accent",
-    "hover:bg-nexora-accent-light hover:border-nexora-accent-light",
+    "hover:bg-nexora-accent-light hover:border-nexora-accent-light hover:scale-[1.02] hover:shadow-[0_4px_16px_rgba(27,77,92,0.28)]",
     "focus-visible:outline-2 focus-visible:outline-nexora-accent focus-visible:outline-offset-2",
   ].join(" "),
   secondary: [
     "bg-transparent text-nexora-graphite border border-nexora-gray-300",
-    "hover:border-nexora-accent hover:text-nexora-accent",
+    "hover:border-[#C49A3C] hover:text-[#8B6D2A] hover:bg-[#F5EDD8]",
     "focus-visible:outline-2 focus-visible:outline-nexora-accent focus-visible:outline-offset-2",
   ].join(" "),
   whatsapp: [

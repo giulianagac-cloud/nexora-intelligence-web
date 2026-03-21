@@ -220,6 +220,18 @@ function HeroAbstract() {
       {/* Línea corta — esquina superior derecha */}
       <line x1="340" y1="70" x2="370" y2="70" stroke="#1B4D5C" strokeWidth="1" opacity="0.25" strokeLinecap="round" />
       <line x1="355" y1="62" x2="355" y2="78" stroke="#1B4D5C" strokeWidth="1" opacity="0.25" strokeLinecap="round" />
+
+      {/* Detalle ámbar: arco corto cuadrante inferior izquierdo */}
+      <path
+        d="M 118 210 A 92 92 0 0 0 210 302"
+        stroke="#C49A3C"
+        strokeWidth="2"
+        opacity="0.5"
+        strokeLinecap="round"
+        fill="none"
+      />
+      {/* Punto ámbar en extremo del arco */}
+      <circle cx="118" cy="210" r="3.5" fill="#C49A3C" opacity="0.65" />
     </svg>
   );
 }
