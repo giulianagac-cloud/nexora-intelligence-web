@@ -25,6 +25,11 @@
   --color-nexora-copper-light: #D4A088;
   --color-nexora-copper-subtle: #F5EDE8;
 
+  /* Acento terciario: ámbar/mostaza elegante */
+  --color-nexora-amber: #C49A3C;
+  --color-nexora-amber-dark: #8B6D2A;
+  --color-nexora-amber-subtle: #F5EDD8;
+
   /* Tipografías */
   --font-heading: var(--font-syne);
   --font-body: var(--font-dm-sans);
