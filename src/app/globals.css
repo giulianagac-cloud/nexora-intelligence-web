@@ -1,26 +1,90 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Colores Nexora */
+  --color-nexora-white: #FAFAFA;
+  --color-nexora-black: #0A0A0A;
+  --color-nexora-graphite: #1A1A1A;
+
+  --color-nexora-gray-50: #F7F7F7;
+  --color-nexora-gray-100: #F0F0F0;
+  --color-nexora-gray-200: #E4E4E4;
+  --color-nexora-gray-300: #D1D1D1;
+  --color-nexora-gray-400: #A0A0A0;
+  --color-nexora-gray-500: #6B6B6B;
+  --color-nexora-gray-600: #4A4A4A;
+
+  /* Acento principal: azul petróleo profundo */
+  --color-nexora-accent: #1B4D5C;
+  --color-nexora-accent-light: #2A6F82;
+  --color-nexora-accent-dark: #0F3542;
+  --color-nexora-accent-subtle: #E8F1F4;
+
+  /* Acento secundario: cobre (usar con moderación) */
+  --color-nexora-copper: #B87B5E;
+  --color-nexora-copper-light: #D4A088;
+  --color-nexora-copper-subtle: #F5EDE8;
+
+  /* Tipografías */
+  --font-heading: var(--font-syne);
+  --font-body: var(--font-dm-sans);
+
+  /* Spacing base para secciones */
+  --spacing-section: 7rem;
+  --spacing-section-sm: 4rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Base */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #FAFAFA;
+  color: #0A0A0A;
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utilidades de tipografía base */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-syne), system-ui, sans-serif;
+  line-height: 1.2;
+}
+
+/* ── Animaciones ───────────────────────────────────────── */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Scroll reveal: clase base (invisible) → .is-visible (visible) */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s ease-out, transform 0.55s ease-out;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
