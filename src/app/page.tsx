@@ -1,6 +1,7 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
+import { ContactPopup } from "@/components/layout/ContactPopup";
 import { Hero } from "@/components/sections/Hero";
 import { Solutions } from "@/components/sections/Solutions";
 import { ContrastBand } from "@/components/sections/ContrastBand";
@@ -30,6 +31,7 @@ export default function Home() {
       </main>
       <Footer />
       <WhatsAppButton />
+      <ContactPopup />
     </>
   );
 }
