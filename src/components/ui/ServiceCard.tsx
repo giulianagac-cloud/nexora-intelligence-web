@@ -32,17 +32,17 @@ export function ServiceCard({ service, index = 0 }: ServiceCardProps) {
   return (
     <article
       className={[
-        "group flex flex-col gap-5 p-8 rounded-2xl",
-        "border border-nexora-gray-200 bg-white",
+        "group flex flex-col gap-5 bg-white rounded-xl",
+        "shadow-[0_1px_4px_rgba(0,0,0,0.05)]",
         "transition-all duration-300",
-        "hover:-translate-y-1 hover:border-nexora-gray-300 hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)]",
+        "hover:-translate-y-1 hover:shadow-[0_6px_24px_rgba(0,0,0,0.08)]",
       ].join(" ")}
-      style={{ "--card-index": index } as React.CSSProperties}
+      style={{ "--card-index": index, padding: "24px 20px" } as React.CSSProperties}
     >
       {/* Ícono */}
-      <div className="w-11 h-11 rounded-xl bg-nexora-gray-100 flex items-center justify-center shrink-0">
+      <div className="w-10 h-10 rounded-lg bg-nexora-gray-100 flex items-center justify-center shrink-0">
         <Icon
-          size={20}
+          size={18}
           strokeWidth={1.5}
           className="text-nexora-black"
           aria-hidden="true"
@@ -51,10 +51,10 @@ export function ServiceCard({ service, index = 0 }: ServiceCardProps) {
 
       {/* Contenido */}
       <div className="flex flex-col gap-2">
-        <h3 className="font-heading font-medium text-nexora-graphite text-[18px] leading-snug">
+        <h3 className="font-body font-semibold text-nexora-black text-[16px] leading-snug">
           {service.title}
         </h3>
-        <p className="font-body text-nexora-gray-500 text-[15px] leading-relaxed">
+        <p className="font-body text-nexora-gray-500 text-[14px] leading-[1.5]">
           {service.description}
         </p>
       </div>
