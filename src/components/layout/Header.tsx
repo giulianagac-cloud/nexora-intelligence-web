@@ -2,16 +2,21 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { NAV_LINKS } from "@/lib/constants";
-import { Button } from "@/components/ui/Button";
-import { Logo } from "@/components/ui/Logo";
+import { SITE_CONFIG } from "@/lib/constants";
+
+const NAV_LINKS = [
+  { label: "Servicios", href: "#servicios" },
+  { label: "Proceso", href: "#proceso" },
+  { label: "Casos", href: "#casos" },
+  { label: "Stack", href: "#stack" },
+  { label: "Contacto", href: "#contacto" },
+];
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("inicio");
 
-  // Detectar scroll para backdrop-blur
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     handleScroll();
@@ -19,19 +24,15 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Intersection Observer para sección activa
   useEffect(() => {
-    const sectionIds = NAV_LINKS.map((l) => l.href.replace("#", ""));
+    const sectionIds = ["inicio", ...NAV_LINKS.map((l) => l.href.replace("#", ""))];
     const observers: IntersectionObserver[] = [];
 
     sectionIds.forEach((id) => {
       const el = document.getElementById(id);
       if (!el) return;
-
       const obs = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) setActiveSection(id);
-        },
+        ([entry]) => { if (entry.isIntersecting) setActiveSection(id); },
         { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
       );
       obs.observe(el);
@@ -41,16 +42,14 @@ export function Header() {
     return () => observers.forEach((o) => o.disconnect());
   }, []);
 
-  // Cerrar menu al hacer click en un link
   const handleNavClick = () => setMenuOpen(false);
 
   return (
     <header
       className={[
-        "fixed top-0 left-0 right-0 z-50",
-        "transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-nexora-white/90 backdrop-blur-md border-b border-nexora-gray-200/80 shadow-[0_1px_0_rgba(0,0,0,0.04)]"
+          ? "bg-nexora-dark/90 backdrop-blur-md border-b border-nexora-border"
           : "bg-transparent",
       ].join(" ")}
     >
@@ -60,11 +59,27 @@ export function Header() {
           {/* Logo */}
           <a
             href="#inicio"
-            className="hover:opacity-80 transition-opacity"
+            className="flex flex-col leading-none hover:opacity-80 transition-opacity"
             onClick={handleNavClick}
-            aria-label="Nexora Intelligence — inicio"
+            aria-label="NEXORA Intelligence — inicio"
           >
-            <Logo variant="light" />
+            <span
+              className="text-nexora-light text-[18px] tracking-[2px] uppercase"
+              style={{ fontFamily: "var(--font-outfit)", fontWeight: 800 }}
+            >
+              NEXORA
+              <span
+                className="text-nexora-neon"
+                style={{ animation: "cursor-blink 1s step-end infinite" }}
+                aria-hidden="true"
+              >_</span>
+            </span>
+            <span
+              className="text-nexora-neon text-[11px] tracking-[1px]"
+              style={{ fontFamily: "var(--font-inter)", fontWeight: 400 }}
+            >
+              Intelligence
+            </span>
           </a>
 
           {/* Nav desktop */}
@@ -77,20 +92,14 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   className={[
-                    "font-body text-[14px] tracking-[0.02em] transition-colors duration-200 relative py-1",
+                    "text-[13px] tracking-[0.04em] transition-colors duration-200",
                     isActive
-                      ? "text-nexora-black"
-                      : "text-nexora-gray-600 hover:text-nexora-graphite",
+                      ? "text-nexora-neon"
+                      : "text-nexora-light/60 hover:text-nexora-neon",
                   ].join(" ")}
+                  style={{ fontFamily: "var(--font-inter)" }}
                 >
                   {link.label}
-                  {/* Subrayado activo */}
-                  {isActive && (
-                    <span
-                      className="absolute bottom-0 left-0 right-0 h-px bg-nexora-black rounded-full"
-                      aria-hidden="true"
-                    />
-                  )}
                 </a>
               );
             })}
@@ -98,14 +107,18 @@ export function Header() {
 
           {/* CTA desktop */}
           <div className="hidden md:block">
-            <Button as="a" href="#contacto" variant="primary" size="sm">
-              Solicitar propuesta
-            </Button>
+            <a
+              href="#contacto"
+              className="inline-flex items-center gap-1.5 px-5 py-2.5 text-[13px] font-medium rounded-lg border border-nexora-neon text-nexora-neon hover:bg-nexora-neon hover:text-nexora-dark transition-all duration-200"
+              style={{ fontFamily: "var(--font-inter)" }}
+            >
+              Hablemos →
+            </a>
           </div>
 
           {/* Hamburguesa mobile */}
           <button
-            className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg text-nexora-graphite hover:bg-nexora-gray-100 transition-colors"
+            className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg text-nexora-light/70 hover:text-nexora-neon hover:bg-nexora-border/50 transition-colors"
             onClick={() => setMenuOpen((prev) => !prev)}
             aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
             aria-expanded={menuOpen}
@@ -123,15 +136,12 @@ export function Header() {
       <div
         className={[
           "md:hidden overflow-hidden transition-all duration-300 ease-in-out",
-          "border-t border-nexora-gray-200/60 bg-nexora-white/95 backdrop-blur-md",
+          "border-t border-nexora-border bg-nexora-dark-card/95 backdrop-blur-md",
           menuOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0",
         ].join(" ")}
         aria-hidden={!menuOpen}
       >
-        <nav
-          aria-label="Navegación mobile"
-          className="flex flex-col px-6 py-4 gap-1"
-        >
+        <nav aria-label="Navegación mobile" className="flex flex-col px-6 py-4 gap-1">
           {NAV_LINKS.map((link) => {
             const id = link.href.replace("#", "");
             const isActive = activeSection === id;
@@ -141,27 +151,26 @@ export function Header() {
                 href={link.href}
                 onClick={handleNavClick}
                 className={[
-                  "font-body text-[15px] py-3 border-b border-nexora-gray-100 transition-colors",
+                  "text-[15px] py-3 border-b border-nexora-border/50 transition-colors",
                   isActive
-                    ? "text-nexora-black font-medium"
-                    : "text-nexora-gray-600 hover:text-nexora-graphite",
+                    ? "text-nexora-neon font-medium"
+                    : "text-nexora-light/60 hover:text-nexora-neon",
                 ].join(" ")}
+                style={{ fontFamily: "var(--font-inter)" }}
               >
                 {link.label}
               </a>
             );
           })}
           <div className="pt-4 pb-2">
-            <Button
-              as="a"
+            <a
               href="#contacto"
-              variant="primary"
-              size="md"
-              className="w-full justify-center"
               onClick={handleNavClick}
+              className="flex items-center justify-center gap-1.5 w-full px-5 py-3 text-[14px] font-medium rounded-lg border border-nexora-neon text-nexora-neon hover:bg-nexora-neon hover:text-nexora-dark transition-all duration-200"
+              style={{ fontFamily: "var(--font-inter)" }}
             >
-              Solicitar propuesta
-            </Button>
+              Hablemos →
+            </a>
           </div>
         </nav>
       </div>
