@@ -22,15 +22,16 @@ export function WhatsAppButton() {
       className={[
         "fixed bottom-6 right-6 z-50",
         "w-14 h-14 rounded-full",
-        "bg-[#25D366] text-white",
         "flex items-center justify-center",
-        "shadow-[0_4px_20px_rgba(37,211,102,0.35)]",
-        "hover:scale-110 hover:shadow-[0_6px_28px_rgba(37,211,102,0.45)]",
-        "transition-all duration-300 ease-out",
+        "hover:scale-110 transition-all duration-300 ease-out",
         visible ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-4 pointer-events-none",
       ].join(" ")}
+      style={{
+        backgroundColor: "#25D366",
+        color: "white",
+        boxShadow: "0 4px 20px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0.2)",
+      }}
     >
-      {/* SVG oficial de WhatsApp */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
