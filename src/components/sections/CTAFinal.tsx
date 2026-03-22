@@ -68,11 +68,13 @@ export function CTAFinal() {
           </div>
 
           <div
-            className="reveal flex flex-col items-center gap-4"
+            className="reveal flex flex-col items-center gap-5"
             style={{ transitionDelay: "240ms" }}
           >
             <a
-              href="#contacto"
+              href="https://wa.me/5491133409351?text=Hola,%20quiero%20consultar%20sobre%20sus%20servicios"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg font-semibold text-nexora-dark transition-all duration-200 hover:scale-[1.02]"
               style={{
                 backgroundColor: "#00F5A0",
@@ -82,16 +84,33 @@ export function CTAFinal() {
                 boxShadow: "var(--shadow-neon-lg)",
               }}
             >
-              Agendar consultoría gratuita (30 min) →
+              Hablemos de tu proyecto →
             </a>
 
-            <a
-              href="mailto:hola@nexoraintelligence.com"
-              className="text-[14px] transition-colors duration-200 hover:text-nexora-neon"
-              style={{ fontFamily: "var(--font-inter)", color: "rgba(245,245,247,0.50)" }}
-            >
-              O escribinos directo: hola@nexoraintelligence.com
-            </a>
+            <div className="flex flex-col items-center gap-2">
+              <a
+                href="mailto:contacto@nexoraintelligence.co"
+                className="text-[14px] transition-colors duration-200 hover:text-nexora-neon"
+                style={{ fontFamily: "var(--font-inter)", color: "rgba(245,245,247,0.50)" }}
+              >
+                contacto@nexoraintelligence.co
+              </a>
+              <a
+                href="https://wa.me/5491133409351"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[14px] transition-colors duration-200 hover:text-nexora-neon"
+                style={{ fontFamily: "var(--font-inter)", color: "rgba(245,245,247,0.40)" }}
+              >
+                +54 9 11 3340-9351
+              </a>
+              <span
+                className="text-[13px]"
+                style={{ fontFamily: "var(--font-inter)", color: "rgba(245,245,247,0.30)" }}
+              >
+                CABA, Buenos Aires, Argentina
+              </span>
+            </div>
           </div>
 
         </div>

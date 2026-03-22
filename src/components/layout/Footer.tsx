@@ -3,18 +3,19 @@ const SERVICIOS_LINKS = [
   "Apps y Sistemas",
   "Automatización",
   "Bots IA",
-  "Consultoría",
+  "Consultoría Funcional",
+  "Testing + Docs",
 ];
 
 const SOLUCIONES_LINKS = [
-  { label: "HR Bot", href: "#casos" },
-  { label: "Finance Bot (próximamente)", href: "#" },
+  { label: "Starter Bot", href: "#bots" },
+  { label: "Smart Bot", href: "#bots" },
+  { label: "Enterprise Bot", href: "#bots" },
 ];
 
-const LEGAL_LINKS = [
-  { label: "Términos y condiciones", href: "#" },
-  { label: "Política de privacidad", href: "#" },
-  { label: "LinkedIn", href: "#" },
+const CONTACTO_LINKS = [
+  { label: "contacto@nexoraintelligence.co", href: "mailto:contacto@nexoraintelligence.co" },
+  { label: "+54 9 11 3340-9351", href: "https://wa.me/5491133409351" },
 ];
 
 export function Footer() {
@@ -54,6 +55,12 @@ export function Footer() {
               style={{ fontFamily: "var(--font-inter)", color: "rgba(245,245,247,0.50)" }}
             >
               Consultoría IT que escala operaciones.
+            </p>
+            <p
+              className="text-[12px]"
+              style={{ fontFamily: "var(--font-inter)", color: "rgba(245,245,247,0.30)" }}
+            >
+              CABA, Buenos Aires, Argentina
             </p>
           </div>
 
@@ -101,25 +108,33 @@ export function Footer() {
             </nav>
           </div>
 
-          {/* Col 4 — Legal */}
+          {/* Col 4 — Contacto */}
           <div className="flex flex-col gap-4">
             <span
               className="text-[11px] uppercase tracking-[1.5px]"
               style={{ fontFamily: "var(--font-jetbrains-mono)", color: "rgba(0,245,160,0.6)" }}
             >
-              Legal
+              Contacto
             </span>
             <nav className="flex flex-col gap-2.5">
-              {LEGAL_LINKS.map((l) => (
+              {CONTACTO_LINKS.map((l) => (
                 <a
                   key={l.label}
                   href={l.href}
+                  target={l.href.startsWith("http") ? "_blank" : undefined}
+                  rel={l.href.startsWith("http") ? "noopener noreferrer" : undefined}
                   className="text-[13px] w-fit transition-colors duration-200 hover:text-nexora-neon"
                   style={{ fontFamily: "var(--font-inter)", color: "rgba(245,245,247,0.50)" }}
                 >
                   {l.label}
                 </a>
               ))}
+              <span
+                className="text-[13px]"
+                style={{ fontFamily: "var(--font-inter)", color: "rgba(245,245,247,0.35)" }}
+              >
+                CABA, Buenos Aires, Argentina
+              </span>
             </nav>
           </div>
 
@@ -134,7 +149,7 @@ export function Footer() {
             className="text-[12px]"
             style={{ fontFamily: "var(--font-inter)", color: "rgba(245,245,247,0.35)" }}
           >
-            © 2026 NEXORA Intelligence • Buenos Aires, Argentina
+            © 2025 NEXORA Intelligence • Buenos Aires, Argentina
           </p>
           <p
             className="text-[12px]"

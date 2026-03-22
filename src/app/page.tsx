@@ -3,6 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { Hero } from "@/components/sections/Hero";
 import { ServiciosBento } from "@/components/sections/ServiciosBento";
+import { BotPlanes } from "@/components/sections/BotPlanes";
 import { Proceso } from "@/components/sections/Proceso";
 import { CasoDeUso } from "@/components/sections/CasoDeUso";
 import { TechStack } from "@/components/sections/TechStack";
@@ -16,6 +17,7 @@ export default function Home() {
       <main>
         <Hero />
         <ServiciosBento />
+        <BotPlanes />
         <Proceso />
         <CasoDeUso />
         <TechStack />

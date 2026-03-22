@@ -33,9 +33,9 @@ function TerminalWidget() {
     return () => obs.disconnect();
   }, []);
 
-  const proyectos = useCountUp(7, 1800, started);
-  const bots = useCountUp(3247, 2000, started);
-  const uptime = useCountUp(997, 1800, started);
+  const proyectos = useCountUp(4, 1800, started);
+  const bots = useCountUp(2, 1600, started);
+  const clientes = useCountUp(3, 1400, started);
 
   return (
     <div
@@ -65,17 +65,15 @@ function TerminalWidget() {
           started={started}
         />
         <Metric
-          label="Bots respondiendo ahora:"
+          label="Bots en construcción:"
           value={bots}
           suffix=""
-          formatted
           started={started}
         />
         <Metric
-          label="Uptime promedio:"
-          value={uptime}
-          suffix="%"
-          decimal
+          label="Clientes activos:"
+          value={clientes}
+          suffix=""
           started={started}
         />
       </div>

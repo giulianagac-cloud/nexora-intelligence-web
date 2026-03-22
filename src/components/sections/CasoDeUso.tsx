@@ -12,51 +12,41 @@ interface Caso {
   resultados: { label: string; valor: string }[];
   tech: string[];
   cta?: string;
+  link?: string;
+  estado?: string;
 }
 
 const CASOS: Caso[] = [
   {
-    empresa: "Estudio contable · 12 empleados",
-    titulo: "El bot de RH que nos devolvió 15hs/semana",
+    empresa: "⚖️ Claudio Ortiz — Abogado independiente",
+    titulo: "La web que convirtió presencia digital en captación de clientes",
     problema:
-      "RRHH colapsado con consultas sobre recibos, vacaciones y licencias que llegaban por WhatsApp, email y en persona.",
+      "No tenía presencia digital profesional. Necesitaba posicionarse como referente en derecho societario, contratos comerciales, acuerdos de accionistas y marcas para captar clientes corporativos.",
     solucion:
-      "Bot con RAG sobre documentación interna + integración con el sistema de RRHH para respuestas precisas y contextualizadas.",
+      "Sitio web institucional con diseño minimalista premium (estética firma legal boutique), arquitectura de información clara por servicios, formulario de contacto integrado, identidad visual elegante (midnight blue + champagne) y SEO optimizado para búsquedas legales corporativas.",
     resultados: [
-      { label: "Consultas resueltas", valor: "847" },
-      { label: "Escalaciones incorrectas", valor: "0" },
-      { label: "Menos tiempo en RRHH", valor: "60%" },
+      { label: "Más consultas por web", valor: "+180%" },
+      { label: "Posición en Google CABA", valor: "Top 3" },
+      { label: "Tiempo de carga", valor: "0.9s" },
     ],
-    tech: ["OpenAI GPT-4", "Pinecone", "Slack"],
+    tech: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS 4", "Formspree", "Vercel"],
     cta: "Quiero algo así →",
+    link: "https://claudio-ortiz-abogado.vercel.app",
   },
   {
-    empresa: "Pyme industrial · 45 empleados",
-    titulo: "Reportes que pasaron de 8 horas a 15 minutos",
+    empresa: "💪 OVERGYM — Gimnasio boutique",
+    titulo: "De planillas Excel a plataforma digital integral",
     problema:
-      "2 días por semana consolidando datos de 5 sistemas distintos en planillas Excel. Errores constantes y decisiones tardías.",
+      "Gestión manual caótica: planillas Excel para clientes y pagos, reservas de clases por WhatsApp, sin control de asistencias, pérdida de información y doble carga de trabajo administrativo.",
     solucion:
-      "Pipeline automatizado con extracción, transformación y visualización en tiempo real. Sin intervención manual.",
+      "Plataforma de gestión integral: app móvil PWA para clientes (reserva de clases, estado de membresía), sistema administrativo web (gestión de clientes, pagos, asistencias), panel de control con métricas en tiempo real y sistema de cobros automatizado.",
     resultados: [
-      { label: "Reducción en tiempo", valor: "90%" },
-      { label: "Errores en reportes", valor: "0" },
-      { label: "Frecuencia", valor: "Real-time" },
+      { label: "Clientes gestionados", valor: "+200" },
+      { label: "Reservas digitalizadas", valor: "90%" },
+      { label: "Reducción tiempo admin", valor: "70%" },
     ],
-    tech: ["Python", "PostgreSQL", "Metabase"],
-  },
-  {
-    empresa: "Clínica odontológica · 3 sucursales",
-    titulo: "De 2% a 7% de conversión en 8 semanas",
-    problema:
-      "Sitio genérico con baja tasa de contacto. El tráfico existía, la conversión no.",
-    solucion:
-      "Rediseño total con copy de conversión + formularios optimizados + carga ultra-rápida.",
-    resultados: [
-      { label: "Conversión", valor: "3.5x" },
-      { label: "Más consultas mensuales", valor: "+200%" },
-      { label: "Tiempo de carga", valor: "1.2s" },
-    ],
-    tech: ["Next.js", "Tailwind", "Resend"],
+    tech: ["Next.js PWA", "FastAPI", "PostgreSQL"],
+    estado: "En desarrollo activo",
   },
 ];
 
@@ -195,16 +185,44 @@ function CasoCard({ caso, index }: { caso: Caso; index: number }) {
             ))}
           </div>
 
-          {/* CTA */}
-          {caso.cta && (
-            <a
-              href="#contacto"
-              className="self-start text-[14px] font-medium transition-colors duration-200 hover:opacity-80"
-              style={{ fontFamily: "var(--font-inter)", color: "#FF3D71" }}
+          {/* Estado */}
+          {caso.estado && (
+            <span
+              className="self-start text-[11px] px-3 py-1 rounded-full border"
+              style={{
+                fontFamily: "var(--font-jetbrains-mono)",
+                color: "rgba(0,217,255,0.8)",
+                borderColor: "rgba(0,217,255,0.2)",
+                backgroundColor: "rgba(0,217,255,0.06)",
+              }}
             >
-              {caso.cta}
-            </a>
+              {caso.estado}
+            </span>
           )}
+
+          {/* CTA + Link */}
+          <div className="flex items-center gap-4 flex-wrap">
+            {caso.link && (
+              <a
+                href={caso.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="self-start text-[14px] font-medium transition-colors duration-200 hover:opacity-80"
+                style={{ fontFamily: "var(--font-inter)", color: "rgba(0,245,160,0.8)" }}
+              >
+                Ver sitio en vivo ↗
+              </a>
+            )}
+            {caso.cta && (
+              <a
+                href="#contacto"
+                className="self-start text-[14px] font-medium transition-colors duration-200 hover:opacity-80"
+                style={{ fontFamily: "var(--font-inter)", color: "#FF3D71" }}
+              >
+                {caso.cta}
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </div>
