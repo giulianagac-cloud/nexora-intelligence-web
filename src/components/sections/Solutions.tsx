@@ -93,7 +93,7 @@ export function Solutions() {
                 </span>
               )}
 
-              <h3 className="font-heading font-semibold text-nexora-black text-[18px] leading-snug tracking-[-0.01em]">
+              <h3 className="font-body font-semibold text-nexora-black text-[16px] leading-snug">
                 {solution.title}
               </h3>
 

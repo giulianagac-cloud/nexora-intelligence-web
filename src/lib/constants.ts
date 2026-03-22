@@ -19,38 +19,32 @@ export const NAV_LINKS: NavLink[] = [
 export const SERVICES: Service[] = [
   {
     title: "Desarrollo Web",
-    description:
-      "Sitios institucionales, landing pages y webs profesionales con diseño claro, moderno y orientado a resultados.",
+    description: "Sitios profesionales con diseño claro y orientado a resultados.",
     icon: "layout",
   },
   {
     title: "Apps y Sistemas",
-    description:
-      "Soluciones digitales a medida para gestión de clientes, turnos, circuitos internos y necesidades operativas concretas.",
+    description: "Sistemas a medida para gestión de clientes, turnos y operaciones.",
     icon: "monitor",
   },
   {
     title: "Automatización de Procesos",
-    description:
-      "Digitalización de tareas y mejora de procesos para reducir fricción operativa y ganar eficiencia.",
+    description: "Reducimos fricción y optimizamos procesos con soluciones digitales.",
     icon: "zap",
   },
   {
     title: "Asistentes Inteligentes",
-    description:
-      "Bots y asistentes digitales para consultas frecuentes, soporte interno y automatización conversacional.",
+    description: "Bots y asistentes para consultas frecuentes y soporte automatizado.",
     icon: "message-circle",
   },
   {
-    title: "Consultoría y Análisis Funcional",
-    description:
-      "Relevamiento, orden de requerimientos y diseño de soluciones alineadas al negocio.",
+    title: "Consultoría Funcional",
+    description: "Relevamiento, estructura y diseño de soluciones alineadas al negocio.",
     icon: "search",
   },
   {
-    title: "Testing Funcional y Documentación",
-    description:
-      "Casos de prueba, validación funcional y documentación clara para proyectos digitales.",
+    title: "Testing y Documentación",
+    description: "Validación funcional y documentación clara para proyectos digitales.",
     icon: "check-square",
   },
 ];

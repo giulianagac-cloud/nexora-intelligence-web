@@ -9,11 +9,11 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
   return (
     <article
       className={[
-        "group flex flex-col gap-4 p-8 rounded-2xl",
-        "border border-nexora-gray-200 bg-white",
+        "group flex flex-col gap-4 p-6 rounded-xl bg-white",
+        "shadow-[0_1px_4px_rgba(0,0,0,0.05)]",
         "relative overflow-hidden",
         "transition-all duration-300",
-        "hover:-translate-y-1 hover:border-nexora-coral/30 hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)]",
+        "hover:-translate-y-1 hover:shadow-[0_6px_24px_rgba(0,0,0,0.08)]",
       ].join(" ")}
       style={{ "--card-index": index } as React.CSSProperties}
     >
@@ -32,10 +32,10 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
 
       {/* Contenido */}
       <div className="flex flex-col gap-2">
-        <h3 className="font-heading font-medium text-nexora-graphite text-[19px] leading-snug">
+        <h3 className="font-body font-semibold text-nexora-black text-[16px] leading-snug">
           {project.title}
         </h3>
-        <p className="font-body text-nexora-gray-500 text-[15px] leading-relaxed">
+        <p className="font-body text-nexora-gray-500 text-[14px] leading-[1.5]">
           {project.description}
         </p>
       </div>
