@@ -23,7 +23,7 @@ export function SectionHeading({
     <div className={`flex flex-col gap-3 ${alignClass} ${className}`}>
       {/* Subtag */}
       <span
-        className="font-body font-medium text-nexora-accent text-[12px] tracking-[0.15em] uppercase"
+        className="font-body font-medium text-nexora-black text-[12px] tracking-[0.15em] uppercase"
         aria-hidden="true"
       >
         {subtag}

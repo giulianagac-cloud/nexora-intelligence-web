@@ -59,7 +59,7 @@ export function About() {
               >
                 {/* Dot acento */}
                 <span
-                  className="shrink-0 w-2 h-2 rounded-full bg-nexora-accent opacity-70"
+                  className="shrink-0 w-2 h-2 rounded-full bg-nexora-black opacity-70"
                   aria-hidden="true"
                 />
                 {/* Número de orden tenue */}

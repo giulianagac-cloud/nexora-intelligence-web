@@ -35,16 +35,16 @@ export function ServiceCard({ service, index = 0 }: ServiceCardProps) {
         "group flex flex-col gap-5 p-8 rounded-2xl",
         "border border-nexora-gray-200 bg-white",
         "transition-all duration-300",
-        "hover:-translate-y-1 hover:border-nexora-accent/30 hover:shadow-[0_8px_32px_rgba(27,77,92,0.08)]",
+        "hover:-translate-y-1 hover:border-nexora-gray-300 hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)]",
       ].join(" ")}
       style={{ "--card-index": index } as React.CSSProperties}
     >
       {/* Ícono */}
-      <div className="w-11 h-11 rounded-xl bg-nexora-accent-subtle flex items-center justify-center shrink-0">
+      <div className="w-11 h-11 rounded-xl bg-nexora-gray-100 flex items-center justify-center shrink-0">
         <Icon
           size={20}
           strokeWidth={1.5}
-          className="text-nexora-accent"
+          className="text-nexora-black"
           aria-hidden="true"
         />
       </div>

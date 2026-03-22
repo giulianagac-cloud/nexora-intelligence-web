@@ -15,51 +15,51 @@ function ProcessAbstract() {
       aria-hidden="true"
     >
       {/* Línea de flujo principal horizontal */}
-      <line x1="40" y1="170" x2="340" y2="170" stroke="#1B4D5C" strokeWidth="1" opacity="0.15" />
+      <line x1="40" y1="170" x2="340" y2="170" stroke="#0A0A0A" strokeWidth="1" opacity="0.15" />
 
       {/* Nodo 1 — Análisis */}
-      <circle cx="80"  cy="170" r="28" stroke="#1B4D5C" strokeWidth="1.5" opacity="0.35" />
-      <circle cx="80"  cy="170" r="6"  fill="#1B4D5C" opacity="0.55" />
+      <circle cx="80"  cy="170" r="28" stroke="#0A0A0A" strokeWidth="1.5" opacity="0.35" />
+      <circle cx="80"  cy="170" r="6"  fill="#0A0A0A" opacity="0.55" />
 
       {/* Nodo 2 — Proceso */}
-      <circle cx="190" cy="170" r="36" stroke="#1B4D5C" strokeWidth="2"   opacity="0.45" />
-      <circle cx="190" cy="170" r="8"  fill="#1B4D5C" opacity="0.7"  />
+      <circle cx="190" cy="170" r="36" stroke="#0A0A0A" strokeWidth="2"   opacity="0.45" />
+      <circle cx="190" cy="170" r="8"  fill="#0A0A0A" opacity="0.7"  />
 
       {/* Nodo 3 — Resultado */}
-      <circle cx="300" cy="170" r="28" stroke="#1B4D5C" strokeWidth="1.5" opacity="0.35" />
-      <circle cx="300" cy="170" r="6"  fill="#1B4D5C" opacity="0.55" />
+      <circle cx="300" cy="170" r="28" stroke="#0A0A0A" strokeWidth="1.5" opacity="0.35" />
+      <circle cx="300" cy="170" r="6"  fill="#0A0A0A" opacity="0.55" />
 
       {/* Conectores con flecha */}
-      <line x1="108" y1="170" x2="154" y2="170" stroke="#1B4D5C" strokeWidth="1.5" opacity="0.4" strokeLinecap="round" />
-      <polyline points="148,164 154,170 148,176" stroke="#1B4D5C" strokeWidth="1.5" fill="none" opacity="0.4" strokeLinecap="round" strokeLinejoin="round" />
+      <line x1="108" y1="170" x2="154" y2="170" stroke="#0A0A0A" strokeWidth="1.5" opacity="0.4" strokeLinecap="round" />
+      <polyline points="148,164 154,170 148,176" stroke="#0A0A0A" strokeWidth="1.5" fill="none" opacity="0.4" strokeLinecap="round" strokeLinejoin="round" />
 
-      <line x1="226" y1="170" x2="272" y2="170" stroke="#1B4D5C" strokeWidth="1.5" opacity="0.4" strokeLinecap="round" />
-      <polyline points="266,164 272,170 266,176" stroke="#1B4D5C" strokeWidth="1.5" fill="none" opacity="0.4" strokeLinecap="round" strokeLinejoin="round" />
+      <line x1="226" y1="170" x2="272" y2="170" stroke="#0A0A0A" strokeWidth="1.5" opacity="0.4" strokeLinecap="round" />
+      <polyline points="266,164 272,170 266,176" stroke="#0A0A0A" strokeWidth="1.5" fill="none" opacity="0.4" strokeLinecap="round" strokeLinejoin="round" />
 
       {/* Labels de nodos */}
-      <text x="80"  y="218" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="#1B4D5C" opacity="0.5" letterSpacing="1.5">ANÁLISIS</text>
-      <text x="190" y="226" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="#1B4D5C" opacity="0.5" letterSpacing="1.5">PROCESO</text>
-      <text x="300" y="218" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="#1B4D5C" opacity="0.5" letterSpacing="1.5">SOLUCIÓN</text>
+      <text x="80"  y="218" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="#0A0A0A" opacity="0.5" letterSpacing="1.5">ANÁLISIS</text>
+      <text x="190" y="226" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="#0A0A0A" opacity="0.5" letterSpacing="1.5">PROCESO</text>
+      <text x="300" y="218" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="#0A0A0A" opacity="0.5" letterSpacing="1.5">SOLUCIÓN</text>
 
       {/* Arco superior decorativo sobre nodo central */}
-      <path d="M 154 134 A 36 36 0 0 1 226 134" stroke="#1B4D5C" strokeWidth="1" opacity="0.2" strokeLinecap="round" />
+      <path d="M 154 134 A 36 36 0 0 1 226 134" stroke="#0A0A0A" strokeWidth="1" opacity="0.2" strokeLinecap="round" />
 
       {/* Líneas verticales decorativas — fondo */}
-      <line x1="190" y1="50"  x2="190" y2="100" stroke="#1B4D5C" strokeWidth="1" opacity="0.12" />
-      <line x1="190" y1="240" x2="190" y2="290" stroke="#1B4D5C" strokeWidth="1" opacity="0.12" />
+      <line x1="190" y1="50"  x2="190" y2="100" stroke="#0A0A0A" strokeWidth="1" opacity="0.12" />
+      <line x1="190" y1="240" x2="190" y2="290" stroke="#0A0A0A" strokeWidth="1" opacity="0.12" />
 
       {/* Pequeños ticks en los extremos del eje */}
-      <line x1="40" y1="162" x2="40" y2="178" stroke="#1B4D5C" strokeWidth="1.5" opacity="0.25" strokeLinecap="round" />
-      <line x1="340" y1="162" x2="340" y2="178" stroke="#1B4D5C" strokeWidth="1.5" opacity="0.25" strokeLinecap="round" />
+      <line x1="40" y1="162" x2="40" y2="178" stroke="#0A0A0A" strokeWidth="1.5" opacity="0.25" strokeLinecap="round" />
+      <line x1="340" y1="162" x2="340" y2="178" stroke="#0A0A0A" strokeWidth="1.5" opacity="0.25" strokeLinecap="round" />
 
       {/* Puntos decorativos off-axis */}
-      <circle cx="190" cy="72"  r="3" fill="#1B4D5C" opacity="0.25" />
-      <circle cx="190" cy="268" r="3" fill="#1B4D5C" opacity="0.25" />
-      <circle cx="40"  cy="170" r="3.5" fill="#1B4D5C" opacity="0.3" />
-      <circle cx="340" cy="170" r="3.5" fill="#1B4D5C" opacity="0.3" />
+      <circle cx="190" cy="72"  r="3" fill="#0A0A0A" opacity="0.25" />
+      <circle cx="190" cy="268" r="3" fill="#0A0A0A" opacity="0.25" />
+      <circle cx="40"  cy="170" r="3.5" fill="#0A0A0A" opacity="0.3" />
+      <circle cx="340" cy="170" r="3.5" fill="#0A0A0A" opacity="0.3" />
 
       {/* Anillo exterior tenue centrado en nodo central */}
-      <circle cx="190" cy="170" r="70" stroke="#1B4D5C" strokeWidth="0.75" opacity="0.1" strokeDasharray="4 6" />
+      <circle cx="190" cy="170" r="70" stroke="#0A0A0A" strokeWidth="0.75" opacity="0.1" strokeDasharray="4 6" />
     </svg>
   );
 }
@@ -105,8 +105,7 @@ export function Differentiator() {
                   className={[
                     "font-body font-medium text-[13px] tracking-[0.06em]",
                     "px-4 py-2 rounded-full",
-                    "border border-nexora-accent/40 text-nexora-accent",
-                    "bg-nexora-accent-subtle/60",
+                    "border border-nexora-gray-300 text-nexora-gray-600",
                   ].join(" ")}
                 >
                   {pillar}

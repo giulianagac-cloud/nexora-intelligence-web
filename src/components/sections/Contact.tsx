@@ -12,7 +12,7 @@ const inputClass = [
   "w-full font-body text-[15px] text-nexora-graphite placeholder:text-nexora-gray-400",
   "bg-white border border-nexora-gray-200 rounded-lg px-4 py-3",
   "transition-colors duration-200",
-  "focus:outline-none focus:border-nexora-accent focus:ring-1 focus:ring-nexora-accent/30",
+  "focus:outline-none focus:border-nexora-black focus:ring-1 focus:ring-nexora-black/10",
 ].join(" ");
 
 const labelClass = "font-body font-medium text-nexora-gray-600 text-[13px]";
@@ -198,7 +198,7 @@ function FormField({
       <span className={labelClass}>
         {label}
         {required && (
-          <span className="text-nexora-accent ml-0.5" aria-hidden="true">*</span>
+          <span className="text-nexora-coral ml-0.5" aria-hidden="true">*</span>
         )}
       </span>
       {children}
@@ -219,14 +219,14 @@ function ContactInfoRow({
 }) {
   const content = (
     <div className="flex items-center gap-3">
-      <span className="shrink-0 w-8 h-8 rounded-lg bg-nexora-accent-subtle flex items-center justify-center text-nexora-accent">
+      <span className="shrink-0 w-8 h-8 rounded-lg bg-nexora-gray-100 flex items-center justify-center text-nexora-black">
         {icon}
       </span>
       <div className="flex flex-col">
         <span className="font-body text-[12px] text-nexora-gray-400 tracking-wide uppercase">
           {label}
         </span>
-        <span className="font-body text-[15px] text-nexora-graphite">
+        <span className="font-body text-[15px] text-nexora-black">
           {value}
         </span>
       </div>
@@ -251,11 +251,11 @@ function ContactInfoRow({
 
 function SuccessMessage() {
   return (
-    <div className="flex flex-col gap-4 p-8 rounded-2xl border border-nexora-accent/20 bg-nexora-accent-subtle">
-      <span className="font-body font-medium text-nexora-accent text-[12px] tracking-[0.15em] uppercase">
+    <div className="flex flex-col gap-4 p-8 rounded-2xl border border-nexora-coral/20 bg-nexora-coral-subtle">
+      <span className="font-body font-medium text-nexora-coral text-[12px] tracking-[0.15em] uppercase">
         Enviado
       </span>
-      <p className="font-heading font-medium text-nexora-graphite text-[20px] leading-snug">
+      <p className="font-heading font-medium text-nexora-black text-[20px] leading-snug">
         ¡Gracias por tu consulta!
       </p>
       <p className="font-body text-nexora-gray-500 text-[15px] leading-relaxed">

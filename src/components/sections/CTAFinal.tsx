@@ -13,25 +13,15 @@ export function CTAFinal() {
       ref={sectionRef as React.RefObject<HTMLElement>}
       className="bg-nexora-black py-[clamp(4.5rem,9vw,9rem)] relative overflow-hidden"
     >
-      {/* Dot pattern de fondo — misma técnica que Hero, invertido */}
+      {/* Dot pattern de fondo */}
       <div
         className="absolute inset-0 pointer-events-none"
         aria-hidden="true"
         style={{
           backgroundImage:
-            "radial-gradient(circle, #2A6F82 1px, transparent 1px)",
+            "radial-gradient(circle, #3A3A3A 1px, transparent 1px)",
           backgroundSize: "32px 32px",
-          opacity: 0.12,
-        }}
-      />
-
-      {/* Gradiente radial central para dar profundidad */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        aria-hidden="true"
-        style={{
-          background:
-            "radial-gradient(ellipse 80% 60% at 50% 50%, rgba(27,77,92,0.35) 0%, transparent 70%)",
+          opacity: 0.25,
         }}
       />
 
@@ -39,7 +29,7 @@ export function CTAFinal() {
         <div className="flex flex-col items-center text-center gap-7 max-w-[640px] mx-auto">
 
           <div className="reveal">
-            <span className="font-body font-medium text-nexora-accent-light text-[12px] tracking-[0.18em] uppercase">
+            <span className="font-body font-medium text-nexora-coral text-[12px] tracking-[0.18em] uppercase">
               Hablemos
             </span>
           </div>

@@ -13,19 +13,19 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
         "border border-nexora-gray-200 bg-white",
         "relative overflow-hidden",
         "transition-all duration-300",
-        "hover:-translate-y-1 hover:border-nexora-accent/30 hover:shadow-[0_8px_32px_rgba(27,77,92,0.08)]",
+        "hover:-translate-y-1 hover:border-nexora-coral/30 hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)]",
       ].join(" ")}
       style={{ "--card-index": index } as React.CSSProperties}
     >
       {/* Línea superior de acento */}
       <div
-        className="absolute top-0 left-0 right-0 h-[3px] bg-nexora-accent opacity-60 transition-opacity duration-300 group-hover:opacity-100"
+        className="absolute top-0 left-0 right-0 h-[3px] bg-nexora-coral opacity-50 transition-opacity duration-300 group-hover:opacity-100"
         aria-hidden="true"
       />
 
       {/* Categoría */}
       {project.category && (
-        <span className="font-body font-medium text-nexora-accent text-[12px] tracking-[0.12em] uppercase pt-1">
+        <span className="font-body font-medium text-nexora-black text-[12px] tracking-[0.12em] uppercase pt-1">
           {project.category}
         </span>
       )}
@@ -42,7 +42,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
 
       {/* Número decorativo */}
       <span
-        className="absolute bottom-6 right-7 font-heading font-medium text-[3rem] leading-none text-nexora-gray-100 select-none transition-colors duration-300 group-hover:text-nexora-accent-subtle"
+        className="absolute bottom-6 right-7 font-heading font-medium text-[3rem] leading-none text-nexora-gray-100 select-none transition-colors duration-300 group-hover:text-nexora-coral-subtle"
         aria-hidden="true"
       >
         {String(index + 1).padStart(2, "0")}

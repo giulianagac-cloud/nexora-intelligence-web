@@ -5,7 +5,7 @@ const FOOTER_LINKS = NAV_LINKS.filter((l) => l.label !== "Proyectos");
 
 export function Footer() {
   return (
-    <footer className="bg-nexora-graphite text-nexora-white">
+    <footer className="bg-nexora-black text-nexora-white">
       {/* Línea decorativa superior */}
       <div className="h-px bg-gradient-to-r from-transparent via-nexora-coral to-transparent opacity-40" aria-hidden="true" />
 
