@@ -2,7 +2,7 @@
 
 @theme {
   /* Colores Nexora */
-  --color-nexora-white: #FAFAFA;
+  --color-nexora-white: #FFFFFF;
   --color-nexora-black: #0A0A0A;
   --color-nexora-graphite: #1A1A1A;
 
@@ -14,25 +14,15 @@
   --color-nexora-gray-500: #6B6B6B;
   --color-nexora-gray-600: #4A4A4A;
 
-  /* Acento principal: azul petróleo profundo */
-  --color-nexora-accent: #1B4D5C;
-  --color-nexora-accent-light: #2A6F82;
-  --color-nexora-accent-dark: #0F3542;
-  --color-nexora-accent-subtle: #E8F1F4;
-
-  /* Acento secundario: cobre (usar con moderación) */
-  --color-nexora-copper: #B87B5E;
-  --color-nexora-copper-light: #D4A088;
-  --color-nexora-copper-subtle: #F5EDE8;
-
-  /* Acento terciario: ámbar/mostaza elegante */
-  --color-nexora-amber: #C49A3C;
-  --color-nexora-amber-dark: #8B6D2A;
-  --color-nexora-amber-subtle: #F5EDD8;
+  /* Acento principal: coral */
+  --color-nexora-coral: #D85A30;
+  --color-nexora-coral-dark: #993C1D;
+  --color-nexora-coral-subtle: #FAECE7;
 
   /* Tipografías */
   --font-heading: var(--font-syne);
   --font-body: var(--font-dm-sans);
+  --font-manrope: var(--font-manrope);
 
   /* Spacing base para secciones */
   --spacing-section: 7rem;
@@ -49,7 +39,7 @@ html {
 }
 
 body {
-  background-color: #FAFAFA;
+  background-color: #FFFFFF;
   color: #0A0A0A;
   font-family: var(--font-dm-sans), system-ui, sans-serif;
   font-size: 16px;
