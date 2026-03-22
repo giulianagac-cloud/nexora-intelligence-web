@@ -1,4 +1,5 @@
 import { SITE_CONFIG, NAV_LINKS } from "@/lib/constants";
+import { Logo } from "@/components/ui/Logo";
 
 const FOOTER_LINKS = NAV_LINKS.filter((l) => l.label !== "Proyectos");
 
@@ -6,7 +7,7 @@ export function Footer() {
   return (
     <footer className="bg-nexora-graphite text-nexora-white">
       {/* Línea decorativa superior */}
-      <div className="h-px bg-gradient-to-r from-transparent via-nexora-accent to-transparent opacity-40" aria-hidden="true" />
+      <div className="h-px bg-gradient-to-r from-transparent via-nexora-coral to-transparent opacity-40" aria-hidden="true" />
 
       <div className="max-w-[1200px] mx-auto px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-12 md:gap-16">
@@ -15,10 +16,10 @@ export function Footer() {
           <div className="flex flex-col gap-4 max-w-sm">
             <a
               href="#inicio"
-              className="font-heading font-medium text-[18px] tracking-tight hover:opacity-80 transition-opacity self-start"
+              className="hover:opacity-80 transition-opacity self-start"
+              aria-label="Nexora Intelligence — inicio"
             >
-              Nexora{" "}
-              <span className="text-nexora-accent-light">Intelligence</span>
+              <Logo variant="dark" />
             </a>
             <p className="font-body text-[14px] text-nexora-gray-400 leading-relaxed">
               {SITE_CONFIG.tagline}

@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { NAV_LINKS, SITE_CONFIG } from "@/lib/constants";
+import { NAV_LINKS } from "@/lib/constants";
 import { Button } from "@/components/ui/Button";
+import { Logo } from "@/components/ui/Logo";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -59,11 +60,11 @@ export function Header() {
           {/* Logo */}
           <a
             href="#inicio"
-            className="font-heading font-medium text-[17px] tracking-tight text-nexora-graphite hover:opacity-80 transition-opacity"
+            className="hover:opacity-80 transition-opacity"
             onClick={handleNavClick}
+            aria-label="Nexora Intelligence — inicio"
           >
-            Nexora{" "}
-            <span className="text-nexora-accent">Intelligence</span>
+            <Logo variant="light" />
           </a>
 
           {/* Nav desktop */}
@@ -78,7 +79,7 @@ export function Header() {
                   className={[
                     "font-body text-[14px] tracking-[0.02em] transition-colors duration-200 relative py-1",
                     isActive
-                      ? "text-nexora-accent"
+                      ? "text-nexora-black"
                       : "text-nexora-gray-600 hover:text-nexora-graphite",
                   ].join(" ")}
                 >
@@ -86,7 +87,7 @@ export function Header() {
                   {/* Subrayado activo */}
                   {isActive && (
                     <span
-                      className="absolute bottom-0 left-0 right-0 h-px bg-nexora-accent rounded-full"
+                      className="absolute bottom-0 left-0 right-0 h-px bg-nexora-black rounded-full"
                       aria-hidden="true"
                     />
                   )}
@@ -142,7 +143,7 @@ export function Header() {
                 className={[
                   "font-body text-[15px] py-3 border-b border-nexora-gray-100 transition-colors",
                   isActive
-                    ? "text-nexora-accent font-medium"
+                    ? "text-nexora-black font-medium"
                     : "text-nexora-gray-600 hover:text-nexora-graphite",
                 ].join(" ")}
               >
