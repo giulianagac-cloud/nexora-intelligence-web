@@ -1,60 +1,146 @@
-import { SITE_CONFIG, NAV_LINKS } from "@/lib/constants";
-import { Logo } from "@/components/ui/Logo";
+const SERVICIOS_LINKS = [
+  "Desarrollo Web",
+  "Apps y Sistemas",
+  "Automatización",
+  "Bots IA",
+  "Consultoría",
+];
 
-const FOOTER_LINKS = NAV_LINKS.filter((l) => l.label !== "Proyectos");
+const SOLUCIONES_LINKS = [
+  { label: "HR Bot", href: "#casos" },
+  { label: "Finance Bot (próximamente)", href: "#" },
+];
+
+const LEGAL_LINKS = [
+  { label: "Términos y condiciones", href: "#" },
+  { label: "Política de privacidad", href: "#" },
+  { label: "LinkedIn", href: "#" },
+];
 
 export function Footer() {
   return (
-    <footer className="bg-nexora-black text-nexora-white">
-      {/* Línea decorativa superior */}
-      <div className="h-px bg-gradient-to-r from-transparent via-nexora-coral to-transparent opacity-40" aria-hidden="true" />
+    <footer
+      className="border-t border-nexora-border"
+      style={{ backgroundColor: "#141829" }}
+    >
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-8 py-14">
 
-      <div className="max-w-[1200px] mx-auto px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-12 md:gap-16">
+        {/* Grid 4 columnas */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
 
-          {/* Columna marca */}
-          <div className="flex flex-col gap-4 max-w-sm">
-            <a
-              href="#inicio"
-              className="hover:opacity-80 transition-opacity self-start"
-              aria-label="Nexora Intelligence — inicio"
-            >
-              <Logo variant="dark" />
+          {/* Col 1 — Branding */}
+          <div className="flex flex-col gap-4 sm:col-span-2 lg:col-span-1">
+            <a href="#inicio" className="flex flex-col leading-none hover:opacity-80 transition-opacity w-fit">
+              <span
+                className="text-nexora-light text-[18px] tracking-[2px] uppercase"
+                style={{ fontFamily: "var(--font-outfit)", fontWeight: 800 }}
+              >
+                NEXORA
+                <span
+                  className="text-nexora-neon"
+                  style={{ animation: "cursor-blink 1s step-end infinite" }}
+                  aria-hidden="true"
+                >_</span>
+              </span>
+              <span
+                className="text-nexora-neon text-[11px] tracking-[1px]"
+                style={{ fontFamily: "var(--font-inter)" }}
+              >
+                Intelligence
+              </span>
             </a>
-            <p className="font-body text-[14px] text-nexora-gray-400 leading-relaxed">
-              {SITE_CONFIG.tagline}
-            </p>
-            <p className="font-body text-[13px] text-nexora-gray-500 italic leading-relaxed mt-1">
-              "Diseñamos soluciones con criterio, claridad y proyección."
+            <p
+              className="text-[13px] leading-relaxed"
+              style={{ fontFamily: "var(--font-inter)", color: "rgba(245,245,247,0.50)" }}
+            >
+              Consultoría IT que escala operaciones.
             </p>
           </div>
 
-          {/* Columna links */}
+          {/* Col 2 — Servicios */}
           <div className="flex flex-col gap-4">
-            <span className="font-body font-medium text-[12px] text-nexora-gray-500 tracking-[0.12em] uppercase">
-              Navegación
+            <span
+              className="text-[11px] uppercase tracking-[1.5px]"
+              style={{ fontFamily: "var(--font-jetbrains-mono)", color: "rgba(0,245,160,0.6)" }}
+            >
+              Servicios
             </span>
-            <nav aria-label="Footer" className="flex flex-col gap-3">
-              {FOOTER_LINKS.map((link) => (
+            <nav className="flex flex-col gap-2.5">
+              {SERVICIOS_LINKS.map((s) => (
                 <a
-                  key={link.href}
-                  href={link.href}
-                  className="font-body text-[14px] text-nexora-gray-400 hover:text-nexora-white transition-colors duration-200 w-fit"
+                  key={s}
+                  href="#servicios"
+                  className="text-[13px] w-fit transition-colors duration-200 hover:text-nexora-neon"
+                  style={{ fontFamily: "var(--font-inter)", color: "rgba(245,245,247,0.50)" }}
                 >
-                  {link.label}
+                  {s}
                 </a>
               ))}
             </nav>
           </div>
+
+          {/* Col 3 — Soluciones */}
+          <div className="flex flex-col gap-4">
+            <span
+              className="text-[11px] uppercase tracking-[1.5px]"
+              style={{ fontFamily: "var(--font-jetbrains-mono)", color: "rgba(0,245,160,0.6)" }}
+            >
+              Soluciones
+            </span>
+            <nav className="flex flex-col gap-2.5">
+              {SOLUCIONES_LINKS.map((l) => (
+                <a
+                  key={l.label}
+                  href={l.href}
+                  className="text-[13px] w-fit transition-colors duration-200 hover:text-nexora-neon"
+                  style={{ fontFamily: "var(--font-inter)", color: "rgba(245,245,247,0.50)" }}
+                >
+                  {l.label}
+                </a>
+              ))}
+            </nav>
+          </div>
+
+          {/* Col 4 — Legal */}
+          <div className="flex flex-col gap-4">
+            <span
+              className="text-[11px] uppercase tracking-[1.5px]"
+              style={{ fontFamily: "var(--font-jetbrains-mono)", color: "rgba(0,245,160,0.6)" }}
+            >
+              Legal
+            </span>
+            <nav className="flex flex-col gap-2.5">
+              {LEGAL_LINKS.map((l) => (
+                <a
+                  key={l.label}
+                  href={l.href}
+                  className="text-[13px] w-fit transition-colors duration-200 hover:text-nexora-neon"
+                  style={{ fontFamily: "var(--font-inter)", color: "rgba(245,245,247,0.50)" }}
+                >
+                  {l.label}
+                </a>
+              ))}
+            </nav>
+          </div>
+
         </div>
 
-        {/* Separador + copyright */}
-        <div className="mt-14 pt-8 border-t border-nexora-gray-600/50 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-          <p className="font-body text-[13px] text-nexora-gray-500">
-            © 2026 Nexora Intelligence. Todos los derechos reservados.
+        {/* Bottom bar */}
+        <div
+          className="mt-12 pt-8 border-t flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
+          style={{ borderColor: "#2A2E45" }}
+        >
+          <p
+            className="text-[12px]"
+            style={{ fontFamily: "var(--font-inter)", color: "rgba(245,245,247,0.35)" }}
+          >
+            © 2026 NEXORA Intelligence • Buenos Aires, Argentina
           </p>
-          <p className="font-body text-[13px] text-nexora-gray-500">
-            Argentina
+          <p
+            className="text-[12px]"
+            style={{ fontFamily: "var(--font-jetbrains-mono)", color: "rgba(0,245,160,0.35)" }}
+          >
+            v3.0.0
           </p>
         </div>
       </div>
