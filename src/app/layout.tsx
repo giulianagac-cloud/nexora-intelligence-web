@@ -1,33 +1,33 @@
 import type { Metadata } from "next";
-import { Syne, DM_Sans, Manrope } from "next/font/google";
+import { Outfit, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const syne = Syne({
+const outfit = Outfit({
   subsets: ["latin"],
-  variable: "--font-syne",
+  variable: "--font-outfit",
+  weight: ["400", "500", "600", "700", "800"],
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
   weight: ["400", "500", "600", "700"],
 });
 
-const dmSans = DM_Sans({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  variable: "--font-dm-sans",
-  weight: ["400", "500", "600"],
-});
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-manrope",
-  weight: ["700"],
+  variable: "--font-jetbrains-mono",
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
-  title: "Nexora Intelligence — Soluciones digitales inteligentes",
+  title: "NEXORA Intelligence | Consultoría IT & Automatización",
   description:
-    "Consultora de tecnología. Desarrollo web, apps, automatización, asistentes inteligentes y consultoría funcional para negocios y profesionales.",
+    "Tu operación funciona. Nosotros la hacemos escalar. Desarrollo web, apps, automatización, bots IA y consultoría funcional.",
   openGraph: {
-    title: "Nexora Intelligence",
+    title: "NEXORA Intelligence",
     description:
-      "Soluciones digitales inteligentes para negocios, profesionales y nuevos proyectos.",
+      "Tu operación funciona. Nosotros la hacemos escalar.",
     type: "website",
   },
 };
@@ -40,9 +40,11 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${syne.variable} ${dmSans.variable} ${manrope.variable} h-full antialiased`}
+      className={`${outfit.variable} ${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-nexora-dark text-nexora-light font-body">
+        {children}
+      </body>
     </html>
   );
 }
