@@ -28,7 +28,7 @@ export function Credibility() {
   return (
     <section
       ref={sectionRef as React.RefObject<HTMLElement>}
-      className="bg-nexora-gray-50 py-[clamp(3rem,6vw,5rem)] border-t border-nexora-gray-100"
+      className="bg-nexora-white py-[clamp(3rem,6vw,5rem)] border-t border-nexora-gray-100"
     >
       <div className="max-w-[1200px] mx-auto px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">

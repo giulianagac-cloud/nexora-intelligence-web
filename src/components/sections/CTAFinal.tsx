@@ -11,7 +11,7 @@ export function CTAFinal() {
     <section
       id="cta"
       ref={sectionRef as React.RefObject<HTMLElement>}
-      className="bg-nexora-graphite py-[clamp(4.5rem,9vw,9rem)] relative overflow-hidden"
+      className="bg-nexora-black py-[clamp(4.5rem,9vw,9rem)] relative overflow-hidden"
     >
       {/* Dot pattern de fondo — misma técnica que Hero, invertido */}
       <div
