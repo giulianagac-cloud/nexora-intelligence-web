@@ -29,7 +29,7 @@ export function CTAFinal() {
         <div className="flex flex-col items-center text-center gap-7 max-w-[640px] mx-auto">
 
           <div className="reveal">
-            <span className="font-body font-medium text-nexora-coral text-[12px] tracking-[0.18em] uppercase">
+            <span className="font-body font-medium text-nexora-coral text-[12px] tracking-[2px] uppercase">
               Hablemos
             </span>
           </div>

@@ -58,7 +58,7 @@ export function Hero() {
           {/* ── Columna izquierda: texto ── */}
           <div className="flex flex-col gap-7 max-w-[600px]">
             <Animated delay={80}>
-              <span className="font-body font-medium text-nexora-black text-[12px] tracking-[0.18em] uppercase">
+              <span className="font-body font-medium text-nexora-black text-[12px] tracking-[2px] uppercase">
                 Consultora digital
               </span>
             </Animated>

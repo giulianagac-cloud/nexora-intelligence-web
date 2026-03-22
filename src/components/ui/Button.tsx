@@ -56,7 +56,7 @@ export function Button({
   ...props
 }: ButtonProps) {
   const base = [
-    "inline-flex items-center justify-center gap-2 rounded-full",
+    "inline-flex items-center justify-center gap-2 rounded-lg",
     "font-body font-medium tracking-[0.03em]",
     "transition-all duration-200 cursor-pointer whitespace-nowrap",
     "disabled:opacity-50 disabled:cursor-not-allowed",

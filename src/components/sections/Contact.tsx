@@ -252,7 +252,7 @@ function ContactInfoRow({
 function SuccessMessage() {
   return (
     <div className="flex flex-col gap-4 p-8 rounded-2xl border border-nexora-coral/20 bg-nexora-coral-subtle">
-      <span className="font-body font-medium text-nexora-coral text-[12px] tracking-[0.15em] uppercase">
+      <span className="font-body font-medium text-nexora-coral text-[12px] tracking-[2px] uppercase">
         Enviado
       </span>
       <p className="font-heading font-medium text-nexora-black text-[20px] leading-snug">
