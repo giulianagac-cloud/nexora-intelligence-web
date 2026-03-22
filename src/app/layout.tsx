@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Syne, DM_Sans } from "next/font/google";
+import { Syne, DM_Sans, Manrope } from "next/font/google";
 import "./globals.css";
 
 const syne = Syne({
@@ -12,6 +12,12 @@ const dmSans = DM_Sans({
   subsets: ["latin"],
   variable: "--font-dm-sans",
   weight: ["400", "500", "600"],
+});
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
+  weight: ["700"],
 });
 
 export const metadata: Metadata = {
@@ -34,7 +40,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${syne.variable} ${dmSans.variable} h-full antialiased`}
+      className={`${syne.variable} ${dmSans.variable} ${manrope.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
