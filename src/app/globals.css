@@ -22,6 +22,11 @@
   /* ── Spacing ── */
   --spacing-section: 7rem;
   --spacing-section-sm: 4rem;
+
+  /* ── Sombras custom ── */
+  --shadow-neon: 4px 4px 0px rgba(0, 245, 160, 0.3);
+  --shadow-neon-lg: 6px 6px 0px #00F5A0;
+  --shadow-soft: 0 8px 32px rgba(0, 245, 160, 0.15);
 }
 
 /* ── Base ── */
