@@ -52,7 +52,13 @@ export function CTAFinal() {
             className="reveal flex flex-wrap justify-center gap-3 pt-2"
             style={{ transitionDelay: "300ms" }}
           >
-            <Button as="a" href="#contacto" variant="primary" size="lg">
+            <Button
+              as="a"
+              href="#contacto"
+              variant="primary"
+              size="lg"
+              className="!bg-nexora-coral !border-nexora-coral hover:!bg-nexora-coral-dark hover:!border-nexora-coral-dark"
+            >
               Solicitar propuesta
             </Button>
             <Button
