@@ -8,51 +8,48 @@ interface SolutionCard {
   title: string;
   description: string;
   checks: [string, string, string];
-  badge: string;
+  badge?: string;
 }
 
 const SOLUTIONS: SolutionCard[] = [
   {
-    title: "Presencia Web Profesional",
+    badge: "Presencia digital",
+    title: "Desarrollo Web",
     description:
-      "Sitios institucionales y landing pages diseñados para generar confianza y convertir visitantes en clientes.",
-    checks: ["Diseño limpio y moderno", "Optimizado para mobile", "Carga rápida y SEO"],
-    badge: "Webs",
+      "Sitios institucionales y landing pages con diseño profesional.",
+    checks: ["Diseño moderno", "Responsive", "Identidad profesional"],
   },
   {
-    title: "Sistemas a Medida",
+    badge: "Solución a medida",
+    title: "Apps y Sistemas",
     description:
-      "Aplicaciones digitales para gestionar turnos, clientes, inventarios y operaciones propias de tu negocio.",
-    checks: ["Flujos según tu lógica", "Acceso web sin instalación", "Escalable desde el día 1"],
-    badge: "Apps",
+      "Soluciones digitales para gestión de clientes, turnos y circuitos internos.",
+    checks: ["Lógica personalizada", "Organización operativa", "Escalabilidad"],
   },
   {
-    title: "Automatización de Procesos",
+    badge: "Eficiencia real",
+    title: "Automatización",
     description:
-      "Eliminamos tareas repetitivas conectando herramientas y digitalizando circuitos que hoy se hacen a mano.",
-    checks: ["Menos errores manuales", "Procesos más rápidos", "Integración con tus sistemas"],
-    badge: "Automatización",
+      "Digitalizamos tareas y optimizamos flujos operativos.",
+    checks: ["Menos fricción", "Más orden", "Mejor operación"],
   },
   {
     title: "Asistentes Inteligentes",
     description:
-      "Bots y asistentes conversacionales para responder consultas, derivar leads y automatizar la comunicación.",
-    checks: ["Disponible 24/7", "Integración WhatsApp / web", "Respuestas personalizadas"],
-    badge: "IA",
+      "Bots y asistentes digitales para soporte y automatización.",
+    checks: ["Consultas ágiles", "Respuestas inmediatas", "Escalabilidad futura"],
   },
   {
     title: "Consultoría Funcional",
     description:
-      "Ordenamos requerimientos, definimos arquitectura y diseñamos la solución antes de escribir una sola línea de código.",
-    checks: ["Relevamiento detallado", "Documentación clara", "Decisiones informadas"],
-    badge: "Consultoría",
+      "Relevamos necesidades y diseñamos soluciones alineadas.",
+    checks: ["Análisis", "Estructura", "Visión de negocio"],
   },
   {
     title: "Testing y Documentación",
     description:
-      "Validación funcional exhaustiva y documentación técnica para que tu sistema sea confiable y mantenible.",
-    checks: ["Casos de prueba formales", "Reporte de defectos", "Manuales de usuario"],
-    badge: "Calidad",
+      "Validación funcional y documentación clara.",
+    checks: ["Calidad funcional", "Orden documental", "Claridad técnica"],
   },
 ];
 
@@ -68,13 +65,11 @@ export function Solutions() {
       className="bg-nexora-white py-[clamp(4rem,8vw,8rem)]"
     >
       <div className="max-w-[1200px] mx-auto px-6 lg:px-8">
-        <div
-          className="reveal mb-12 lg:mb-16"
-        >
+        <div className="reveal mb-12 lg:mb-16">
           <SectionHeading
             subtag="Soluciones"
             title="Soluciones que desarrollamos"
-            description="Cada servicio está pensado para resolver necesidades concretas de negocios, profesionales y proyectos nuevos."
+            description="Herramientas digitales pensadas para resolver necesidades reales, ordenar procesos y potenciar proyectos."
           />
         </div>
 
@@ -82,21 +77,23 @@ export function Solutions() {
           {SOLUTIONS.map((solution, i) => (
             <div
               key={solution.title}
-              className="reveal flex flex-col gap-4 p-6 rounded-2xl border border-nexora-gray-200 bg-white hover:border-nexora-accent/30 hover:shadow-[0_4px_20px_rgba(27,77,92,0.08)] transition-all duration-300"
+              className="reveal flex flex-col gap-4 p-6 rounded-xl border border-[#F0F0F0] bg-white shadow-[0_1px_4px_rgba(0,0,0,0.06)] hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(0,0,0,0.1)] transition-all duration-300"
               style={{ transitionDelay: `${i * STAGGER}ms` }}
             >
-              {/* Badge ámbar */}
-              <span
-                className="self-start font-body font-medium text-[11px] tracking-[0.15em] uppercase px-2.5 py-1 rounded-full"
-                style={{
-                  color: "#8B6D2A",
-                  backgroundColor: "#F5EDD8",
-                }}
-              >
-                {solution.badge}
-              </span>
+              {/* Badge coral — solo primeras 3 */}
+              {solution.badge && (
+                <span
+                  className="self-start font-body font-medium text-[11px] tracking-[0.12em] uppercase px-3 py-1 rounded-full"
+                  style={{
+                    color: "#993C1D",
+                    backgroundColor: "#FAECE7",
+                  }}
+                >
+                  {solution.badge}
+                </span>
+              )}
 
-              <h3 className="font-heading font-medium text-nexora-black text-[18px] leading-snug tracking-[-0.01em]">
+              <h3 className="font-heading font-semibold text-nexora-black text-[18px] leading-snug tracking-[-0.01em]">
                 {solution.title}
               </h3>
 
@@ -109,8 +106,8 @@ export function Solutions() {
                   <li key={item} className="flex items-center gap-2">
                     <Check
                       size={14}
-                      strokeWidth={2.5}
-                      className="shrink-0 text-nexora-accent"
+                      strokeWidth={1.5}
+                      className="shrink-0 text-nexora-black"
                       aria-hidden="true"
                     />
                     <span className="font-body text-[13px] text-nexora-gray-600">
