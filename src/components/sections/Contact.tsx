@@ -15,7 +15,9 @@ const inputClass = [
 const inputStyle = {
   fontFamily: "var(--font-inter)",
   backgroundColor: "#141829",
-  border: "1px solid #2A2E45",
+  borderWidth: "1px",
+  borderStyle: "solid",
+  borderColor: "#2A2E45",
   color: "#F5F5F7",
 };
 
