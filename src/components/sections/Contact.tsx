@@ -128,8 +128,8 @@ export function Contact() {
 
             <div className="reveal flex flex-col gap-5" style={{ transitionDelay: "100ms" }}>
               <InfoRow icon={<Mail size={15} strokeWidth={1.75} />} label="EMAIL" value={SITE_CONFIG.email} href={`mailto:${SITE_CONFIG.email}`} />
-              <InfoRow icon={<MessageCircle size={15} strokeWidth={1.75} />} label="WHATSAPP" value="+54 11 XXXX-XXXX" href={`https://wa.me/${SITE_CONFIG.whatsapp}`} />
-              <InfoRow icon={<MapPin size={15} strokeWidth={1.75} />} label="UBICACIÓN" value="Buenos Aires, Argentina" />
+              <InfoRow icon={<MessageCircle size={15} strokeWidth={1.75} />} label="WHATSAPP" value="+54 9 11 3340-9351" href={`https://wa.me/${SITE_CONFIG.whatsapp}?text=Hola,%20vi%20la%20web%20de%20NEXORA%20y%20quiero%20consultar%20sobre%20sus%20servicios`} />
+              <InfoRow icon={<MapPin size={15} strokeWidth={1.75} />} label="UBICACIÓN" value="CABA, Buenos Aires, Argentina" />
             </div>
           </div>
 

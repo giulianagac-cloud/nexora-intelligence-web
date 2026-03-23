@@ -56,6 +56,7 @@ function TechBadge({ tech }: { tech: Tech }) {
       className="relative"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
+      onClick={() => setHover((h) => !h)}
     >
       <div
         className="px-4 py-3 rounded-lg border text-center cursor-default transition-all duration-200"

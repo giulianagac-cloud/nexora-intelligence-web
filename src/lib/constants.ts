@@ -3,9 +3,9 @@ import type { SiteConfig, NavLink, Service, Project } from "./types";
 export const SITE_CONFIG: SiteConfig = {
   name: "Nexora Intelligence",
   tagline: "Soluciones digitales, automatización y tecnología con visión de negocio.",
-  email: "info@nexoraintelligence.com",
-  whatsapp: "5411XXXXXXXX", // placeholder
-  location: "Argentina",
+  email: "contacto@nexoraintelligence.co",
+  whatsapp: "5491133409351",
+  location: "CABA, Buenos Aires, Argentina",
 };
 
 export const NAV_LINKS: NavLink[] = [

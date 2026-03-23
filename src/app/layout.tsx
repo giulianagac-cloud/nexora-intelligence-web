@@ -43,6 +43,8 @@ export default function RootLayout({
       className={`${outfit.variable} ${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-nexora-dark text-nexora-light font-body">
+        {/* Deshabilitar scroll restoration ANTES de la hidratación */}
+        <script dangerouslySetInnerHTML={{ __html: "history.scrollRestoration='manual';window.scrollTo(0,0);" }} />
         {children}
       </body>
     </html>

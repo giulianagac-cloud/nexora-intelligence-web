@@ -208,7 +208,9 @@ export function Hero() {
             {/* CTA */}
             <div style={{ animation: "slide-up 0.6s cubic-bezier(0.16,1,0.3,1) both", animationDelay: "0.45s" }}>
               <a
-                href="#contacto"
+                href="https://wa.me/5491133409351?text=Hola,%20vi%20la%20web%20de%20NEXORA%20y%20quiero%20consultar%20sobre%20sus%20servicios"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg text-nexora-dark font-semibold text-[16px] transition-all duration-200 hover:scale-[1.02]"
                 style={{
                   backgroundColor: "#00F5A0",

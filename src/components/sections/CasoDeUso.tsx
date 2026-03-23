@@ -103,7 +103,7 @@ function CasoCard({ caso, index }: { caso: Caso; index: number }) {
       {/* Contenido expandido */}
       <div
         className="overflow-hidden transition-all duration-300 ease-in-out"
-        style={{ maxHeight: open ? "700px" : "0px", opacity: open ? 1 : 0 }}
+        style={{ maxHeight: open ? "2000px" : "0px", opacity: open ? 1 : 0 }}
       >
         <div className="px-6 pb-6 flex flex-col gap-6">
           {/* Separador */}
