@@ -142,7 +142,7 @@ function CasoCard({ caso, index }: { caso: Caso; index: number }) {
           </div>
 
           {/* Resultados */}
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {caso.resultados.map((r) => (
               <div key={r.label} className="flex flex-col gap-1">
                 <span

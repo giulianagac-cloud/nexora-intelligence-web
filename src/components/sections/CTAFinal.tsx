@@ -75,12 +75,10 @@ export function CTAFinal() {
               href="https://wa.me/5491133409351?text=Hola,%20quiero%20consultar%20sobre%20sus%20servicios"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg font-semibold text-nexora-dark transition-all duration-200 hover:scale-[1.02]"
+              className="inline-flex items-center gap-2 rounded-lg font-semibold text-nexora-dark transition-all duration-200 hover:scale-[1.02] px-7 py-4 text-[16px] sm:px-10 sm:py-5 sm:text-[18px]"
               style={{
                 backgroundColor: "#00F5A0",
-                padding: "20px 40px",
                 fontFamily: "var(--font-inter)",
-                fontSize: "18px",
                 boxShadow: "var(--shadow-neon-lg)",
               }}
             >

@@ -149,7 +149,7 @@ export function Footer() {
             className="text-[12px]"
             style={{ fontFamily: "var(--font-inter)", color: "rgba(245,245,247,0.35)" }}
           >
-            © 2025 NEXORA Intelligence • CABA, Buenos Aires, Argentina
+            © 2026 NEXORA Intelligence • CABA, Buenos Aires, Argentina
           </p>
           <p
             className="text-[12px]"

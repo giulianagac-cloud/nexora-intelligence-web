@@ -191,9 +191,8 @@ export function BotPlanes() {
       className="py-[clamp(4rem,8vw,8rem)]"
       style={{ backgroundColor: "#0A0E27" }}
     >
+      {/* Título */}
       <div className="max-w-[1200px] mx-auto px-6 lg:px-8">
-
-        {/* Título */}
         <div className="reveal mb-12">
           <p
             className="text-nexora-neon text-[13px] mb-3"
@@ -214,15 +213,21 @@ export function BotPlanes() {
             Tres niveles de automatización conversacional. Desde respuestas simples hasta integración con tus sistemas reales.
           </p>
         </div>
+      </div>
 
-        {/* Grid de planes */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 reveal">
+      {/* Planes — scroll horizontal en mobile, grid en desktop */}
+      <div className="max-w-[1200px] mx-auto">
+        <div className="flex gap-5 overflow-x-auto overflow-y-visible snap-x snap-mandatory scrollbar-hide px-6 lg:px-8 pb-6 md:grid md:grid-cols-3 md:overflow-visible reveal">
           {PLANES.map((plan) => (
-            <PlanCard key={plan.numero} plan={plan} />
+            <div key={plan.numero} className="flex-shrink-0 w-[82vw] sm:w-[68vw] md:w-auto snap-center">
+              <PlanCard plan={plan} />
+            </div>
           ))}
         </div>
+      </div>
 
-        {/* Nota RAG */}
+      {/* Nota RAG */}
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-8">
         <div
           className="reveal mt-8 flex items-start gap-3 p-5 rounded-xl border"
           style={{
@@ -240,7 +245,6 @@ export function BotPlanes() {
             (consulta documental sobre reglamentos, manuales e instructivos internos)
           </p>
         </div>
-
       </div>
     </section>
   );
