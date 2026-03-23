@@ -153,7 +153,7 @@ export function Contact() {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
+              <form action="https://formspree.io/f/xjgankvp" method="POST" onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <Field label="Nombre" required>
                     <FocusInput type="text" name="nombre" placeholder="Tu nombre" required />
