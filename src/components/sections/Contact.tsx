@@ -26,7 +26,7 @@ const inputFocusStyle = {
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
-const FORMSPREE_URL = "https://formspree.io/f/XXXXXXXX";
+const FORMSPREE_URL = "https://formspree.io/f/xjgankvp";
 
 function FocusInput({
   className = "",
