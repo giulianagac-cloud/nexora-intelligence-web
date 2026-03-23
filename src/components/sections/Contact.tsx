@@ -88,7 +88,7 @@ export function Contact() {
         body: data,
         headers: { Accept: "application/json" },
       });
-      if (res.ok) { setFormState("success"); form.reset(); }
+      if (res.ok) { setFormState("success"); form.reset(); setTimeout(() => { document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" }); }, 100); }
       else setFormState("error");
     } catch {
       setFormState("error");
