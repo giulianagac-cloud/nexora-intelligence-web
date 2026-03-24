@@ -101,8 +101,8 @@ export function ServiciosBento() {
       </div>
 
       {/* Cards — scroll horizontal en mobile, grid en desktop */}
-      <div className="max-w-[1200px] mx-auto">
-        <div className="flex gap-6 overflow-x-auto overflow-y-visible snap-x snap-mandatory scrollbar-hide px-6 lg:px-8 pb-6 md:grid md:grid-cols-2 md:overflow-visible lg:grid-cols-3">
+      <div className="max-w-[1200px] mx-auto overflow-hidden md:overflow-visible">
+        <div className="flex gap-6 overflow-x-auto overflow-y-hidden snap-x snap-mandatory scrollbar-hide px-6 lg:px-8 pb-2 pr-6 md:grid md:grid-cols-2 md:overflow-visible lg:grid-cols-3">
           {CARDS.map((card) => {
             const Icon = card.icon;
             const isHovered = hoveredId === card.id;
