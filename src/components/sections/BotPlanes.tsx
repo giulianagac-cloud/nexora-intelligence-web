@@ -216,8 +216,8 @@ export function BotPlanes() {
       </div>
 
       {/* Planes — scroll horizontal en mobile, grid en desktop */}
-      <div className="max-w-[1200px] mx-auto overflow-hidden md:overflow-visible">
-        <div className="flex gap-5 overflow-x-auto overflow-y-hidden snap-x snap-mandatory scrollbar-hide px-6 lg:px-8 pb-2 pr-6 md:grid md:grid-cols-3 md:overflow-visible reveal">
+      <div className="max-w-[1200px] mx-auto" style={{ overflowX: "clip", overflowY: "visible" }}>
+        <div className="flex gap-5 overflow-x-auto snap-x snap-mandatory scrollbar-hide px-6 lg:px-8 pb-4 pt-2 md:grid md:grid-cols-3 md:overflow-visible reveal">
           {PLANES.map((plan) => (
             <div key={plan.numero} className="flex-shrink-0 w-[82vw] sm:w-[68vw] md:w-auto snap-center">
               <PlanCard plan={plan} />
