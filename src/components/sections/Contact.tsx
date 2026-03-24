@@ -223,7 +223,7 @@ export function Contact() {
               <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <Field label="Nombre" required>
-                    <FocusInput type="text" name="nombre" placeholder="Tu nombre" required />
+                    <FocusInput type="text" name="nombre" placeholder="Tu nombre" required pattern="[A-Za-zÀ-ÿñÑ\s]+" onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/[^A-Za-zÀ-ÿñÑ\s]/g, ''); }} />
                   </Field>
                   <Field label="Email" required>
                     <FocusInput type="email" name="email" placeholder="tu@email.com" required />
@@ -231,6 +231,9 @@ export function Contact() {
                 </div>
                 <Field label="Empresa / Rubro">
                   <FocusInput type="text" name="empresa" placeholder="Nombre de empresa o rubro" />
+                </Field>
+                <Field label="Teléfono / WhatsApp">
+                  <FocusInput type="tel" name="telefono" placeholder="+54 9 11 1234-5678" />
                 </Field>
                 <Field label="Tipo de proyecto">
                   <FocusSelect name="tipo_proyecto">
