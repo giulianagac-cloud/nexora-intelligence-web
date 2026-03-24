@@ -221,6 +221,7 @@ export function Contact() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
+                <input type="text" name="_gotcha" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <Field label="Nombre" required>
                     <FocusInput type="text" name="nombre" placeholder="Tu nombre" required pattern="[A-Za-zÀ-ÿñÑ\s]+" onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/[^A-Za-zÀ-ÿñÑ\s]/g, ''); }} />

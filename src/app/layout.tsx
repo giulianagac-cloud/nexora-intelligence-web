@@ -24,11 +24,29 @@ export const metadata: Metadata = {
   title: "NEXORA Intelligence | Consultoría IT & Automatización",
   description:
     "Tu operación funciona. Nosotros la hacemos escalar. Desarrollo web, apps, automatización, bots IA y consultoría funcional.",
+  metadataBase: new URL("https://nexoraintelligence.co"),
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "https://nexoraintelligence.co",
+  },
   openGraph: {
-    title: "NEXORA Intelligence",
-    description:
-      "Tu operación funciona. Nosotros la hacemos escalar.",
+    title: "NEXORA Intelligence | Consultoría IT & Automatización",
+    description: "Tu operación funciona. Nosotros la hacemos escalar. Desarrollo web, apps, automatización, bots IA y consultoría funcional.",
+    url: "https://nexoraintelligence.co",
+    siteName: "NEXORA Intelligence",
     type: "website",
+    locale: "es_AR",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NEXORA Intelligence | Consultoría IT & Automatización",
+    description: "Tu operación funciona. Nosotros la hacemos escalar.",
+  },
+  icons: {
+    icon: "/favicon.svg",
   },
 };
 
