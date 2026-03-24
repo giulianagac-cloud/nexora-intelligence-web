@@ -212,6 +212,13 @@ export function BotPlanes() {
           >
             Tres niveles de automatización conversacional. Desde respuestas simples hasta integración con tus sistemas reales.
           </p>
+          <p
+            className="flex items-center gap-2 mt-4 md:hidden text-[14px]"
+            style={{ fontFamily: "var(--font-inter)", color: "rgba(245,245,247,0.40)" }}
+          >
+            Deslizá para ver más
+            <span className="text-nexora-neon" style={{ animation: "cursor-blink 1s step-end infinite" }}>→</span>
+          </p>
         </div>
       </div>
 
