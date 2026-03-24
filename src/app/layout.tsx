@@ -45,7 +45,9 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-nexora-dark text-nexora-light font-body">
         {/* Deshabilitar scroll restoration ANTES de la hidratación */}
         <script dangerouslySetInnerHTML={{ __html: "history.scrollRestoration='manual';window.scrollTo(0,0);" }} />
-        {children}
+        <div style={{ overflowX: "hidden", width: "100%", maxWidth: "100vw" }}>
+          {children}
+        </div>
       </body>
     </html>
   );
