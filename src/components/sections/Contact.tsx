@@ -230,10 +230,10 @@ export function Contact() {
                   </Field>
                 </div>
                 <Field label="Empresa / Rubro">
-                  <FocusInput type="text" name="empresa" placeholder="Nombre de empresa o rubro" />
+                  <FocusInput type="text" name="empresa" placeholder="Nombre de empresa o rubro" onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/[^A-Za-zÀ-ÿñÑ\s]/g, ''); }} />
                 </Field>
                 <Field label="Teléfono / WhatsApp">
-                  <FocusInput type="tel" name="telefono" placeholder="+54 9 11 1234-5678" />
+                  <FocusInput type="tel" name="telefono" placeholder="+54 9 11 1234-5678" onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/[^0-9+\-\s()]/g, ''); }} />
                 </Field>
                 <Field label="Tipo de proyecto">
                   <FocusSelect name="tipo_proyecto">
