@@ -5,6 +5,12 @@ import { useScrollReveal } from "@/lib/useScrollReveal";
 import { SITE_CONFIG, PROJECT_TYPES } from "@/lib/constants";
 import { Mail, MapPin, MessageCircle } from "lucide-react";
 
+const FORMSPREE_URL = "https://formspree.io/f/xjgankvp";
+
+type FormState = "idle" | "submitting" | "success" | "error";
+
+/* ── Estilos compartidos para inputs ── */
+
 const inputClass = [
   "w-full text-[15px] rounded-lg px-4 py-3",
   "transition-colors duration-200",
@@ -12,7 +18,7 @@ const inputClass = [
   "placeholder:text-nexora-light/30",
 ].join(" ");
 
-const inputStyle = {
+const inputStyle: React.CSSProperties = {
   fontFamily: "var(--font-inter)",
   backgroundColor: "#141829",
   borderWidth: "1px",
@@ -21,14 +27,12 @@ const inputStyle = {
   color: "#F5F5F7",
 };
 
-const inputFocusStyle = {
+const inputFocusStyle: React.CSSProperties = {
   borderColor: "#00F5A0",
   boxShadow: "0 0 0 2px rgba(0,245,160,0.1)",
 };
 
-type FormState = "idle" | "submitting" | "success" | "error";
-
-const FORMSPREE_URL = "https://formspree.io/f/xjgankvp";
+/* ── Componentes de input con focus ── */
 
 function FocusInput({
   className = "",
@@ -73,27 +77,80 @@ function FocusSelect(props: React.SelectHTMLAttributes<HTMLSelectElement>) {
   );
 }
 
+/* ── Componentes auxiliares ── */
+
+function Field({ label, required, children }: { label: string; required?: boolean; children: React.ReactNode }) {
+  return (
+    <label className="flex flex-col gap-1.5">
+      <span
+        className="text-[11px] uppercase tracking-[1.5px]"
+        style={{ fontFamily: "var(--font-jetbrains-mono)", color: "rgba(245,245,247,0.50)" }}
+      >
+        {label}{required && <span style={{ color: "#00F5A0" }} aria-hidden="true"> *</span>}
+      </span>
+      {children}
+    </label>
+  );
+}
+
+function InfoRow({ icon, label, value, href }: { icon: React.ReactNode; label: string; value: string; href?: string }) {
+  const content = (
+    <div className="flex items-center gap-3">
+      <span
+        className="shrink-0 w-8 h-8 rounded-lg flex items-center justify-center"
+        style={{ backgroundColor: "rgba(0,245,160,0.08)", color: "#00F5A0", borderWidth: "1px", borderStyle: "solid", borderColor: "rgba(0,245,160,0.15)" }}
+      >
+        {icon}
+      </span>
+      <div className="flex flex-col">
+        <span className="text-[10px] uppercase tracking-[1.5px]" style={{ fontFamily: "var(--font-jetbrains-mono)", color: "rgba(245,245,247,0.35)" }}>
+          {label}
+        </span>
+        <span className="text-[14px]" style={{ fontFamily: "var(--font-inter)", color: "rgba(245,245,247,0.70)" }}>
+          {value}
+        </span>
+      </div>
+    </div>
+  );
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        className="hover:opacity-75 transition-opacity w-fit"
+        target={href.startsWith("http") ? "_blank" : undefined}
+        rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+      >
+        {content}
+      </a>
+    );
+  }
+  return <div>{content}</div>;
+}
+
+/* ── Componente principal ── */
+
 export function Contact() {
   const sectionRef = useScrollReveal();
   const [formState, setFormState] = useState<FormState>("idle");
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) { e.preventDefault(); }
-
-  async function handleClick() {
-    const form = document.querySelector('#contacto form') as HTMLFormElement;
-    if (!form) return;
-    if (!form.checkValidity()) return;
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    e.stopPropagation();
     setFormState("submitting");
+    const form = e.currentTarget;
     const data = new FormData(form);
+
     try {
       const res = await fetch(FORMSPREE_URL, {
         method: "POST",
         body: data,
         headers: { Accept: "application/json" },
       });
+
       if (res.ok) {
-        setFormState("success");
         form.reset();
+        setFormState("success");
         setTimeout(() => {
           document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" });
         }, 100);
@@ -193,8 +250,7 @@ export function Contact() {
 
                 <div className="pt-1">
                   <button
-                    type="button"
-                    onClick={handleClick}
+                    type="submit"
                     disabled={formState === "submitting"}
                     className="inline-flex items-center justify-center rounded-lg font-semibold text-nexora-dark transition-all duration-200 hover:scale-[1.02] disabled:opacity-50"
                     style={{
@@ -215,50 +271,4 @@ export function Contact() {
       </div>
     </section>
   );
-}
-
-function Field({ label, required, children }: { label: string; required?: boolean; children: React.ReactNode }) {
-  return (
-    <label className="flex flex-col gap-1.5">
-      <span
-        className="text-[11px] uppercase tracking-[1.5px]"
-        style={{ fontFamily: "var(--font-jetbrains-mono)", color: "rgba(245,245,247,0.50)" }}
-      >
-        {label}{required && <span style={{ color: "#00F5A0" }} aria-hidden="true"> *</span>}
-      </span>
-      {children}
-    </label>
-  );
-}
-
-function InfoRow({ icon, label, value, href }: { icon: React.ReactNode; label: string; value: string; href?: string }) {
-  const content = (
-    <div className="flex items-center gap-3">
-      <span
-        className="shrink-0 w-8 h-8 rounded-lg flex items-center justify-center"
-        style={{ backgroundColor: "rgba(0,245,160,0.08)", color: "#00F5A0", border: "1px solid rgba(0,245,160,0.15)" }}
-      >
-        {icon}
-      </span>
-      <div className="flex flex-col">
-        <span className="text-[10px] uppercase tracking-[1.5px]" style={{ fontFamily: "var(--font-jetbrains-mono)", color: "rgba(245,245,247,0.35)" }}>
-          {label}
-        </span>
-        <span className="text-[14px]" style={{ fontFamily: "var(--font-inter)", color: "rgba(245,245,247,0.70)" }}>
-          {value}
-        </span>
-      </div>
-    </div>
-  );
-
-  if (href) {
-    return (
-      <a href={href} className="hover:opacity-75 transition-opacity w-fit"
-        target={href.startsWith("http") ? "_blank" : undefined}
-        rel={href.startsWith("http") ? "noopener noreferrer" : undefined}>
-        {content}
-      </a>
-    );
-  }
-  return <div>{content}</div>;
 }
