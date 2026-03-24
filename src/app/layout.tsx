@@ -39,11 +39,20 @@ export const metadata: Metadata = {
     siteName: "NEXORA Intelligence",
     type: "website",
     locale: "es_AR",
+    images: [
+      {
+        url: "https://nexoraintelligence.co/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "NEXORA Intelligence - Tu operación funciona. Nosotros la hacemos escalar.",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "NEXORA Intelligence | Consultoría IT & Automatización",
     description: "Tu operación funciona. Nosotros la hacemos escalar.",
+    images: ["https://nexoraintelligence.co/og-image.png"],
   },
   icons: {
     icon: "/favicon.svg",
