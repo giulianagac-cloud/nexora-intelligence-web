@@ -77,10 +77,13 @@ export function Contact() {
   const sectionRef = useScrollReveal();
   const [formState, setFormState] = useState<FormState>("idle");
 
-  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
+  function handleSubmit(e: FormEvent<HTMLFormElement>) { e.preventDefault(); }
+
+  async function handleClick() {
+    const form = document.querySelector('#contacto form') as HTMLFormElement;
+    if (!form) return;
+    if (!form.checkValidity()) return;
     setFormState("submitting");
-    const form = e.currentTarget;
     const data = new FormData(form);
     try {
       const res = await fetch(FORMSPREE_URL, {
@@ -88,8 +91,15 @@ export function Contact() {
         body: data,
         headers: { Accept: "application/json" },
       });
-      if (res.ok) { setFormState("success"); form.reset(); setTimeout(() => { document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" }); }, 100); }
-      else setFormState("error");
+      if (res.ok) {
+        setFormState("success");
+        form.reset();
+        setTimeout(() => {
+          document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      } else {
+        setFormState("error");
+      }
     } catch {
       setFormState("error");
     }
@@ -153,7 +163,7 @@ export function Contact() {
                 </p>
               </div>
             ) : (
-              <form action="https://formspree.io/f/xjgankvp" method="POST" onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
+              <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <Field label="Nombre" required>
                     <FocusInput type="text" name="nombre" placeholder="Tu nombre" required />
@@ -183,7 +193,8 @@ export function Contact() {
 
                 <div className="pt-1">
                   <button
-                    type="submit"
+                    type="button"
+                    onClick={handleClick}
                     disabled={formState === "submitting"}
                     className="inline-flex items-center justify-center rounded-lg font-semibold text-nexora-dark transition-all duration-200 hover:scale-[1.02] disabled:opacity-50"
                     style={{
