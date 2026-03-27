@@ -4,7 +4,6 @@ import { useState, type FormEvent } from "react";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 import { SITE_CONFIG, PROJECT_TYPES } from "@/lib/constants";
 import { Mail, MapPin, MessageCircle } from "lucide-react";
-import Turnstile from "react-turnstile";
 
 const FORMSPREE_URL = "https://formspree.io/f/xjgankvp";
 
@@ -134,7 +133,6 @@ function InfoRow({ icon, label, value, href }: { icon: React.ReactNode; label: s
 export function Contact() {
   const sectionRef = useScrollReveal();
   const [formState, setFormState] = useState<FormState>("idle");
-  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -142,7 +140,6 @@ export function Contact() {
     setFormState("submitting");
     const form = e.currentTarget;
     const data = new FormData(form);
-    data.append("cf-turnstile-response", turnstileToken || "");
 
     try {
       const res = await fetch(FORMSPREE_URL, {
@@ -255,20 +252,10 @@ export function Contact() {
                   </p>
                 )}
 
-                <div className="pt-2">
-                  <Turnstile
-                    sitekey="0x4AAAAAAAEqkFNfmHqxvqKE"
-                    onVerify={(token) => setTurnstileToken(token)}
-                    onError={() => setTurnstileToken(null)}
-                    onExpire={() => setTurnstileToken(null)}
-                    theme="dark"
-                  />
-                </div>
-
                 <div className="pt-1">
                   <button
                     type="submit"
-                    disabled={formState === "submitting" || !turnstileToken}
+                    disabled={formState === "submitting"}
                     className="inline-flex items-center justify-center rounded-lg font-semibold text-nexora-dark transition-all duration-200 hover:scale-[1.02] disabled:opacity-50"
                     style={{
                       backgroundColor: "#00F5A0",
