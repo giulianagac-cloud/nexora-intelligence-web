@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Outfit, Inter, JetBrains_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -75,6 +76,11 @@ export default function RootLayout({
         <div style={{ overflowX: "hidden", width: "100%", maxWidth: "100vw" }}>
           {children}
         </div>
+        <Script
+          src="https://nexora-bots-ten.vercel.app/widget.js"
+          data-client="demo"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );
