@@ -1,238 +1,225 @@
-"use client";
+'use client'
+import { useEffect, useRef } from 'react'
+import { useReveal } from '@/hooks/useReveal'
 
-import { useEffect, useRef, useState } from "react";
-
-function useCountUp(target: number, duration = 2000, start = false) {
-  const [value, setValue] = useState(0);
-  useEffect(() => {
-    if (!start) return;
-    let startTime: number | null = null;
-    const step = (ts: number) => {
-      if (!startTime) startTime = ts;
-      const progress = Math.min((ts - startTime) / duration, 1);
-      setValue(Math.floor(progress * target));
-      if (progress < 1) requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
-  }, [start, target, duration]);
-  return value;
-}
-
-function TerminalWidget() {
-  const [started, setStarted] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setStarted(true); },
-      { threshold: 0.3 }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
-
-  const proyectos = useCountUp(4, 1800, started);
-  const bots = useCountUp(2, 1600, started);
-  const clientes = useCountUp(3, 1400, started);
-
-  return (
-    <div
-      ref={ref}
-      className="w-full max-w-[480px] rounded-xl border border-nexora-border overflow-hidden"
-      style={{ backgroundColor: "#141829" }}
-    >
-      {/* Terminal header */}
-      <div className="flex items-center gap-2 px-4 py-3 border-b border-nexora-border">
-        <span className="w-3 h-3 rounded-full bg-[#FF5F56]" />
-        <span className="w-3 h-3 rounded-full bg-[#FFBD2E]" />
-        <span className="w-3 h-3 rounded-full bg-[#27C93F]" />
-        <span
-          className="ml-3 text-[12px] text-nexora-neon/50"
-          style={{ fontFamily: "var(--font-jetbrains-mono)" }}
-        >
-          // Sistema activo
-        </span>
-      </div>
-
-      {/* Terminal body */}
-      <div className="px-6 py-8 flex flex-col gap-6">
-        <Metric
-          label="Proyectos en desarrollo:"
-          value={proyectos}
-          suffix=""
-          started={started}
-        />
-        <Metric
-          label="Bots en construcción:"
-          value={bots}
-          suffix=""
-          started={started}
-        />
-        <Metric
-          label="Clientes activos:"
-          value={clientes}
-          suffix=""
-          started={started}
-        />
-      </div>
-    </div>
-  );
-}
-
-function Metric({
-  label,
-  value,
-  suffix,
-  formatted,
-  decimal,
-  started,
-}: {
-  label: string;
-  value: number;
-  suffix: string;
-  formatted?: boolean;
-  decimal?: boolean;
-  started: boolean;
-}) {
-  const display = decimal
-    ? (value / 10).toFixed(1) + suffix
-    : formatted
-    ? value.toLocaleString("es-AR") + suffix
-    : value + suffix;
-
-  return (
-    <div className="flex flex-col gap-1">
-      <span
-        className="text-[12px] text-nexora-light/60"
-        style={{ fontFamily: "var(--font-jetbrains-mono)" }}
-      >
-        {label}
-      </span>
-      <span
-        className="text-[2.2rem] font-medium leading-none"
-        style={{
-          fontFamily: "var(--font-jetbrains-mono)",
-          color: "#00F5A0",
-        }}
-      >
-        {started ? display : "0"}
-      </span>
-    </div>
-  );
+interface Particle {
+  x: number; y: number; r: number
+  vx: number; vy: number; a: number; p: number
 }
 
 export function Hero() {
+  useReveal()
+  const canvasRef = useRef<HTMLCanvasElement>(null)
+  const twRef     = useRef<HTMLSpanElement>(null)
+
+  // ── Canvas particles ──
+  useEffect(() => {
+    const cv = canvasRef.current
+    if (!cv) return
+    const ctx = cv.getContext('2d')!
+    let W = 0, H = 0
+    let pts: Particle[] = []
+    let rafId: number
+
+    function resize() {
+      W = cv!.width  = cv!.offsetWidth
+      H = cv!.height = cv!.offsetHeight
+    }
+    resize()
+    window.addEventListener('resize', resize)
+
+    for (let i = 0; i < 100; i++) {
+      pts.push({
+        x: Math.random() * W, y: Math.random() * H,
+        r: Math.random() * 1.4 + 0.4,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
+        a: Math.random() * 0.45 + 0.1,
+        p: Math.random() * Math.PI * 2,
+      })
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, W, H)
+      pts.forEach(p => {
+        p.p  += 0.012
+        p.x  += p.vx; p.y += p.vy
+        if (p.x < 0) p.x = W; if (p.x > W) p.x = 0
+        if (p.y < 0) p.y = H; if (p.y > H) p.y = 0
+        ctx.beginPath()
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
+        ctx.fillStyle = `rgba(0,229,160,${p.a * (0.6 + 0.4 * Math.sin(p.p))})`
+        ctx.fill()
+      })
+      for (let i = 0; i < pts.length; i++) {
+        for (let j = i + 1; j < pts.length; j++) {
+          const dx = pts[i].x - pts[j].x, dy = pts[i].y - pts[j].y
+          const d  = Math.sqrt(dx * dx + dy * dy)
+          if (d < 95) {
+            ctx.beginPath()
+            ctx.moveTo(pts[i].x, pts[i].y)
+            ctx.lineTo(pts[j].x, pts[j].y)
+            ctx.strokeStyle = `rgba(0,229,160,${0.11 * (1 - d / 95)})`
+            ctx.lineWidth = 0.5
+            ctx.stroke()
+          }
+        }
+      }
+      rafId = requestAnimationFrame(draw)
+    }
+    rafId = requestAnimationFrame(draw)
+
+    return () => {
+      cancelAnimationFrame(rafId)
+      window.removeEventListener('resize', resize)
+    }
+  }, [])
+
+  // ── Typewriter ──
+  useEffect(() => {
+    const words = ['escalar_', 'crecer_', 'automatizar_', 'transformarse_']
+    let wi = 0, ci = 0, deleting = false
+    let timerId: ReturnType<typeof setTimeout>
+
+    function type() {
+      const el = twRef.current
+      if (!el) return
+      const w = words[wi]
+      if (!deleting) {
+        el.textContent = w.substring(0, ++ci)
+        if (ci === w.length) {
+          deleting = true
+          timerId = setTimeout(type, 1800)
+          return
+        }
+      } else {
+        el.textContent = w.substring(0, --ci)
+        if (ci === 0) {
+          deleting = false
+          wi = (wi + 1) % words.length
+          timerId = setTimeout(type, 400)
+          return
+        }
+      }
+      timerId = setTimeout(type, deleting ? 45 : 80)
+    }
+    const startId = setTimeout(type, 2800)
+    return () => {
+      clearTimeout(startId)
+      clearTimeout(timerId)
+    }
+  }, [])
+
+  // ── Counter animation ──
+  useEffect(() => {
+    function animCount(el: Element) {
+      const target = +(el.getAttribute('data-target') ?? 0)
+      const dur = 1800
+      const start = performance.now()
+      function up(now: number) {
+        const p = Math.min((now - start) / dur, 1)
+        const e = 1 - Math.pow(1 - p, 3)
+        el.textContent = String(Math.floor(e * target))
+        if (p < 1) requestAnimationFrame(up)
+        else el.textContent = String(target)
+      }
+      requestAnimationFrame(up)
+    }
+
+    const bar = document.querySelector('.metrics-bar')
+    if (!bar) return
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting)
+            e.target.querySelectorAll('.counter').forEach(animCount)
+        })
+      },
+      { threshold: 0.5 }
+    )
+    observer.observe(bar)
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex items-center overflow-hidden pt-[68px]"
-      style={{ backgroundColor: "#0A0E27" }}
+      style={{
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        padding: '120px 64px 0',
+        position: 'relative',
+        overflow: 'hidden',
+      }}
     >
-      {/* Mesh gradient animado */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        aria-hidden="true"
-        style={{
-          background:
-            "radial-gradient(ellipse at 20% 30%, rgba(0,245,160,0.12) 0%, transparent 55%), radial-gradient(ellipse at 80% 70%, rgba(0,217,255,0.08) 0%, transparent 55%)",
-          animation: "mesh-float 20s ease-in-out infinite",
-        }}
+      <div className="hero-bg" />
+      <div className="hero-grid" />
+      <canvas
+        ref={canvasRef}
+        style={{ position: 'absolute', inset: 0, pointerEvents: 'none', width: '100%', height: '100%' }}
       />
 
-      {/* Dot grid sutil */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        aria-hidden="true"
-        style={{
-          backgroundImage: "radial-gradient(circle, rgba(42,46,69,0.8) 1px, transparent 1px)",
-          backgroundSize: "32px 32px",
-          opacity: 0.5,
-        }}
-      />
+      <div style={{ position: 'relative', zIndex: 2 }}>
+        <div className="hero-pill">
+          <div className="pdot" />
+          // consultoría_IT &amp; automatización_IA — CABA, Argentina
+        </div>
 
-      <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-8 w-full py-12 lg:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-14 lg:gap-10 items-center">
+        <h1 className="hero-title">
+          &gt; Tu operación<br />
+          <span className="outline">&gt; ya funciona.</span>
+          &gt; Nosotros la hacemos<br />
+          <span className="tw-accent" ref={twRef} />
+          <span className="cur-blink" />
+        </h1>
 
-          {/* ── Columna izquierda ── */}
-          <div className="flex flex-col gap-8">
-            {/* Subtag mono */}
-            <div style={{ animation: "slide-up 0.6s cubic-bezier(0.16,1,0.3,1) both" }}>
-              <span
-                className="text-nexora-neon text-[14px]"
-                style={{ fontFamily: "var(--font-jetbrains-mono)" }}
-              >
-                &gt; consultora_digital
-              </span>
-            </div>
+        <p className="hero-sub">
+          Diseñamos automatizaciones, asistentes IA y sistemas a medida para
+          transformar necesidades reales en resultados concretos.
+        </p>
 
-            {/* Título */}
-            <div
-              className="flex flex-col gap-1"
-              style={{ animation: "slide-up 0.6s cubic-bezier(0.16,1,0.3,1) both", animationDelay: "0.15s" }}
-            >
-              <h1
-                className="text-nexora-light leading-[1.1]"
-                style={{
-                  fontFamily: "var(--font-outfit)",
-                  fontWeight: 800,
-                  fontSize: "clamp(2.2rem,5vw,3.8rem)",
-                }}
-              >
-                <span className="block">&gt; Tu operación funciona.</span>
-                <span className="block mt-1">
-                  &gt; Nosotros la hacemos{" "}
-                  <span style={{ color: "#00F5A0" }}>
-                    escalar
-                    <span
-                      style={{ animation: "cursor-blink 1s step-end infinite" }}
-                      aria-hidden="true"
-                    >_</span>
-                  </span>
-                </span>
-              </h1>
-            </div>
+        <div className="hero-actions">
+          <a href="#contacto" className="btn-primary">
+            hablemos de tu proyecto →
+          </a>
+          <a href="#bots" className="btn-ghost">
+            ver plataforma de bots <span className="arr">→</span>
+          </a>
+        </div>
+      </div>
 
-            {/* Subtítulo */}
-            <div style={{ animation: "slide-up 0.6s cubic-bezier(0.16,1,0.3,1) both", animationDelay: "0.3s" }}>
-              <p
-                className="text-[17px] leading-[1.7] max-w-[520px]"
-                style={{ fontFamily: "var(--font-inter)", color: "rgba(245,245,247,0.70)" }}
-              >
-                Diseñamos webs, sistemas, automatizaciones y asistentes digitales
-                para transformar necesidades reales en soluciones concretas.
-              </p>
-            </div>
-
-            {/* CTA */}
-            <div style={{ animation: "slide-up 0.6s cubic-bezier(0.16,1,0.3,1) both", animationDelay: "0.45s" }}>
-              <a
-                href="https://wa.me/5491133409351?text=Hola,%20vi%20la%20web%20de%20NEXORA%20y%20quiero%20consultar%20sobre%20sus%20servicios"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg text-nexora-dark font-semibold text-[16px] transition-all duration-200 hover:scale-[1.02]"
-                style={{
-                  backgroundColor: "#00F5A0",
-                  padding: "16px 32px",
-                  fontFamily: "var(--font-inter)",
-                  boxShadow: "var(--shadow-neon)",
-                }}
-              >
-                Hablemos de tu proyecto →
-              </a>
-            </div>
+      <div className="metrics-bar">
+        <div className="m-item">
+          <div className="m-num">
+            <span className="counter" data-target="20">0</span>
+            <span className="unit">hs</span>
           </div>
-
-          {/* ── Columna derecha: Terminal ── */}
-          <div
-            className="hidden lg:flex justify-center"
-            style={{ animation: "slide-up 0.6s cubic-bezier(0.16,1,0.3,1) both", animationDelay: "0.6s" }}
-          >
-            <TerminalWidget />
+          <div className="m-lbl">// ahorro semanal por automatización</div>
+        </div>
+        <div className="m-item">
+          <div className="m-num">
+            <span className="counter" data-target="180">0</span>
+            <span className="unit">%</span>
           </div>
+          <div className="m-lbl">// más consultas — caso abogado</div>
+        </div>
+        <div className="m-item">
+          <div className="m-num">
+            <span className="counter" data-target="90">0</span>
+            <span className="unit">%</span>
+          </div>
+          <div className="m-lbl">// reservas digitalizadas — gimnasio</div>
+        </div>
+        <div className="m-item">
+          <div className="m-num">
+            <span className="counter" data-target="24">0</span>
+            <span className="unit">/7</span>
+          </div>
+          <div className="m-lbl">// disponibilidad asistentes IA</div>
         </div>
       </div>
     </section>
-  );
+  )
 }

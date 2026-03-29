@@ -2,6 +2,14 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactCompiler: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'api.microlink.io',
+      },
+    ],
+  },
   allowedDevOrigins: ['192.168.0.14'],
   async headers() {
     return [

@@ -12,13 +12,13 @@ const outfit = Outfit({
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-jetbrains-mono",
-  weight: ["400", "500"],
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -70,7 +70,7 @@ export default function RootLayout({
       lang="es"
       className={`${outfit.variable} ${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-nexora-dark text-nexora-light font-body">
+      <body className="min-h-full flex flex-col">
         {/* Deshabilitar scroll restoration ANTES de la hidratación */}
         <script dangerouslySetInnerHTML={{ __html: "history.scrollRestoration='manual';window.scrollTo(0,0);" }} />
         <div style={{ overflowX: "hidden", width: "100%", maxWidth: "100vw" }}>
