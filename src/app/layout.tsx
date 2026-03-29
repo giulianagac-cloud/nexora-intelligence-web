@@ -24,24 +24,24 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "NEXORA Intelligence — Automatización que escala",
   description: "Diseñamos automatizaciones, asistentes IA y sistemas a medida para transformar necesidades reales en resultados concretos.",
-  metadataBase: new URL("https://nexoraintelligence.co"),
+  metadataBase: new URL("https://www.nexoraintelligence.co"),
   robots: {
     index: true,
     follow: true,
   },
   alternates: {
-    canonical: "https://nexoraintelligence.co",
+    canonical: "https://www.nexoraintelligence.co",
   },
   openGraph: {
     title: "NEXORA Intelligence — Automatización que escala",
     description: "Consultoría IT & Automatización IA — CABA, Argentina",
-    url: "https://nexoraintelligence.co",
+    url: "https://www.nexoraintelligence.co",
     siteName: "NEXORA Intelligence",
     type: "website",
     locale: "es_AR",
     images: [
       {
-        url: "https://nexoraintelligence.co/og-image3.png",
+        url: "/og-image3.svg",
         width: 1200,
         height: 630,
         alt: "NEXORA Intelligence",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "NEXORA Intelligence",
     description: "Consultoría IT & Automatización IA",
-    images: ["https://nexoraintelligence.co/og-image3.png"],
+    images: ["/og-image3.svg"],
   },
   icons: {
     icon: "/favicon.svg",
