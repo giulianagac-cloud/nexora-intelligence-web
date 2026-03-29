@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@800&amp;display=swap');
+    </style>
+  </defs>
+  
+  <!-- Fondo negro -->
+  <rect width="1200" height="630" fill="#080810"/>
+  
+  <!-- NEXORA_ en blanco sólido -->
+  <text
+    x="600" y="290"
+    text-anchor="middle"
+    font-family="'JetBrains Mono', 'DejaVu Sans Mono', monospace"
+    font-weight="800"
+    font-size="110"
+    letter-spacing="-2"
+  >
+    <tspan fill="#f0f0f5">NEXORA</tspan><tspan fill="#00e5a0">_</tspan>
+  </text>
+
+  <!-- Intelligence en outline -->
+  <text
+    x="600" y="420"
+    text-anchor="middle"
+    font-family="'JetBrains Mono', 'DejaVu Sans Mono', monospace"
+    font-weight="800"
+    font-size="110"
+    letter-spacing="-2"
+    fill="none"
+    stroke="#f0f0f5"
+    stroke-width="1.5"
+    paint-order="stroke"
+  >Intelligence</text>
+
+  <!-- URL abajo -->
+  <text
+    x="600" y="570"
+    text-anchor="middle"
+    font-family="'JetBrains Mono', 'DejaVu Sans Mono', monospace"
+    font-weight="400"
+    font-size="22"
+    fill="#00e5a0"
+    opacity="0.7"
+  >www.nexoraintelligence.co</text>
+
+</svg>

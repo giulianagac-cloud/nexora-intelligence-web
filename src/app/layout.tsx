@@ -22,9 +22,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NEXORA Intelligence | Consultoría IT & Automatización",
-  description:
-    "Tu operación funciona. Nosotros la hacemos escalar. Desarrollo web, apps, automatización, bots IA y consultoría funcional.",
+  title: "NEXORA Intelligence — Automatización que escala",
+  description: "Diseñamos automatizaciones, asistentes IA y sistemas a medida para transformar necesidades reales en resultados concretos.",
   metadataBase: new URL("https://nexoraintelligence.co"),
   robots: {
     index: true,
@@ -34,26 +33,26 @@ export const metadata: Metadata = {
     canonical: "https://nexoraintelligence.co",
   },
   openGraph: {
-    title: "NEXORA Intelligence | Consultoría IT & Automatización",
-    description: "Tu operación funciona. Nosotros la hacemos escalar. Desarrollo web, apps, automatización, bots IA y consultoría funcional.",
+    title: "NEXORA Intelligence — Automatización que escala",
+    description: "Consultoría IT & Automatización IA — CABA, Argentina",
     url: "https://nexoraintelligence.co",
     siteName: "NEXORA Intelligence",
     type: "website",
     locale: "es_AR",
     images: [
       {
-        url: "https://www.nexoraintelligence.co/og-image-v2.png",
+        url: "https://nexoraintelligence.co/og-image3.png",
         width: 1200,
         height: 630,
-        alt: "NEXORA Intelligence - Tu operación funciona. Nosotros la hacemos escalar.",
+        alt: "NEXORA Intelligence",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "NEXORA Intelligence | Consultoría IT & Automatización",
-    description: "Tu operación funciona. Nosotros la hacemos escalar.",
-    images: ["https://www.nexoraintelligence.co/og-image-v2.png"],
+    title: "NEXORA Intelligence",
+    description: "Consultoría IT & Automatización IA",
+    images: ["https://nexoraintelligence.co/og-image3.png"],
   },
   icons: {
     icon: "/favicon.svg",
