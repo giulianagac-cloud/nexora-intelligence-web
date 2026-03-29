@@ -76,11 +76,13 @@ export default function RootLayout({
         <div style={{ overflowX: "hidden", width: "100%", maxWidth: "100vw" }}>
           {children}
         </div>
+        {/* Widget Nexora Bot — descomentar para activar
         <Script
           src="https://nexora-bots-ten.vercel.app/widget.js"
           data-client="demo"
           strategy="lazyOnload"
         />
+        */}
       </body>
     </html>
   );
