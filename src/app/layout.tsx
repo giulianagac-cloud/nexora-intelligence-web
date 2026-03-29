@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     locale: "es_AR",
     images: [
       {
-        url: "/og-image3.svg",
+        url: "/og-image3.png",
         width: 1200,
         height: 630,
         alt: "NEXORA Intelligence",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "NEXORA Intelligence",
     description: "Consultoría IT & Automatización IA",
-    images: ["/og-image3.svg"],
+    images: ["/og-image3.png"],
   },
   icons: {
     icon: "/favicon.svg",
