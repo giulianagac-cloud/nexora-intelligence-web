@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 export function Casos() {
   return (
     <section className="sec-pad" id="casos">
@@ -77,13 +75,19 @@ export function Casos() {
             className="relative w-full mb-6 overflow-hidden rounded"
             style={{ height: '160px' }}
           >
-            <Image
+            <img
               src="/gym.jpg"
-              alt="Caso gimnasio boutique — Nexora Intelligence"
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover object-center"
-              style={{ opacity: 0.65 }}
+              alt=""
+              aria-hidden="true"
+              style={{
+                position: 'absolute',
+                inset: 0,
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                objectPosition: 'center',
+                opacity: 0.65,
+              }}
             />
             <div
               className="absolute inset-0"
