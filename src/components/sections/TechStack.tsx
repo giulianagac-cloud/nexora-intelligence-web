@@ -1,7 +1,8 @@
 const STACK = [
   'Python','FastAPI','Flow Engine','Intent Router','React','Next.js',
-  'PostgreSQL','OpenAI GPT-4','LangChain','Pinecone','FAISS','n8n',
-  'Make','Vercel','Railway','AWS','WhatsApp API','SAP','pytest',
+  'PostgreSQL','FAISS','n8n',
+  'Make','Vercel','Railway','AWS','WhatsApp API','pytest',
+  'scikit-learn','TF-IDF','Tailwind CSS',
 ]
 
 export function TechStack() {
