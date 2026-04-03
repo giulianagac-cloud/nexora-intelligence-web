@@ -10,7 +10,8 @@ const SERVICES = [
     tags: ['GPT-4','LangChain','RAG','WhatsApp'] },
   { num: '03 — desarrollo', icon: '💻', name: 'Desarrollo Web & Apps',
     desc: 'Sitios que convierten y sistemas que escalan. Landing pages hasta plataformas de gestión completas.',
-    tags: ['Next.js','React','FastAPI','PostgreSQL'] },
+    tags: ['Next.js','React','FastAPI','PostgreSQL'],
+    link: '#casos' },
   { num: '04 — consultoría', icon: '🔍', name: 'Consultoría Funcional',
     desc: 'Relevamiento profundo. Encontramos los cuellos de botella que frenan tu operación y los eliminamos.',
     tags: ['análisis','documentación','roadmap'] },
@@ -66,7 +67,11 @@ export function Servicios() {
             <div className="sc-tags">
               {s.tags.map(t => <span key={t} className="sc-tag">{t}</span>)}
             </div>
-            <div className="sc-arr">→</div>
+            {s.link ? (
+              <a href={s.link} className="sc-arr" style={{ cursor: 'pointer', textDecoration: 'none' }}>→</a>
+            ) : (
+              <div className="sc-arr">→</div>
+            )}
           </div>
         ))}
       </div>
