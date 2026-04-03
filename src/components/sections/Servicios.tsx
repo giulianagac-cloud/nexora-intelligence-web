@@ -63,7 +63,7 @@ export function Servicios() {
       </h2>
       <div className="svcs reveal d2">
         {SERVICES.map((s) => (
-          <div key={s.num} className="sc" data-tilt>
+          <div key={s.num} className="sc" data-tilt onClick={(e) => { if ((e.target as HTMLElement).closest('a')) return; }}>
             <div className="sc-num">{s.num}</div>
             <div className="sc-icon">{s.icon}</div>
             <div className="sc-name">{s.name}</div>
