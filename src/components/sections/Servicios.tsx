@@ -72,7 +72,15 @@ export function Servicios() {
               {s.tags.map(t => <span key={t} className="sc-tag">{t}</span>)}
             </div>
             {s.link ? (
-              <a href={s.link} className="sc-arr" style={{ cursor: 'pointer', textDecoration: 'none' }}>→</a>
+              <div
+                className="sc-arr"
+                style={{ cursor: 'pointer' }}
+                onClick={(e) => {
+                  e.stopPropagation()
+                  const target = document.querySelector(s.link!)
+                  if (target) target.scrollIntoView({ behavior: 'smooth' })
+                }}
+              >→</div>
             ) : (
               <div className="sc-arr">→</div>
             )}
