@@ -9,7 +9,7 @@ interface Caso {
   titulo: string;
   problema: string;
   solucion: string;
-  resultados: { label: string; valor: string }[];
+  resultados?: { label: string; valor: string }[];
   tech: string[];
   cta?: string;
   link?: string;
@@ -19,32 +19,22 @@ interface Caso {
 const CASOS: Caso[] = [
   {
     empresa: "⚖️ Claudio Ortiz — Abogado independiente",
-    titulo: "La web que convirtió presencia digital en captación de clientes",
+    titulo: "Sitio web institucional — Ortiz Alejandre Abogados",
     problema:
       "No tenía presencia digital profesional. Necesitaba posicionarse como referente en derecho societario, contratos comerciales, acuerdos de accionistas y marcas para captar clientes corporativos.",
     solucion:
-      "Sitio web institucional con diseño minimalista premium (estética firma legal boutique), arquitectura de información clara por servicios, formulario de contacto integrado, identidad visual elegante (midnight blue + champagne) y SEO optimizado para búsquedas legales corporativas.",
-    resultados: [
-      { label: "Más consultas por web", valor: "+180%" },
-      { label: "Posición en Google CABA", valor: "Top 3" },
-      { label: "Tiempo de carga", valor: "0.9s" },
-    ],
+      "Diseño minimalista premium con identidad visual corporativa, arquitectura de información clara por servicios, SEO técnico optimizado, formulario de contacto seguro, performance de carga por debajo de 1s y deploy en producción con dominio propio.",
     tech: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS 4", "Formspree", "Vercel"],
     cta: "Quiero algo así →",
     link: "https://claudio-ortiz-abogado.vercel.app",
   },
   {
-    empresa: "💪 OVERGYM — Gimnasio boutique",
-    titulo: "De planillas Excel a plataforma digital integral",
+    empresa: "💪 Overgym — Gimnasio boutique",
+    titulo: "App de gestión desarrollada para Overgym",
     problema:
       "Gestión manual caótica: planillas Excel para clientes y pagos, reservas de clases por WhatsApp, sin control de asistencias, pérdida de información y doble carga de trabajo administrativo.",
     solucion:
       "Plataforma de gestión integral: app móvil PWA para clientes (reserva de clases, estado de membresía), sistema administrativo web (gestión de clientes, pagos, asistencias), panel de control con métricas en tiempo real y sistema de cobros automatizado.",
-    resultados: [
-      { label: "Clientes gestionados", valor: "+200" },
-      { label: "Reservas digitalizadas", valor: "90%" },
-      { label: "Reducción tiempo admin", valor: "70%" },
-    ],
     tech: ["Next.js PWA", "FastAPI", "PostgreSQL"],
     estado: "En desarrollo activo",
   },
@@ -141,26 +131,6 @@ function CasoCard({ caso, index }: { caso: Caso; index: number }) {
             </div>
           </div>
 
-          {/* Resultados */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {caso.resultados.map((r) => (
-              <div key={r.label} className="flex flex-col gap-1">
-                <span
-                  className="text-[1.6rem] font-bold leading-none"
-                  style={{ fontFamily: "var(--font-outfit)", color: "#00F5A0" }}
-                >
-                  {r.valor}
-                </span>
-                <span
-                  className="text-[12px]"
-                  style={{ fontFamily: "var(--font-inter)", color: "rgba(245,245,247,0.50)" }}
-                >
-                  {r.label}
-                </span>
-              </div>
-            ))}
-          </div>
-
           {/* Tech stack */}
           <div className="flex items-center gap-3 flex-wrap">
             <span
@@ -247,13 +217,13 @@ export function CasoDeUso() {
             className="text-nexora-neon text-[13px] mb-3"
             style={{ fontFamily: "var(--font-jetbrains-mono)" }}
           >
-            // CASOS_REALES.slice(0, 3)
+            // desarrollos_nexora
           </p>
           <h2
             className="text-nexora-light text-[clamp(1.8rem,4vw,2.8rem)] leading-[1.15] tracking-tight"
             style={{ fontFamily: "var(--font-outfit)", fontWeight: 800 }}
           >
-            Resultados reales
+            Lo que construimos
           </h2>
         </div>
 
