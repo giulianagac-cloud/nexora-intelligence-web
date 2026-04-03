@@ -137,9 +137,9 @@ export function Hero() {
         </div>
 
         <h1 className="hero-title">
-          &gt; Tu operación<br />
-          <span className="outline">&gt; ya funciona.</span>
-          &gt; Nosotros la hacemos<br />
+          Tu operación<br />
+          <span className="outline">ya funciona.</span>
+          Nosotros la hacemos<br />
           <span className="tw-accent" ref={twRef} />
           <span className="cur-blink" />
         </h1>

@@ -16,7 +16,7 @@ export function Founder() {
     <section className="founder-sec sec-pad" id="founder">
       <div className="eyebrow reveal">// EQUIPO.founder</div>
       <h2 className="sec-title reveal d1">
-        La persona detrás<br /><em>de Nexora</em>
+        Detrás de Nexora
       </h2>
 
       <div className="founder-layout reveal d2">
