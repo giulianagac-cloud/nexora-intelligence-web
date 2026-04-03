@@ -110,37 +110,6 @@ export function Hero() {
     }
   }, [])
 
-  // ── Counter animation ──
-  useEffect(() => {
-    function animCount(el: Element) {
-      const target = +(el.getAttribute('data-target') ?? 0)
-      const dur = 1800
-      const start = performance.now()
-      function up(now: number) {
-        const p = Math.min((now - start) / dur, 1)
-        const e = 1 - Math.pow(1 - p, 3)
-        el.textContent = String(Math.floor(e * target))
-        if (p < 1) requestAnimationFrame(up)
-        else el.textContent = String(target)
-      }
-      requestAnimationFrame(up)
-    }
-
-    const bar = document.querySelector('.metrics-bar')
-    if (!bar) return
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(e => {
-          if (e.isIntersecting)
-            e.target.querySelectorAll('.counter').forEach(animCount)
-        })
-      },
-      { threshold: 0.5 }
-    )
-    observer.observe(bar)
-    return () => observer.disconnect()
-  }, [])
-
   return (
     <section
       id="inicio"
@@ -190,36 +159,6 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="metrics-bar">
-        <div className="m-item">
-          <div className="m-num">
-            <span className="counter" data-target="20">0</span>
-            <span className="unit">hs</span>
-          </div>
-          <div className="m-lbl">// ahorro semanal por automatización</div>
-        </div>
-        <div className="m-item">
-          <div className="m-num">
-            <span className="counter" data-target="180">0</span>
-            <span className="unit">%</span>
-          </div>
-          <div className="m-lbl">// más consultas — caso abogado</div>
-        </div>
-        <div className="m-item">
-          <div className="m-num">
-            <span className="counter" data-target="90">0</span>
-            <span className="unit">%</span>
-          </div>
-          <div className="m-lbl">// reservas digitalizadas — gimnasio</div>
-        </div>
-        <div className="m-item">
-          <div className="m-num">
-            <span className="counter" data-target="24">0</span>
-            <span className="unit">/7</span>
-          </div>
-          <div className="m-lbl">// disponibilidad asistentes IA</div>
-        </div>
-      </div>
     </section>
   )
 }
