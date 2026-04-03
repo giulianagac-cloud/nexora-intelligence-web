@@ -1,9 +1,9 @@
 export function Casos() {
   return (
     <section className="sec-pad" id="casos">
-      <div className="eyebrow reveal">// CASOS_REALES.slice(0,2)</div>
+      <div className="eyebrow reveal">// desarrollos_nexora</div>
       <h2 className="sec-title reveal d1">
-        Resultados que se<br /><em>miden en números</em>
+        Lo que<br /><em>construimos</em>
       </h2>
 
       <div className="cases reveal d2">
@@ -54,19 +54,15 @@ export function Casos() {
               ver sitio ↗
             </a>
           </div>
-          <div className="cc-lbl">⚖️ abogado independiente</div>
+          <div className="cc-lbl">⚖️ Ortiz Alejandre Abogados</div>
           <h3 className="cc-title">
-            La web que convirtió presencia digital en captación de clientes
+            Sitio web institucional — Ortiz Alejandre Abogados
           </h3>
           <p className="cc-desc">
-            Sin presencia digital, sin clientes corporativos. Sitio premium con
-            SEO optimizado para derecho societario en CABA.
+            Diseño minimalista premium, arquitectura de información clara,
+            SEO técnico optimizado, formulario de contacto seguro
+            y performance de carga por debajo de 1s.
           </p>
-          <div className="cc-mets">
-            <div><div className="cc-mn">+180%</div><div className="cc-ml">más_consultas</div></div>
-            <div><div className="cc-mn">Top 3</div><div className="cc-ml">google_CABA</div></div>
-            <div><div className="cc-mn">0.9s</div><div className="cc-ml">carga</div></div>
-          </div>
         </div>
 
         {/* Gimnasio */}
@@ -96,30 +92,24 @@ export function Casos() {
               }}
             />
           </div>
-          <div className="cc-lbl">💪 gimnasio boutique</div>
+          <div className="cc-lbl">💪 Overgym — Gimnasio boutique</div>
           <h3 className="cc-title">
-            De planillas Excel a plataforma digital integral
+            App de gestión desarrollada para Overgym
           </h3>
           <p className="cc-desc">
             PWA con gestión de clientes, pagos, reservas y panel en tiempo real.
             Operación digitalizada en semanas.
           </p>
-          <div className="cc-mets">
-            <div><div className="cc-mn">+200</div><div className="cc-ml">clientes</div></div>
-            <div><div className="cc-mn">90%</div><div className="cc-ml">reservas_digitales</div></div>
-            <div><div className="cc-mn">-70%</div><div className="cc-ml">tiempo_admin</div></div>
-          </div>
         </div>
 
         {/* CTA row */}
         <div className="cc" style={{ gridColumn: '1 / -1', background: '#0d0d18' }}>
           <div className="cc-lbl">⚡ próximo caso — tu empresa</div>
           <h3 className="cc-title" style={{ maxWidth: '580px' }}>
-            ¿Cuál va a ser el número que defina tu caso de éxito?
+            ¿Querés que desarrollemos tu próximo proyecto?
           </h3>
           <p className="cc-desc" style={{ maxWidth: '500px' }}>
-            Cada automatización tiene un ROI medible. Contanos tu proceso y te
-            decimos cuánto podés recuperar.
+            Contanos tu idea y te decimos cómo la hacemos realidad.
           </p>
           <a href="#contacto" className="btn-primary" style={{ display: 'inline-block', marginTop: '8px' }}>
             calculemos juntos →
