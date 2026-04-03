@@ -7,6 +7,7 @@ import { Bots }         from '@/components/sections/Bots'
 import { Verticales }   from '@/components/sections/Verticales'
 import { Founder }      from '@/components/sections/Founder'
 import { Casos }        from '@/components/sections/Casos'
+import { Productos }    from '@/components/sections/Productos'
 import { Proceso }      from '@/components/sections/Proceso'
 import { TechStack }    from '@/components/sections/TechStack'
 import { CTAFinal }     from '@/components/sections/CTAFinal'
@@ -24,6 +25,7 @@ export default function Home() {
         <Bots />
         <Verticales />
         <Casos />
+        <Productos />
         <Founder />
         <Proceso />
         <TechStack />
