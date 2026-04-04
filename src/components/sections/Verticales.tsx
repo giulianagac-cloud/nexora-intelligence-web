@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
+import { useReveal } from '@/hooks/useReveal'
 
 interface Msg  { t: 'bot' | 'usr'; m: string }
 interface Vert {
@@ -59,6 +60,7 @@ const VERTS: Vert[] = [
 ]
 
 export function Verticales() {
+  useReveal()
   const [active, setActive] = useState(0)
   const [msgs, setMsgs]     = useState<Msg[]>([])
   const msgsRef = useRef<HTMLDivElement>(null)
@@ -92,16 +94,10 @@ export function Verticales() {
 
   return (
     <section className="vert-sec sec-pad" id="verticales">
-      <div className="eyebrow reveal">// NEXORA_ASSISTANT.verticales</div>
-      <h2 className="sec-title reveal d1">
-        Un producto.<br /><em>Cuatro verticales.</em>
-      </h2>
-      <p className="reveal d2" style={{ fontSize:'14px',color:'var(--muted)',marginTop:'14px',maxWidth:'540px',fontFamily:'var(--sans)',lineHeight:'1.8' }}>
-        La plataforma Nexora se adapta a cualquier área de tu empresa. Mismo motor,
-        configurado para cada contexto. Hacé clic en cada vertical para ver cómo trabaja.
-      </p>
+      <div className="eyebrow reveal">// VERTICALES_DE_APLICACIÓN</div>
+      <h2 className="sec-title reveal d1">DÓNDE APLICAMOS LA IA</h2>
 
-      <div className="vert-layout reveal d3">
+      <div className="vert-layout reveal d2">
         {/* Tabs */}
         <div className="vert-tabs-panel">
           <div className="vert-tabs">
@@ -112,7 +108,7 @@ export function Verticales() {
                 onClick={() => switchVert(i)}
               >
                 <div className={`vtab-status ${i === 0 ? 'live' : 'soon'}`}>
-                  {i === 0 ? 'en producción' : 'próximamente'}
+                  {i === 0 ? 'ACTIVO' : 'PRÓXIMAMENTE'}
                 </div>
                 <div className="vtab-name">{vert.av} {vert.name}</div>
                 <div className="vtab-sub">

@@ -1,130 +1,140 @@
+'use client'
+import { useReveal } from '@/hooks/useReveal'
+
 export function Bots() {
+  useReveal()
+
   return (
     <section className="bots-sec sec-pad" id="bots">
-      <div className="bots-header">
-        <div>
-          <div className="eyebrow reveal">// NEXORA_ASSISTANT_PLATFORM</div>
-          <h2 className="sec-title reveal d1">
-            Tres niveles de<br /><em>inteligencia conversacional</em>
-          </h2>
-        </div>
-        <div className="reveal d2">
-          <div className="live-badge">
-            <div className="live-badge-dot" />
-            // producto en producción — no es un concepto
-          </div>
-          <p className="bots-intro">
-            Plataforma modular construida sobre{' '}
-            <strong>Python + FastAPI + Flow Engine</strong>. Cada plan es un nivel
-            distinto de inteligencia. Empezás donde tiene sentido y escalás cuando
-            lo necesitás.
-          </p>
-        </div>
-      </div>
+      <div className="eyebrow reveal">// NEXORA_BOTS — PRODUCTO EN PRODUCCIÓN</div>
+      <h2 className="sec-title reveal d1">PLATAFORMA DE ASISTENTES IA</h2>
+      <p className="bots-intro reveal d2">No es un concepto. Está funcionando.</p>
 
-      <div className="plans reveal">
+      <div className="plans reveal d3">
         {/* STARTER */}
         <div className="plan starter">
           <div className="plan-body">
-            <div className="plan-tier">// plan_01</div>
-            <div className="plan-name">Starter Bot</div>
-            <div className="plan-subtitle">
-              Respuestas predecibles, configuradas para tu negocio. Sin IA externa, sin sorpresas.
-            </div>
-            <div className="plan-tech">
-              <div className="plan-tech-dot" />
-              flujo_guiado · sin_IA_externa
-            </div>
-            <div className="plan-arch">
-              <div className="arch-title">arquitectura</div>
-              <div>Frontend → API → <span>Flow Engine</span> → Respuestas</div>
-            </div>
+            <div className="plan-badge orange">DEMO GRATIS</div>
+            <div className="plan-price">USD 299</div>
+            <div className="plan-price-sub">implementación única · sin costo mensual</div>
+            <div className="plan-name">STARTER BOT</div>
+            <div className="plan-subtitle">Flujo guiado, sin IA externa</div>
+            <div className="plan-tech-pill">Flow Engine</div>
             <div className="plan-div" />
             <ul className="plan-feats">
-              {['Árbol de decisión configurable','FAQs, links y botones de acción',
-                'Derivación a WhatsApp o email','Widget web · iframe · link directo',
-                'Branding visual de tu empresa','1 ronda de ajustes/mes incluida']
-                .map(f => <li key={f}><span className="ck">✓</span>{f}</li>)}
+              {[
+                'Respuestas por flujo predefinido',
+                'Botones y opciones guiadas',
+                'Derivación a humano',
+                'FAQ configurable',
+                'Sin costo mensual',
+              ].map(f => (
+                <li key={f}>
+                  <span className="ck">✓</span>
+                  {f}
+                </li>
+              ))}
             </ul>
           </div>
           <div className="plan-cta-wrap">
-            <a href="https://nexora-bots-ten.vercel.app/" target="_blank" rel="noopener noreferrer" className="plan-cta">
-              ver demo en vivo →
+            <a
+              href="https://nexora-bots-ten.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="plan-cta plan-cta-main"
+            >
+              VER DEMO EN VIVO →
+            </a>
+            <a href="#contacto" className="plan-cta plan-cta-sec">
+              CONTRATAR
             </a>
           </div>
         </div>
 
         {/* SMART */}
         <div className="plan smart">
-          <div className="popular-badge">más elegido</div>
           <div className="plan-body">
-            <div className="plan-tier">// plan_02</div>
-            <div className="plan-name">Smart Bot</div>
-            <div className="plan-subtitle">
-              NLP propio. Interpreta intención, mantiene contexto, sin depender de APIs externas.
-            </div>
-            <div className="plan-tech">
-              <div className="plan-tech-dot" />
-              NLP · Intent Detection
-            </div>
-            <div className="plan-arch">
-              <div className="arch-title">arquitectura</div>
-              <div>Frontend → API → Flow Engine → <span>Intent Router</span> → Adapters</div>
-            </div>
+            <div className="plan-badge violet">MÁS ELEGIDO</div>
+            <div className="plan-price">USD 599</div>
+            <div className="plan-price-sub">implementación + USD 99/mes</div>
+            <div className="plan-name">SMART BOT</div>
+            <div className="plan-subtitle">NLP propio, comprende lenguaje natural</div>
+            <div className="plan-tech-pill">Intent Router + NLP</div>
             <div className="plan-div" />
             <ul className="plan-feats">
-              {['NLP propio — detecta intención real','Memoria de flujo conversacional',
-                'Entities y respuestas dinámicas','Contratos tipados por proceso',
-                'Ideal para RRHH y administración','Adaptadores desacoplados por módulo']
-                .map(f => <li key={f}><span className="ck">✓</span>{f}</li>)}
+              {[
+                'Intent Detection & NLP',
+                'Memoria de conversación',
+                'Respuestas dinámicas',
+                'Integración WhatsApp y Web',
+                'Dashboard de métricas',
+              ].map(f => (
+                <li key={f}>
+                  <span className="ck">✓</span>
+                  {f}
+                </li>
+              ))}
             </ul>
           </div>
           <div className="plan-cta-wrap">
-            <a href="#contacto" className="plan-cta">consultar por este plan →</a>
+            <a href="#contacto" className="plan-cta plan-cta-main">
+              CONSULTAR
+            </a>
           </div>
         </div>
 
         {/* ENTERPRISE */}
         <div className="plan enterprise">
           <div className="plan-body">
-            <div className="plan-tier">// plan_03</div>
-            <div className="plan-name">Enterprise Bot</div>
-            <div className="plan-subtitle">
-              ML con API propia. Conectado a tus sistemas reales — ERP, SAP, CRM.
-            </div>
-            <div className="plan-tech">
-              <div className="plan-tech-dot" />
-              ML · API_propia · ERP
-            </div>
-            <div className="plan-arch">
-              <div className="arch-title">arquitectura</div>
-              <div>Frontend → API Gateway → Intent Router → <span>Adapters → SAP / ERP</span></div>
-            </div>
+            <div className="plan-badge blue">CORPORATIVO</div>
+            <div className="plan-price" style={{ fontSize: 'clamp(22px,2.5vw,32px)' }}>DESDE USD 1.500</div>
+            <div className="plan-price-sub">cotización a medida según alcance</div>
+            <div className="plan-name">ENTERPRISE BOT</div>
+            <div className="plan-subtitle">ML propio, integración SAP/ERP</div>
+            <div className="plan-tech-pill">ML + API Propia + RAG</div>
             <div className="plan-div" />
             <ul className="plan-feats">
-              {['Machine Learning con API propia','Conexión a SAP, CRM, bases de datos',
-                'Respuestas con datos reales','Logging avanzado y trazabilidad',
-                'Autenticación y escalabilidad cloud','Arquitectura multicliente']
-                .map(f => <li key={f}><span className="ck">✓</span>{f}</li>)}
+              {[
+                'Machine Learning personalizado',
+                'API propia de procesamiento',
+                'Integración SAP / ERP',
+                'RAG sobre documentos internos',
+                'SLA garantizado',
+              ].map(f => (
+                <li key={f}>
+                  <span className="ck">✓</span>
+                  {f}
+                </li>
+              ))}
             </ul>
           </div>
           <div className="plan-cta-wrap">
-            <a href="#contacto" className="plan-cta">hablar con el equipo →</a>
+            <a href="#contacto" className="plan-cta plan-cta-main">
+              SOLICITAR COTIZACIÓN
+            </a>
           </div>
         </div>
       </div>
 
-      <div className="rag-callout reveal d1">
-        <div className="rag-icon">🧠</div>
-        <div className="rag-text">
-          <div className="rag-title">// evolución <span>RAG</span> — disponible en todos los planes</div>
-          <div className="rag-desc">
-            Incorporá consulta documental sobre los archivos reales de tu empresa.
-            El bot responde basándose en tus reglamentos, manuales y convenios — no en respuestas genéricas.
-          </div>
+      {/* RAG callout */}
+      <div className="rag-callout reveal d4">
+        <div style={{
+          width: 48, height: 48, borderRadius: '50%',
+          background: 'linear-gradient(135deg,rgba(139,92,246,.15),rgba(0,85,255,.15))',
+          border: '1px solid rgba(139,92,246,.25)',
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          fontSize: 20, flexShrink: 0,
+        }}>
+          <svg viewBox="0 0 24 24" fill="none" width="22" height="22" stroke="currentColor" strokeWidth="1.5" style={{ color: 'var(--violet)' }}>
+            <path d="M12 2a7 7 0 0 1 7 7c0 3.5-2.5 6.5-6 7.4V18h1a1 1 0 0 1 0 2h-4a1 1 0 0 1 0-2h1v-1.6C7.5 15.5 5 12.5 5 9a7 7 0 0 1 7-7Z" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <div className="rag-title">RAG EN ROADMAP — Recuperación aumentada con vectores sobre documentos del cliente</div>
+          <div className="rag-desc">El bot responde basándose en tus reglamentos, manuales y convenios — no en respuestas genéricas.</div>
         </div>
         <div className="rag-tags">
-          {['FAISS','Chroma','LangChain','Pinecone'].map(t => (
+          {['FAISS', 'Chroma', 'LangChain', 'Pinecone'].map(t => (
             <span key={t} className="rag-tag">{t}</span>
           ))}
         </div>
