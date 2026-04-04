@@ -118,13 +118,7 @@ export function Bots() {
 
       {/* RAG callout */}
       <div className="rag-callout reveal d4">
-        <div style={{
-          width: 48, height: 48, borderRadius: '50%',
-          background: 'linear-gradient(135deg,rgba(139,92,246,.15),rgba(0,85,255,.15))',
-          border: '1px solid rgba(139,92,246,.25)',
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          fontSize: 20, flexShrink: 0,
-        }}>
+        <div className="rag-icon">
           <svg viewBox="0 0 24 24" fill="none" width="22" height="22" stroke="currentColor" strokeWidth="1.5" style={{ color: 'var(--violet)' }}>
             <path d="M12 2a7 7 0 0 1 7 7c0 3.5-2.5 6.5-6 7.4V18h1a1 1 0 0 1 0 2h-4a1 1 0 0 1 0-2h1v-1.6C7.5 15.5 5 12.5 5 9a7 7 0 0 1 7-7Z" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>

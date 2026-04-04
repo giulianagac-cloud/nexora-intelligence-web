@@ -11,7 +11,7 @@ export function Casos() {
 
       <div className="cases reveal d2">
         {/* Abogado — featured */}
-        <div className="cc feat" style={{ position: 'relative' }}>
+        <div className="cc feat">
           <a
             href="https://claudio-ortiz-abogado.vercel.app/"
             target="_blank"
@@ -26,31 +26,23 @@ export function Casos() {
             Sitio web institucional —<br />Ortiz Alejandre Abogados
           </h3>
           <p className="cc-desc">
-            Diseño minimalista premium, arquitectura de información clara, SEO técnico optimizado, formulario de contacto seguro y performance de carga por debajo de 1s.
+            Diseño minimalista premium, arquitectura de información clara, SEO técnico optimizado,
+            formulario de contacto seguro y performance de carga por debajo de 1s.
           </p>
 
-          <div className="cc-mets" style={{ marginBottom: 28 }}>
+          <div className="cc-mets">
             <span className="cc-met">+180% consultas</span>
             <span className="cc-met">Top 3 Google CABA</span>
             <span className="cc-met">0.9s carga</span>
           </div>
 
-          <div style={{ width: '100%', height: 160, overflow: 'hidden', borderRadius: 4, position: 'relative', border: '1px solid var(--border)' }}>
+          <div className="cc-img">
             <img
               src="https://api.microlink.io/?url=https://claudio-ortiz-abogado.vercel.app/&screenshot=true&meta=false&embed=screenshot.url"
               alt="Web Claudio Ortiz Abogado — desarrollada por Nexora"
-              style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                objectPosition: 'top center',
-                opacity: 0.85,
-              }}
+              style={{ objectPosition: 'top center', opacity: 0.85 }}
             />
-            <div style={{
-              position: 'absolute', inset: 0,
-              background: 'linear-gradient(to bottom, transparent 50%, var(--surface) 100%)',
-            }} />
+            <div className="cc-img-fade" />
           </div>
         </div>
 
@@ -61,31 +53,23 @@ export function Casos() {
             App de gestión desarrollada<br />para Overgym
           </h3>
           <p className="cc-desc">
-            PWA con gestión de clientes, pagos, reservas y panel en tiempo real. Operación digitalizada en semanas.
+            PWA con gestión de clientes, pagos, reservas y panel en tiempo real.
+            Operación digitalizada en semanas.
           </p>
 
-          <div className="cc-mets" style={{ marginBottom: 28 }}>
+          <div className="cc-mets">
             <span className="cc-met">+200 clientes</span>
             <span className="cc-met">90% reservas digitalizadas</span>
             <span className="cc-met">-70% tiempo admin</span>
           </div>
 
-          <div style={{ width: '100%', height: 160, overflow: 'hidden', borderRadius: 4, position: 'relative', border: '1px solid var(--border)' }}>
+          <div className="cc-img">
             <img
               src="/gym.jpg"
               alt="Overgym — plataforma de gestión desarrollada por Nexora"
-              style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                objectPosition: 'center',
-                opacity: 0.75,
-              }}
+              style={{ objectPosition: 'center', opacity: 0.75 }}
             />
-            <div style={{
-              position: 'absolute', inset: 0,
-              background: 'linear-gradient(to bottom, transparent 50%, var(--surface) 100%)',
-            }} />
+            <div className="cc-img-fade" />
           </div>
         </div>
       </div>
