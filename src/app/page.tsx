@@ -1,7 +1,6 @@
 import { IntroScreen }  from '@/components/IntroScreen'
 import { Nav }          from '@/components/layout/Nav'
 import { Hero }         from '@/components/sections/Hero'
-import { LogosStrip }   from '@/components/sections/LogosStrip'
 import { Servicios }    from '@/components/sections/Servicios'
 import { Bots }         from '@/components/sections/Bots'
 import { Verticales }        from '@/components/sections/Verticales'
@@ -19,7 +18,6 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <LogosStrip />
         <Servicios />
         <Bots />
         <Verticales />
