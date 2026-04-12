@@ -30,7 +30,7 @@ export function CookieBanner() {
   return (
     <div style={{
       position: 'fixed',
-      bottom: 0,
+      bottom: '24px',
       left: 0,
       right: 0,
       background: '#0d0d14',
@@ -48,7 +48,7 @@ export function CookieBanner() {
     }}>
       <p style={{
         fontFamily: 'var(--mono)',
-        fontSize: '12px',
+        fontSize: '14px',
         color: 'rgba(242,242,248,0.7)',
         lineHeight: 1.7,
         margin: 0,
