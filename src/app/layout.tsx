@@ -69,6 +69,15 @@ export default function RootLayout({
       lang="es"
       className={`${outfit.variable} ${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
+      <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNTYK7RQXW"></script>
+        <script dangerouslySetInnerHTML={{__html: `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZNTYK7RQXW');
+`}} />
+      </head>
       <body className="min-h-full flex flex-col">
         {/* Deshabilitar scroll restoration ANTES de la hidratación */}
         <script dangerouslySetInnerHTML={{ __html: "history.scrollRestoration='manual';window.scrollTo(0,0);" }} />
