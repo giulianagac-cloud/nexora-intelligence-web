@@ -80,7 +80,8 @@ export function Hero() {
         </h1>
 
         <p className="hero-sub">
-          Diseñamos automatizaciones, asistentes IA y sistemas a medida.
+          Diseñamos soluciones en IA, automatización, desarrollo digital y sistemas a medida.<br />
+          Web · Apps · Bots · Consultoría tecnológica para PyMEs y emprendedores.
         </p>
 
         <div className="hero-actions">
