@@ -174,15 +174,16 @@ export function NuestrosProductos() {
       <div className="prod-grid reveal d2">
         {PRODUCTS.map(p => (
           <div key={p.id} className="prod-card">
-            {p.illustration && (
-              <div style={{marginBottom: '16px'}}>
-                {p.illustration}
-              </div>
-            )}
             <div className={`prod-tag ${p.accent}`}>{p.tag}</div>
             <div className="prod-name">{p.name}</div>
             <div className="prod-pitch">{p.pitch}</div>
             <div className="prod-desc">{p.desc}</div>
+
+            {p.illustration && (
+              <div style={{marginBottom: '16px', marginTop: '16px'}}>
+                {p.illustration}
+              </div>
+            )}
 
             <div className="prod-divider" />
 
