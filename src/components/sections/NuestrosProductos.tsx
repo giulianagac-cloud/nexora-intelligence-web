@@ -60,6 +60,30 @@ const PRODUCTS: Product[] = [
     ],
     techs: ['LangChain', 'FastAPI', 'Next.js', 'WhatsApp'],
   },
+  {
+    id: 'factura',
+    tag: 'administración · finanzas',
+    accent: 'orange',
+    name: 'Factura Lista',
+    pitch: '¿Todavía cargás facturas a mano? Eso se terminó.',
+    desc: 'Automatización completa de lectura y registro de comprobantes. Subís el PDF a Google Drive y el sistema hace el resto.',
+    modules: [
+      {
+        name: 'Lectura automática',
+        desc: 'Lee PDFs digitales, escaneados y fotos de facturas. Extrae CUIT, tipo de comprobante, monto neto, IVA, total y fecha de emisión sin intervención manual.',
+      },
+      {
+        name: 'Validación AFIP',
+        desc: 'Valida automáticamente el CUIT del proveedor contra el padrón de AFIP. Si algo no está claro, te avisa para que lo revisés vos. Nunca carga algo sin estar seguro.',
+      },
+      {
+        name: 'Integración Google Drive',
+        desc: 'Sin software nuevo, sin capacitación larga. Usás una carpeta de Drive que ya tenés. Nosotros configuramos todo.',
+      },
+    ],
+    note: 'Implementación a medida según el volumen y sistema de cada empresa.',
+    techs: ['n8n', 'Claude API', 'Google Drive', 'AFIP'],
+  },
 ]
 
 export function NuestrosProductos() {
@@ -67,8 +91,8 @@ export function NuestrosProductos() {
 
   return (
     <section className="prod-sec sec-pad" id="productos">
-      <div className="eyebrow reveal">// nuestros_productos</div>
-      <h2 className="sec-title reveal d1">PRODUCTOS LISTOS<br />PARA ADOPTAR</h2>
+      <div className="eyebrow reveal">// nuestras_soluciones</div>
+      <h2 className="sec-title reveal d1">SOLUCIONES A<br />MEDIDA DE TU NEGOCIO</h2>
 
       <div className="prod-grid reveal d2">
         {PRODUCTS.map(p => (
