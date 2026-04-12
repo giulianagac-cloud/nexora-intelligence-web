@@ -10,6 +10,7 @@ import { Casos }            from '@/components/sections/Casos'
 import { Proceso }          from '@/components/sections/Proceso'
 import { Stack }            from '@/components/sections/Stack'
 import { Contacto }         from '@/components/sections/Contacto'
+import { CookieBanner }    from '@/components/CookieBanner'
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
         <Contacto />
       </main>
       <Footer />
+      <CookieBanner />
     </>
   )
 }
