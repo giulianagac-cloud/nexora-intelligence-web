@@ -15,8 +15,6 @@ export function Bots() {
         <div className="plan starter">
           <div className="plan-body">
             <div className="plan-badge orange">DEMO GRATIS</div>
-            <div className="plan-price">USD 299</div>
-            <div className="plan-price-sub">implementación única · sin costo mensual</div>
             <div className="plan-name">STARTER BOT</div>
             <div className="plan-subtitle">Flujo guiado, sin IA externa</div>
             <div className="plan-tech-pill">Flow Engine</div>
@@ -55,8 +53,6 @@ export function Bots() {
         <div className="plan smart">
           <div className="plan-body">
             <div className="plan-badge violet">MÁS ELEGIDO</div>
-            <div className="plan-price">USD 599</div>
-            <div className="plan-price-sub">implementación + USD 99/mes</div>
             <div className="plan-name">SMART BOT</div>
             <div className="plan-subtitle">NLP propio, comprende lenguaje natural</div>
             <div className="plan-tech-pill">Intent Router + NLP</div>
@@ -87,8 +83,6 @@ export function Bots() {
         <div className="plan enterprise">
           <div className="plan-body">
             <div className="plan-badge blue">CORPORATIVO</div>
-            <div className="plan-price" style={{ fontSize: 'clamp(22px,2.5vw,32px)' }}>DESDE USD 1.500</div>
-            <div className="plan-price-sub">cotización a medida según alcance</div>
             <div className="plan-name">ENTERPRISE BOT</div>
             <div className="plan-subtitle">ML propio, integración SAP/ERP</div>
             <div className="plan-tech-pill">ML + API Propia + RAG</div>
