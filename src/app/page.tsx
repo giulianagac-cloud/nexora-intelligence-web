@@ -2,7 +2,6 @@ import { IntroScreen }       from '@/components/IntroScreen'
 import { Nav }               from '@/components/layout/Nav'
 import { Footer }            from '@/components/layout/Footer'
 import { Hero }              from '@/components/sections/Hero'
-import { Dolor }             from '@/components/sections/Dolor'
 import { Servicios }         from '@/components/sections/Servicios'
 import { Bots }              from '@/components/sections/Bots'
 import { Casos }             from '@/components/sections/Casos'
@@ -19,7 +18,6 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <Dolor />
         <Servicios />
         <Bots />
         <Casos />
