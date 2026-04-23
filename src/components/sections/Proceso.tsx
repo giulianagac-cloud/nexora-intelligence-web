@@ -2,26 +2,25 @@
 import { useReveal } from '@/hooks/useReveal'
 
 const STEPS = [
-  { n: '01', name: 'RELEVAMIENTO',  desc: 'Entendemos tu operación' },
-  { n: '02', name: 'PROPUESTA',     desc: 'Diseñamos la solución' },
-  { n: '03', name: 'DESARROLLO',    desc: 'Lo construimos' },
-  { n: '04', name: 'ENTREGA',       desc: 'Implementamos y capacitamos' },
-  { n: '05', name: 'SOPORTE',       desc: 'Seguimos con vos' },
+  { num: '01', name: 'Relevamiento', desc: 'Entendemos tu operación' },
+  { num: '02', name: 'Propuesta', desc: 'Diseñamos la solución' },
+  { num: '03', name: 'Desarrollo', desc: 'Lo construimos' },
+  { num: '04', name: 'Entrega', desc: 'Implementamos y capacitamos' },
+  { num: '05', name: 'Soporte', desc: 'Seguimos con vos' },
 ]
 
 export function Proceso() {
   useReveal()
-
   return (
-    <section className="proc-sec sec-pad" id="proceso">
-      <div className="eyebrow reveal">// CÓMO_TRABAJAMOS</div>
-      <h2 className="sec-title reveal d1">EL PROCESO</h2>
+    <section className="sec-pad proc-sec" id="proceso">
+      <div className="eyebrow reveal">// cómo trabajamos</div>
+      <h2 className="sec-title reveal d1">Simple.<br />Sin vueltas.</h2>
       <div className="proc-steps reveal d2">
-        {STEPS.map(s => (
-          <div key={s.n} className="ps">
-            <div className="ps-circ">{s.n}</div>
+        {STEPS.map((s) => (
+          <div key={s.num} className="ps">
+            <div className="ps-circ">{s.num}</div>
             <div className="ps-name">{s.name}</div>
-            <div className="ps-desc">{s.desc}</div>
+            <p className="ps-desc">{s.desc}</p>
           </div>
         ))}
       </div>

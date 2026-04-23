@@ -1,131 +1,80 @@
 'use client'
 import { useReveal } from '@/hooks/useReveal'
 
+const COMPARE = [
+  {
+    label: 'Para empezar',
+    desc: 'Respondé las preguntas frecuentes de tus clientes automáticamente.',
+    price: 'USD 299',
+    color: 'orange' as const,
+  },
+  {
+    label: 'Para crecer',
+    desc: 'Tu negocio atiende solo en WhatsApp, entiende lenguaje natural y recuerda el contexto.',
+    price: 'USD 599 + USD 99/mes',
+    color: 'violet' as const,
+    featured: true,
+  },
+  {
+    label: 'Para escalar',
+    desc: 'Integrado a tus sistemas internos, entrenado con tus documentos, con SLA garantizado.',
+    price: 'Desde USD 1.500',
+    color: 'blue' as const,
+  },
+]
+
 export function Bots() {
   useReveal()
-
   return (
     <section className="bots-sec sec-pad" id="bots">
-      <div className="eyebrow reveal">// NEXORA_BOTS — PRODUCTO EN PRODUCCIÓN</div>
-      <h2 className="sec-title reveal d1">PLATAFORMA DE ASISTENTES IA</h2>
-      <p className="bots-intro reveal d2">No es un concepto. Está funcionando.</p>
+      <div className="eyebrow reveal">// nexora bots</div>
+      <h2 className="sec-title reveal d1">Tu negocio responde.<br />Aunque no estés.</h2>
+      <p className="bots-intro reveal d2">
+        No es un concepto. Está funcionando. Elegí el nivel que necesita tu operación.
+      </p>
 
-      <div className="plans reveal d3">
-        {/* STARTER */}
-        <div className="plan starter">
-          <div className="plan-body">
-            <div className="plan-badge orange">DEMO GRATIS</div>
-            <div className="plan-name">STARTER BOT</div>
-            <div className="plan-subtitle">Flujo guiado, sin IA externa</div>
-            <div className="plan-tech-pill">Flow Engine</div>
-            <div className="plan-div" />
-            <ul className="plan-feats">
-              {[
-                'Respuestas por flujo predefinido',
-                'Botones y opciones guiadas',
-                'Derivación a humano',
-                'FAQ configurable',
-                'Sin costo mensual',
-              ].map(f => (
-                <li key={f}>
-                  <span className="ck">✓</span>
-                  {f}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="plan-cta-wrap">
-            <a
-              href="https://nexora-bots-ten.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="plan-cta plan-cta-main"
-            >
-              VER DEMO EN VIVO →
-            </a>
-            <a href="#contacto" className="plan-cta plan-cta-sec">
-              CONTRATAR
-            </a>
-          </div>
+      {/* Mockup */}
+      <div className="bot-mockup reveal d3">
+        <div className="bot-mock-header">
+          <div className="bot-mock-dot" style={{ background: '#ff5f57' }} />
+          <div className="bot-mock-dot" style={{ background: '#febc2e' }} />
+          <div className="bot-mock-dot" style={{ background: '#28c840' }} />
+          <span className="bot-mock-title">NexBot — Atención al cliente</span>
+          <span className="bot-mock-live">● en vivo</span>
         </div>
-
-        {/* SMART */}
-        <div className="plan smart">
-          <div className="plan-body">
-            <div className="plan-badge violet">MÁS ELEGIDO</div>
-            <div className="plan-name">SMART BOT</div>
-            <div className="plan-subtitle">NLP propio, comprende lenguaje natural</div>
-            <div className="plan-tech-pill">Intent Router + NLP</div>
-            <div className="plan-div" />
-            <ul className="plan-feats">
-              {[
-                'Intent Detection & NLP',
-                'Memoria de conversación',
-                'Respuestas dinámicas',
-                'Integración WhatsApp y Web',
-                'Dashboard de métricas',
-              ].map(f => (
-                <li key={f}>
-                  <span className="ck">✓</span>
-                  {f}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="plan-cta-wrap">
-            <a href="#contacto" className="plan-cta plan-cta-main">
-              CONSULTAR
-            </a>
-          </div>
-        </div>
-
-        {/* ENTERPRISE */}
-        <div className="plan enterprise">
-          <div className="plan-body">
-            <div className="plan-badge blue">CORPORATIVO</div>
-            <div className="plan-name">ENTERPRISE BOT</div>
-            <div className="plan-subtitle">ML propio, integración SAP/ERP</div>
-            <div className="plan-tech-pill">ML + API Propia + RAG</div>
-            <div className="plan-div" />
-            <ul className="plan-feats">
-              {[
-                'Machine Learning personalizado',
-                'API propia de procesamiento',
-                'Integración SAP / ERP',
-                'RAG sobre documentos internos',
-                'SLA garantizado',
-              ].map(f => (
-                <li key={f}>
-                  <span className="ck">✓</span>
-                  {f}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="plan-cta-wrap">
-            <a href="#contacto" className="plan-cta plan-cta-main">
-              SOLICITAR COTIZACIÓN
-            </a>
+        <div className="bot-mock-body">
+          <div className="bot-mock-msg bot">Hola, soy el asistente de Nexora. ¿En qué te puedo ayudar hoy?</div>
+          <div className="bot-mock-msg user">¿Cuánto tarda la implementación?</div>
+          <div className="bot-mock-msg bot">Depende del plan. El Starter se configura en 48hs. El Smart en 1 semana. ¿Querés que te cuente más sobre alguno?</div>
+          <div className="bot-mock-msg user">Sí, el Smart.</div>
+          <div className="bot-mock-msg bot typing">
+            <span className="bot-mock-dot-anim" /><span className="bot-mock-dot-anim" /><span className="bot-mock-dot-anim" />
           </div>
         </div>
       </div>
 
-      {/* RAG callout */}
-      <div className="rag-callout reveal d4">
-        <div className="rag-icon">
-          <svg viewBox="0 0 24 24" fill="none" width="22" height="22" stroke="currentColor" strokeWidth="1.5" style={{ color: 'var(--violet)' }}>
-            <path d="M12 2a7 7 0 0 1 7 7c0 3.5-2.5 6.5-6 7.4V18h1a1 1 0 0 1 0 2h-4a1 1 0 0 1 0-2h1v-1.6C7.5 15.5 5 12.5 5 9a7 7 0 0 1 7-7Z" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </div>
-        <div>
-          <div className="rag-title">RAG EN ROADMAP — Recuperación aumentada con vectores sobre documentos del cliente</div>
-          <div className="rag-desc">El bot responde basándose en tus reglamentos, manuales y convenios — no en respuestas genéricas.</div>
-        </div>
-        <div className="rag-tags">
-          {['FAISS', 'Chroma', 'LangChain', 'Pinecone'].map(t => (
-            <span key={t} className="rag-tag">{t}</span>
-          ))}
-        </div>
+      {/* Comparación */}
+      <div className="bots-compare reveal d4">
+        {COMPARE.map((c) => (
+          <div key={c.label} className={`bots-row ${c.featured ? 'featured' : ''} ${c.color}`}>
+            <div className="bots-row-left">
+              <span className={`plan-badge ${c.color}`}>{c.label}</span>
+              <p className="bots-row-desc">{c.desc}</p>
+            </div>
+            <div className="bots-row-right">
+              <span className="bots-row-price">{c.price}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="bots-cta reveal d4">
+        <a href="https://wa.me/5491133409351" target="_blank" rel="noopener noreferrer" className="btn-primary">
+          Contame qué necesitás →
+        </a>
+        <a href="https://nexora-bots-ten.vercel.app/" target="_blank" rel="noopener noreferrer" className="btn-outline">
+          Ver demo en vivo →
+        </a>
       </div>
     </section>
   )

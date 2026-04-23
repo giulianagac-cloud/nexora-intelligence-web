@@ -347,6 +347,51 @@ body::after {
 .f-links a { font-family:var(--mono);font-size:13px;color:var(--muted);text-decoration:none;transition:color .2s }
 .f-links a:hover { color:var(--white) }
 
+/* ══ DOLOR ══ */
+.dolor-sec { background: var(--deep); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.dolor-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 52px; }
+.dolor-item { background: var(--surface); padding: 40px 36px; display: flex; flex-direction: column; gap: 14px; transition: background .3s; }
+.dolor-item:hover { background: var(--surface2); }
+.dolor-num { font-family: var(--hl); font-size: 48px; font-weight: 700; color: rgba(255,107,43,.15); line-height: 1; letter-spacing: -.04em; }
+.dolor-item:hover .dolor-num { color: rgba(255,107,43,.3); }
+.dolor-text { font-family: var(--mono); font-size: 17px; color: var(--white); line-height: 1.7; font-weight: 400; }
+
+/* ══ SERVICIOS — 3 columnas ══ */
+.svcs-3 { grid-template-columns: repeat(3, 1fr); }
+
+/* ══ BOT MOCKUP ══ */
+.bot-mockup { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-top: 52px; max-width: 560px; }
+.bot-mock-header { background: var(--surface2); padding: 12px 16px; display: flex; align-items: center; gap: 6px; border-bottom: 1px solid var(--border); }
+.bot-mock-dot { width: 11px; height: 11px; border-radius: 50%; }
+.bot-mock-title { font-family: var(--mono); font-size: 12px; color: var(--muted); margin-left: 8px; }
+.bot-mock-live { font-family: var(--mono); font-size: 11px; color: #4aff91; margin-left: auto; animation: pulse 2s infinite; }
+.bot-mock-body { padding: 20px 16px; display: flex; flex-direction: column; gap: 10px; min-height: 180px; }
+.bot-mock-msg { font-family: var(--mono); font-size: 13px; line-height: 1.6; padding: 9px 13px; border-radius: 10px; max-width: 85%; }
+.bot-mock-msg.bot { background: rgba(255,255,255,.05); border: 1px solid var(--border); border-bottom-left-radius: 3px; align-self: flex-start; color: var(--white); }
+.bot-mock-msg.user { background: var(--orange); color: #fff; border-bottom-right-radius: 3px; align-self: flex-end; }
+.bot-mock-msg.typing { display: flex; align-items: center; gap: 4px; padding: 12px 16px; }
+.bot-mock-dot-anim { width: 6px; height: 6px; border-radius: 50%; background: var(--muted); animation: pulse 1.2s ease-in-out infinite; }
+.bot-mock-dot-anim:nth-child(2) { animation-delay: .2s; }
+.bot-mock-dot-anim:nth-child(3) { animation-delay: .4s; }
+
+/* ══ BOTS COMPARE ══ */
+.bots-compare { margin-top: 32px; border: 1px solid var(--border); background: var(--border); display: flex; flex-direction: column; gap: 1px; }
+.bots-row { background: var(--surface); padding: 24px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; transition: background .3s; }
+.bots-row:hover { background: var(--surface2); }
+.bots-row.featured { background: linear-gradient(90deg, rgba(139,92,246,.06), var(--surface)); border-left: 2px solid var(--violet); }
+.bots-row-left { display: flex; flex-direction: column; gap: 8px; }
+.bots-row-desc { font-family: var(--mono); font-size: 14px; color: var(--muted); line-height: 1.6; max-width: 480px; }
+.bots-row-right { flex-shrink: 0; }
+.bots-row-price { font-family: var(--hl); font-size: 20px; font-weight: 700; letter-spacing: -.03em; white-space: nowrap; }
+.bots-row.orange .bots-row-price { color: var(--orange); }
+.bots-row.violet .bots-row-price { color: var(--violet); }
+.bots-row.blue .bots-row-price { color: #6699ff; }
+.bots-cta { display: flex; gap: 16px; margin-top: 32px; flex-wrap: wrap; }
+
+/* ══ HERO — ajustes tipografía ══ */
+.hero-title { font-size: clamp(52px, 7vw, 88px); }
+.hero-title .tw-line { color: var(--orange); }
+
 /* ══ MOBILE ══ */
 @media (max-width: 768px) {
   body { cursor: auto }
@@ -369,4 +414,9 @@ body::after {
   .contact-info { flex-direction:column;align-items:center;gap:12px }
   .hero-actions { flex-direction:column;align-items:flex-start }
   .plan.smart { margin:0 }
+  .dolor-grid { grid-template-columns: 1fr; }
+  .svcs-3 { grid-template-columns: 1fr; }
+  .bots-row { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .bot-mockup { max-width: 100%; }
+  .bots-cta { flex-direction: column; }
 }
