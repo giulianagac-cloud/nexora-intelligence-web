@@ -56,6 +56,14 @@ export function Servicios() {
           </div>
           <div className="fl-card-cta fl-card-cta-violet">Ver Nexora RRHH →</div>
         </a>
+        <a href="/nexora-inventario" className="fl-card fl-card-blue">
+          <div className="fl-card-left">
+            <span className="fl-card-tag fl-card-tag-blue">// inventario</span>
+            <div className="fl-card-title">¿Sabés exactamente qué tiene tu empresa?</div>
+            <p className="fl-card-desc">Equipos, licencias y activos — con historial y alertas automáticas.</p>
+          </div>
+          <div className="fl-card-cta fl-card-cta-blue">Ver Nexora Inventario ↗</div>
+        </a>
         <a href="/nexora-finanzas" className="fl-card fl-card-blue">
           <div className="fl-card-left">
             <span className="fl-card-tag fl-card-tag-blue">// finanzas</span>
