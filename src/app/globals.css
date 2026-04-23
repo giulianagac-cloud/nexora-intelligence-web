@@ -357,7 +357,7 @@ body::after {
 .footer-prod-link:hover { color: #ff8040; }
 
 /* ══ DOLOR ══ */
-.dolor-sec { background: var(--black); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.dolor-sec { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 .dolor-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 52px; }
 .dolor-item { background: var(--surface); padding: 40px 36px; display: flex; flex-direction: column; gap: 14px; transition: background .3s; }
 .dolor-item:hover { background: var(--surface2); }
