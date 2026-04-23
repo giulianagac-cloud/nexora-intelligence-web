@@ -3,7 +3,6 @@ import { Nav }               from '@/components/layout/Nav'
 import { Footer }            from '@/components/layout/Footer'
 import { Hero }              from '@/components/sections/Hero'
 import { Servicios }         from '@/components/sections/Servicios'
-import { Bots }              from '@/components/sections/Bots'
 import { Casos }             from '@/components/sections/Casos'
 import { Blog }              from '@/components/sections/Blog'
 import { FAQ }               from '@/components/sections/FAQ'
@@ -19,7 +18,6 @@ export default function Home() {
       <main>
         <Hero />
         <Servicios />
-        <Bots />
         <Casos />
         <Blog />
         <FAQ />
