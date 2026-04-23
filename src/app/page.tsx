@@ -1,14 +1,17 @@
-import { IntroScreen }        from '@/components/IntroScreen'
-import { Nav }                from '@/components/layout/Nav'
-import { Footer }             from '@/components/layout/Footer'
-import { Hero }               from '@/components/sections/Hero'
-import { Dolor }              from '@/components/sections/Dolor'
-import { Servicios }          from '@/components/sections/Servicios'
-import { Bots }               from '@/components/sections/Bots'
-import { Casos }              from '@/components/sections/Casos'
-import { Proceso }            from '@/components/sections/Proceso'
-import { Contacto }           from '@/components/sections/Contacto'
-import { CookieBanner }       from '@/components/CookieBanner'
+import { IntroScreen }       from '@/components/IntroScreen'
+import { Nav }               from '@/components/layout/Nav'
+import { Footer }            from '@/components/layout/Footer'
+import { Hero }              from '@/components/sections/Hero'
+import { Dolor }             from '@/components/sections/Dolor'
+import { Servicios }         from '@/components/sections/Servicios'
+import { Programadora }      from '@/components/sections/Programadora'
+import { Bots }              from '@/components/sections/Bots'
+import { Casos }             from '@/components/sections/Casos'
+import { Blog }              from '@/components/sections/Blog'
+import { FAQ }               from '@/components/sections/FAQ'
+import { Proceso }           from '@/components/sections/Proceso'
+import { Contacto }          from '@/components/sections/Contacto'
+import { CookieBanner }      from '@/components/CookieBanner'
 
 export default function Home() {
   return (
@@ -19,8 +22,11 @@ export default function Home() {
         <Hero />
         <Dolor />
         <Servicios />
+        <Programadora />
         <Bots />
         <Casos />
+        <Blog />
+        <FAQ />
         <Proceso />
         <Contacto />
       </main>

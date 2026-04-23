@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import { useReveal } from '@/hooks/useReveal'
 
 const SERVICES = [
@@ -6,19 +7,22 @@ const SERVICES = [
     num: '01',
     name: 'Automatización',
     desc: 'Tus procesos repetitivos en piloto automático. Reportes, notificaciones, carga de datos — corriendo solos mientras trabajás en lo que importa.',
-    link: { label: 'Ver Factura Lista →', href: '/factura-lista' },
+    img: '/automatizacion.png',
+    imgAlt: 'Dashboard de automatización Nexora',
   },
   {
     num: '02',
     name: 'Bots con IA',
     desc: 'Atención al cliente y gestión interna sin intervención humana. Tu negocio responde, deriva y resuelve las 24 horas.',
-    link: null,
+    img: '/bots.png',
+    imgAlt: 'Bot de WhatsApp Nexora en acción',
   },
   {
     num: '03',
     name: 'Desarrollo digital',
     desc: 'Webs, apps y sistemas que escalan con tu negocio. Desde una landing que convierte hasta una plataforma de gestión completa.',
-    link: null,
+    img: '/desarrollo.png',
+    imgAlt: 'Desarrollo web y apps Nexora',
   },
 ]
 
@@ -28,12 +32,24 @@ export function Servicios() {
     <section className="sec-pad" id="servicios">
       <div className="eyebrow reveal">// lo que hacemos</div>
       <h2 className="sec-title reveal d1">Tres cosas.<br />Bien hechas.</h2>
-      <div className="svcs svcs-3 reveal d2">
-        {SERVICES.map(s => (
-          <div key={s.num} className="sc">
-            <div className="sc-ghost">{s.num}</div>
-            <div className="sc-name">{s.name}</div>
-            <p className="sc-desc">{s.desc}</p>
+
+      <div className="svcs-alt reveal d2">
+        {SERVICES.map((s, i) => (
+          <div key={s.num} className={`svc-row ${i % 2 === 1 ? 'svc-row-reverse' : ''}`}>
+            <div className="svc-img-wrap">
+              <Image
+                src={s.img}
+                alt={s.imgAlt}
+                width={640}
+                height={400}
+                className="svc-img"
+              />
+            </div>
+            <div className="svc-content">
+              <div className="sc-ghost">{s.num}</div>
+              <div className="sc-name">{s.name}</div>
+              <p className="sc-desc">{s.desc}</p>
+            </div>
           </div>
         ))}
       </div>
@@ -62,7 +78,7 @@ export function Servicios() {
             <div className="fl-card-title">¿Sabés exactamente qué tiene tu empresa?</div>
             <p className="fl-card-desc">Equipos, licencias y activos — con historial y alertas automáticas.</p>
           </div>
-          <div className="fl-card-cta fl-card-cta-blue">Ver Nexora Inventario ↗</div>
+          <div className="fl-card-cta fl-card-cta-blue">Ver Nexora Inventario →</div>
         </a>
         <a href="/nexora-finanzas" className="fl-card fl-card-blue">
           <div className="fl-card-left">
