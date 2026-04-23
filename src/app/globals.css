@@ -186,6 +186,15 @@ body::after {
 .fl-card-desc { font-family: var(--mono); font-size: 14px; color: var(--muted); line-height: 1.7; max-width: 480px; }
 .fl-card-cta { font-family: var(--mono); font-size: 14px; font-weight: 700; color: var(--orange); white-space: nowrap; flex-shrink: 0; transition: gap .2s; }
 .fl-card:hover .fl-card-cta { letter-spacing: .04em; }
+.prod-links { display: flex; flex-direction: column; gap: 1px; margin-top: 1px; }
+.fl-card-violet { background: rgba(139,92,246,.06); border: 1px solid rgba(139,92,246,.2); }
+.fl-card-violet:hover { background: rgba(139,92,246,.1); border-color: rgba(139,92,246,.4); }
+.fl-card-tag-violet { color: var(--violet); }
+.fl-card-cta-violet { color: var(--violet); }
+.fl-card-blue { background: rgba(0,85,255,.06); border: 1px solid rgba(0,85,255,.2); margin-top: 0; }
+.fl-card-blue:hover { background: rgba(0,85,255,.1); border-color: rgba(0,85,255,.4); }
+.fl-card-tag-blue { color: #6699ff; }
+.fl-card-cta-blue { color: #6699ff; }
 
 /* ══ BOTS ══ */
 .bots-sec { background:var(--deep);border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden;position:relative }
