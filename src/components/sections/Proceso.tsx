@@ -1,26 +1,27 @@
 'use client'
 import { useReveal } from '@/hooks/useReveal'
 
-const STEPS = [
-  { num: '01', name: 'Relevamiento', desc: 'Entendemos tu operación' },
-  { num: '02', name: 'Propuesta', desc: 'Diseñamos la solución' },
-  { num: '03', name: 'Desarrollo', desc: 'Lo construimos' },
-  { num: '04', name: 'Entrega', desc: 'Implementamos y capacitamos' },
-  { num: '05', name: 'Soporte', desc: 'Seguimos con vos' },
+const COMO_TRABAJO = [
+  'Antes de proponer cualquier solución, entiendo cómo funciona tu negocio y dónde perdés tiempo.',
+  'Todo el desarrollo es transparente — tenés acceso al avance en tiempo real, sin cajas negras.',
+  'No entrego demos que nunca funcionan en producción. Lo que construyo está pensado para el mundo real.',
+  'Al inicio del proyecto te envío una guía con requerimientos, revisiones y formas de trabajo claras.',
+  'El cliente siempre accede al proyecto en construcción y puede revisar a gusto en cada etapa.',
+  'Una vez finalizado, entrego todo funcionando en el servidor final, completamente operativo.',
+  'No desaparezco cuando cobro. Si algo falla o necesitás ajustar, estoy.',
 ]
 
 export function Proceso() {
   useReveal()
   return (
     <section className="sec-pad proc-sec" id="proceso">
-      <div className="eyebrow reveal">// cómo trabajamos</div>
-      <h2 className="sec-title reveal d1">Simple.<br />Sin vueltas.</h2>
-      <div className="proc-steps reveal d2">
-        {STEPS.map((s) => (
-          <div key={s.num} className="ps">
-            <div className="ps-circ">{s.num}</div>
-            <div className="ps-name">{s.name}</div>
-            <p className="ps-desc">{s.desc}</p>
+      <div className="eyebrow reveal">// cómo trabajo</div>
+      <h2 className="sec-title reveal d1">Sin humo.<br />Sin promesas vacías.</h2>
+      <div className="checklist reveal d2">
+        {COMO_TRABAJO.map((item, i) => (
+          <div key={i} className="checklist-item">
+            <div className="checklist-icon">✓</div>
+            <p className="checklist-text">{item}</p>
           </div>
         ))}
       </div>

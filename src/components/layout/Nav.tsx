@@ -81,7 +81,7 @@ export function Nav() {
 
         <li><a href="/programadora">Programadora</a></li>
         <li><a href="/blog">Blog</a></li>
-        <li><a href="/#casos">Casos</a></li>
+        <li><a href="/casos">Casos</a></li>
         <li><a href="/#faq">FAQ</a></li>
         <li><a href="#contacto" className="nav-cta">HABLEMOS →</a></li>
       </ul>
