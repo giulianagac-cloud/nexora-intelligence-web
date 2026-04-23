@@ -54,6 +54,7 @@ export function Nav() {
           )}
         </li>
 
+        <li><a href="/programadora">Programadora</a></li>
         <li><a href="#blog">Blog</a></li>
         <li><a href="#casos">Casos</a></li>
         <li><a href="#faq">FAQ</a></li>

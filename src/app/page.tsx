@@ -4,7 +4,6 @@ import { Footer }            from '@/components/layout/Footer'
 import { Hero }              from '@/components/sections/Hero'
 import { Dolor }             from '@/components/sections/Dolor'
 import { Servicios }         from '@/components/sections/Servicios'
-import { Programadora }      from '@/components/sections/Programadora'
 import { Bots }              from '@/components/sections/Bots'
 import { Casos }             from '@/components/sections/Casos'
 import { Blog }              from '@/components/sections/Blog'
@@ -22,7 +21,6 @@ export default function Home() {
         <Hero />
         <Dolor />
         <Servicios />
-        <Programadora />
         <Bots />
         <Casos />
         <Blog />
