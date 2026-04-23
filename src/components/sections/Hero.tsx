@@ -7,7 +7,7 @@ export function Hero() {
   const twRef = useRef<HTMLSpanElement>(null)
 
   useEffect(() => {
-    const words = ['sola_', 'sin vos_', 'en piloto_', '24/7_']
+    const words = ['solo_', 'sin vos_', 'en piloto_', '24/7_']
     let wi = 0, ci = 0, deleting = false
     let timerId: ReturnType<typeof setTimeout>
 
