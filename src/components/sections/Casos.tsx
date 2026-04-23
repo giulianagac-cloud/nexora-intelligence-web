@@ -5,7 +5,8 @@ const CASOS = [
   {
     label: 'Estudio jurídico',
     title: 'Ortiz Alejandre Abogados',
-    desc: 'Sitio institucional con arquitectura de información clara, carga menor a 1 segundo y formulario de contacto seguro. El cliente pasó de no tener presencia digital a recibir consultas diarias.',
+    antes: 'Sin presencia digital. Los clientes llegaban solo por recomendación y no había forma de contacto directo.',
+    desc: 'Sitio institucional con arquitectura clara, carga menor a 1 segundo y formulario de contacto seguro. Hoy recibe consultas diarias desde Google.',
     url: 'https://claudio-ortiz-abogado.vercel.app/',
     imgUrl: 'https://api.microlink.io/?url=https://claudio-ortiz-abogado.vercel.app/&screenshot=true&meta=false&embed=screenshot.url',
     feat: true,
@@ -13,7 +14,8 @@ const CASOS = [
   {
     label: 'Gimnasio boutique',
     title: 'OverGym',
-    desc: 'App de gestión con reservas, pagos y panel en tiempo real. La operación pasó de planillas manuales a un sistema digital en pocas semanas.',
+    antes: 'Gestión manual en planillas. Reservas por WhatsApp, pagos en efectivo y cero visibilidad del negocio en tiempo real.',
+    desc: 'App de gestión con reservas, pagos y panel en tiempo real. La operación pasó de planillas manuales a un sistema digital completo en pocas semanas.',
     imgUrl: '/gym.jpg',
     feat: false,
   },
@@ -35,6 +37,7 @@ export function Casos() {
             )}
             <div className="cc-lbl">{c.label}</div>
             <div className="cc-title">{c.title}</div>
+            <div className="cc-antes">Antes — {c.antes}</div>
             <p className="cc-desc">{c.desc}</p>
             <div className="cc-img">
               <img src={c.imgUrl} alt={c.title} loading="lazy" />

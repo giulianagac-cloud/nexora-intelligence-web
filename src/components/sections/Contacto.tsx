@@ -10,12 +10,15 @@ export function Contacto() {
           // hablemos
         </div>
         <h2 className="contact-title reveal d1">
-          Sin costo.<br />Sin compromiso.
+          15 minutos<br />por WhatsApp.
         </h2>
         <p className="contact-sub reveal d2">
-          Contanos qué te está comiendo el tiempo<br />
-          y vemos si te podemos ayudar.
+          Contanos qué proceso te come el tiempo<br />
+          y te decimos si lo podemos automatizar.
         </p>
+        <div className="contact-price reveal d2">
+          Implementaciones desde USD 299 · Sin contrato mensual obligatorio
+        </div>
         <div className="contact-btns reveal d3">
           <a
             href="https://wa.me/5491133409351"

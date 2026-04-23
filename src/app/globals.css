@@ -295,6 +295,7 @@ body::after {
 .cc-met { font-family:var(--mono);font-size:13px;color:var(--muted2);background:rgba(255,255,255,.04);border:1px solid var(--border);padding:5px 10px;border-radius:2px }
 .cc-site-btn { display:inline-flex;align-items:center;gap:6px;background:var(--orange);color:#fff;font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:7px 14px;border-radius:2px;position:absolute;top:20px;right:20px;transition:all .3s;z-index:10 }
 .cc-site-btn:hover { background:#ff8040;box-shadow:0 0 18px rgba(255,107,43,.4) }
+.cc-antes { font-family: var(--mono); font-size: 13px; color: var(--muted); border-left: 2px solid var(--border); padding-left: 12px; margin-bottom: 12px; line-height: 1.6; font-style: italic; }
 
 /* ══ PRODUCTOS ══ */
 .prod-sec { background:var(--deep);border-top:1px solid var(--border);border-bottom:1px solid var(--border) }
@@ -356,6 +357,7 @@ body::after {
 .contact-btn.em:hover { background:rgba(0,85,255,.18);box-shadow:0 0 28px rgba(0,85,255,.2);transform:translateY(-2px) }
 .contact-info { display:flex;justify-content:center;gap:32px;font-family:var(--mono);font-size:13px;color:var(--muted);position:relative;flex-wrap:wrap }
 .contact-info span { display:flex;align-items:center;gap:6px }
+.contact-price { font-family: var(--mono); font-size: 13px; color: var(--orange); letter-spacing: .06em; margin-bottom: 32px; position: relative; }
 
 /* ══ FOOTER ══ */
 .nexora-footer { padding: 48px 64px; border-top: 1px solid var(--border); background: var(--black); display: flex; flex-direction: column; gap: 32px; }
