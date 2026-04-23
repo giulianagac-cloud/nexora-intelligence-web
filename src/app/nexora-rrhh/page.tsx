@@ -130,19 +130,8 @@ export default function NexoraRRHHPage() {
         }}>
           Lo ves funcionar<br />antes de comprarlo.
         </h2>
-        <div style={{
-          width: '100%', aspectRatio: '16/9', background: 'var(--surface)',
-          border: '2px dashed rgba(139,92,246,.3)', borderRadius: '8px',
-          display: 'flex', flexDirection: 'column', alignItems: 'center',
-          justifyContent: 'center', gap: '12px',
-        }}>
-          <div style={{ fontSize: '32px' }}>📸</div>
-          <div style={{
-            fontFamily: 'var(--mono)', fontSize: '13px', color: 'var(--muted)',
-            letterSpacing: '.1em', textTransform: 'uppercase',
-          }}>
-            Screenshot del sistema — reemplazar este fin de semana
-          </div>
+        <div style={{ width: '100%', aspectRatio: '16/9', overflow: 'hidden', border: '1px solid var(--border)', borderRadius: '4px' }}>
+          <img src="/producto-rrhh.png" alt="Nexora RRHH — sistema en acción" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
         </div>
       </section>
 
