@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Nav } from '@/components/layout/Nav'
 
 export const metadata: Metadata = {
   title: 'Nexora Finanzas — Sistema financiero para PyMEs | NEXORA Intelligence',
@@ -9,25 +10,7 @@ export default function NexoraFinanzasPage() {
   return (
     <main style={{ background: 'var(--black)', color: 'var(--white)', fontFamily: 'var(--mono)' }}>
 
-      {/* NAV */}
-      <nav style={{
-        position: 'fixed', top: 0, left: 0, right: 0, zIndex: 500,
-        padding: '22px 64px', display: 'flex', alignItems: 'center',
-        justifyContent: 'space-between', background: 'rgba(5,5,8,.85)',
-        backdropFilter: 'blur(24px)', borderBottom: '1px solid var(--border)',
-      }}>
-        <a href="/" style={{ fontFamily: 'var(--mono)', fontWeight: 800, fontSize: '16px', color: 'var(--white)', textDecoration: 'none' }}>
-          NEXORA<span style={{ color: 'var(--orange)' }}>_</span>Intelligence
-        </a>
-        <a href="/#contacto" style={{
-          background: 'var(--orange)', color: '#fff', padding: '10px 20px',
-          fontFamily: 'var(--mono)', fontWeight: 700, fontSize: '13px',
-          letterSpacing: '.08em', textTransform: 'uppercase', textDecoration: 'none',
-          borderRadius: '2px',
-        }}>
-          Hablemos →
-        </a>
-      </nav>
+      <Nav />
 
       {/* HERO */}
       <section style={{
