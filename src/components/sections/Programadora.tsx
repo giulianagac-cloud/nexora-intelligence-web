@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import { useReveal } from '@/hooks/useReveal'
 
 export function Programadora() {
@@ -7,9 +8,13 @@ export function Programadora() {
     <section className="sec-pad prog-sec" id="nosotros">
       <div className="prog-inner reveal">
         <div className="prog-foto-wrap">
-          <div className="prog-foto-placeholder">
-            <span>foto próximamente</span>
-          </div>
+          <Image
+            src="/giuli.jpeg"
+            alt="Giuliana, fundadora de Nexora Intelligence"
+            width={600}
+            height={750}
+            className="svc-img"
+          />
         </div>
         <div className="prog-content">
           <div className="eyebrow">// quién está detrás</div>
