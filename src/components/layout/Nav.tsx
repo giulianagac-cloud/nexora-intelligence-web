@@ -17,8 +17,7 @@ export function Nav() {
       </a>
       <ul className="nav-links">
         <li><a href="#servicios">servicios</a></li>
-        <li><a href="#bots">bots_IA</a></li>
-        <li><a href="#verticales">verticales</a></li>
+        <li><a href="#bots">bots</a></li>
         <li><a href="#casos">casos</a></li>
         <li><a href="#contacto" className="nav-cta">HABLEMOS →</a></li>
       </ul>
