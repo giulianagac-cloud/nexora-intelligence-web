@@ -65,16 +65,69 @@ export default function ProgramadoraPage() {
             </h1>
             <p style={{
               fontFamily: 'var(--mono)', fontSize: '15px', color: 'var(--muted)',
-              lineHeight: 1.85, marginBottom: '16px',
+              lineHeight: 1.85, marginBottom: '24px',
             }}>
-              Nexora no es una agencia de 50 personas. Soy Giuliana, analista funcional SAP con más de 14 años de experiencia en procesos y sistemas, y fundadora de Nexora Intelligence.
+              Soy consultora SAP y profesional orientada al análisis funcional, la tecnología y la mejora de procesos, con una mirada que combina negocio, sistemas y visión estratégica.
             </p>
             <p style={{
               fontFamily: 'var(--mono)', fontSize: '15px', color: 'var(--muted)',
-              lineHeight: 1.85, marginBottom: '32px',
+              lineHeight: 1.85, marginBottom: '24px',
             }}>
-              Construyo cada solución entendiendo primero cómo funciona tu negocio — no al revés. Porque automatizar mal es peor que no automatizar.
+              Estudié programación en la Universidad de Belgrano, formación que fortaleció mi forma de pensar soluciones desde una lógica técnica y estructurada, incorporando herramientas para comprender el desarrollo, la automatización y el funcionamiento profundo de los sistemas.
             </p>
+            <p style={{
+              fontFamily: 'var(--mono)', fontSize: '15px', color: 'var(--muted)',
+              lineHeight: 1.85, marginBottom: '24px',
+            }}>
+              A lo largo de mi recorrido profesional fui consolidando experiencia en análisis funcional, documentación, testing, procesos de negocio y entornos corporativos, especialmente en contextos donde la tecnología necesita dialogar de forma clara con las necesidades reales de una organización.
+            </p>
+            <p style={{
+              fontFamily: 'var(--mono)', fontSize: '15px', color: 'var(--muted)',
+              lineHeight: 1.85, marginBottom: '24px',
+            }}>
+              Mi trabajo se apoya en una combinación de análisis, criterio funcional y curiosidad constante por nuevas herramientas: automatización, inteligencia artificial, integración de sistemas y soluciones digitales pensadas para generar impacto concreto.
+            </p>
+            <p style={{
+              fontFamily: 'var(--mono)', fontSize: '15px', color: 'var(--muted)',
+              lineHeight: 1.85, marginBottom: '40px',
+            }}>
+              Me interesa especialmente crear soluciones claras, útiles y bien diseñadas, donde la tecnología no sea un fin en sí mismo, sino una herramienta real para mejorar la forma de trabajar.
+            </p>
+
+            <div style={{
+              borderTop: '1px solid var(--border)', paddingTop: '32px', marginBottom: '24px',
+            }}>
+              <div style={{
+                fontFamily: 'var(--mono)', fontSize: '12px', letterSpacing: '.14em',
+                textTransform: 'uppercase', color: 'var(--orange)', marginBottom: '20px',
+              }}>
+                // por qué nació Nexora
+              </div>
+              <p style={{
+                fontFamily: 'var(--mono)', fontSize: '15px', color: 'var(--muted)',
+                lineHeight: 1.85, marginBottom: '24px',
+              }}>
+                Nexora nació de una necesidad muy concreta: acercar tecnología inteligente a negocios reales, especialmente a pymes y emprendimientos que muchas veces tienen potencial de crecimiento pero siguen funcionando con procesos manuales, fragmentados o poco optimizados.
+              </p>
+              <p style={{
+                fontFamily: 'var(--mono)', fontSize: '15px', color: 'var(--muted)',
+                lineHeight: 1.85, marginBottom: '24px',
+              }}>
+                Después de trabajar de cerca con procesos, detectar ineficiencias y ver cuánto tiempo se pierde en tareas repetitivas o desordenadas, entendí que había una oportunidad clara: ayudar a transformar esa complejidad en soluciones simples, funcionales y sostenibles.
+              </p>
+              <p style={{
+                fontFamily: 'var(--mono)', fontSize: '15px', color: 'var(--muted)',
+                lineHeight: 1.85, marginBottom: '24px',
+              }}>
+                Nexora surge como una propuesta enfocada en automatización, mejora de procesos e integración tecnológica, con una mirada práctica: entender cómo funciona cada negocio y diseñar herramientas que realmente acompañen su crecimiento.
+              </p>
+              <p style={{
+                fontFamily: 'var(--mono)', fontSize: '15px', color: 'var(--orange)',
+                lineHeight: 1.85, fontWeight: 600,
+              }}>
+                Porque incorporar tecnología no es solamente digitalizar: es pensar mejor, ordenar mejor y hacer que cada recurso trabaje con más inteligencia.
+              </p>
+            </div>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '40px' }}>
               {['SAP HCM', 'Automatización', 'IA aplicada', '14+ años de experiencia', 'FastAPI', 'n8n', 'LangChain'].map(t => (
                 <span key={t} style={{
