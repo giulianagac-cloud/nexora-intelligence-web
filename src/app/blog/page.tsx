@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import { POSTS } from '@/components/sections/Blog'
+import { POSTS } from '@/data/posts'
 
 export const metadata: Metadata = {
   title: 'Blog — Automatización e IA para PyMEs | NEXORA Intelligence',
