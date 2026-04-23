@@ -14,6 +14,10 @@ export function Footer() {
           <li><a href="#contacto">contacto</a></li>
         </ul>
       </div>
+      <div className="footer-productos">
+        <span className="footer-prod-label">// productos</span>
+        <a href="/factura-lista" className="footer-prod-link">Factura Lista ↗</a>
+      </div>
       <div className="footer-stack">
         {STACK.map(t => <span key={t} className="stk">{t}</span>)}
       </div>
