@@ -310,7 +310,7 @@ body::after {
 .rag-icon { width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,rgba(139,92,246,.15),rgba(0,85,255,.15));border:1px solid rgba(139,92,246,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0 }
 
 /* ══ PROCESO ══ */
-.proc-sec { background:var(--deep) }
+.proc-sec { background: var(--black); border-top: 1px solid var(--border); }
 .proc-steps { display:grid;grid-template-columns:repeat(5,1fr);margin-top:56px;position:relative }
 .proc-steps::before { content:'';position:absolute;top:26px;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,var(--border) 20%,rgba(0,85,255,.4) 50%,var(--border) 80%,transparent);animation:lG 3s ease-in-out infinite }
 .ps { padding:0 18px;text-align:center }
@@ -325,7 +325,7 @@ body::after {
 .stk:hover { border-color:rgba(0,85,255,.5);color:#6699ff;background:rgba(0,85,255,.06);transform:translateY(-2px) }
 
 /* ══ CONTACTO ══ */
-.contact-sec { text-align:center;padding:112px 64px;position:relative;overflow:hidden;background:var(--deep);border-top:1px solid var(--border) }
+.contact-sec { text-align: center; padding: 112px 64px; position: relative; overflow: hidden; background: var(--surface); border-top: 1px solid var(--border); }
 .contact-sec::before { content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(0,85,255,.05) 0%,transparent 70%);pointer-events:none }
 .contact-title { font-family:var(--hl);font-size:clamp(32px,4.5vw,62px);font-weight:700;letter-spacing:-.04em;line-height:1;margin-bottom:16px;position:relative;text-transform:uppercase }
 .contact-sub { font-size:15px;color:var(--muted);margin-bottom:48px;font-family:var(--mono);position:relative }
@@ -339,16 +339,19 @@ body::after {
 .contact-info span { display:flex;align-items:center;gap:6px }
 
 /* ══ FOOTER ══ */
-.nexora-footer { padding:36px 64px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center }
-.f-logo { font-family:var(--mono);font-weight:800;font-size:14px }
-.f-logo span { color:var(--orange) }
-.f-copy { font-family:var(--mono);font-size:13px;color:var(--muted) }
-.f-links { display:flex;gap:22px;list-style:none }
-.f-links a { font-family:var(--mono);font-size:13px;color:var(--muted);text-decoration:none;transition:color .2s }
-.f-links a:hover { color:var(--white) }
+.nexora-footer { padding: 48px 64px; border-top: 1px solid var(--border); background: var(--black); display: flex; flex-direction: column; gap: 32px; }
+.footer-top { display: flex; justify-content: space-between; align-items: center; }
+.f-logo { font-family: var(--mono); font-weight: 800; font-size: 14px; color: var(--white); }
+.f-logo span { color: var(--orange); }
+.f-links { display: flex; gap: 22px; list-style: none; }
+.f-links a { font-family: var(--mono); font-size: 13px; color: var(--muted); text-decoration: none; transition: color .2s; }
+.f-links a:hover { color: var(--white); }
+.footer-stack { display: flex; flex-wrap: wrap; gap: 8px; padding-top: 24px; border-top: 1px solid var(--border); }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid var(--border); flex-wrap: wrap; gap: 8px; }
+.f-copy { font-family: var(--mono); font-size: 12px; color: var(--muted); }
 
 /* ══ DOLOR ══ */
-.dolor-sec { background: var(--deep); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.dolor-sec { background: var(--black); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 .dolor-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 52px; }
 .dolor-item { background: var(--surface); padding: 40px 36px; display: flex; flex-direction: column; gap: 14px; transition: background .3s; }
 .dolor-item:hover { background: var(--surface2); }
@@ -419,4 +422,7 @@ body::after {
   .bots-row { flex-direction: column; align-items: flex-start; gap: 12px; }
   .bot-mockup { max-width: 100%; }
   .bots-cta { flex-direction: column; }
+  .nexora-footer { padding: 40px 24px; gap: 24px; }
+  .footer-top { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
 }
