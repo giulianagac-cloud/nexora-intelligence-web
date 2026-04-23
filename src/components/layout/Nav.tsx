@@ -50,9 +50,9 @@ export function Nav() {
               onMouseEnter={openServicios}
               onMouseLeave={closeServicios}
             >
-              <a href="/#servicios" className="nav-drop-item">Automatización</a>
-              <a href="/#servicios" className="nav-drop-item">Bots con IA</a>
-              <a href="/#servicios" className="nav-drop-item">Desarrollo digital</a>
+              <a href="/servicios/automatizacion" className="nav-drop-item">Automatización</a>
+              <a href="/servicios/bots-con-ia" className="nav-drop-item">Bots con IA</a>
+              <a href="/servicios/desarrollo-digital" className="nav-drop-item">Desarrollo digital</a>
             </div>
           )}
         </li>
