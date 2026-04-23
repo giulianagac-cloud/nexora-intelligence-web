@@ -16,7 +16,7 @@ export function Proceso() {
   return (
     <section className="sec-pad proc-sec" id="proceso">
       <div className="eyebrow reveal">// cómo trabajo</div>
-      <h2 className="sec-title reveal d1">Sin humo.<br />Sin promesas vacías.</h2>
+      <h2 className="sec-title reveal d1">Cómo trabajo.</h2>
       <div className="checklist reveal d2">
         {COMO_TRABAJO.map((item, i) => (
           <div key={i} className="checklist-item">
