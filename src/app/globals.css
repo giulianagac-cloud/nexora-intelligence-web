@@ -178,7 +178,7 @@ body::after {
 .sc:hover .sc-tag { border-color:rgba(0,85,255,.3);color:rgba(100,150,255,.8) }
 
 /* Servicios grid bloques */
-.svcs-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:52px }
+.svcs-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:52px }
 .svc-block { position:relative;overflow:hidden;aspect-ratio:4/3;text-decoration:none;display:block }
 .svc-block-img { position:absolute;inset:0 }
 .svc-block-overlay { position:absolute;inset:0;background:linear-gradient(to top, rgba(5,5,8,.95) 0%, rgba(5,5,8,.4) 50%, rgba(5,5,8,.1) 100%);transition:background .4s }
