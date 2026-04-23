@@ -54,9 +54,7 @@ export function CookieBanner() {
         margin: 0,
         maxWidth: '680px',
       }}>
-        🍪 Usamos cookies para analizar el tráfico y mejorar tu experiencia en el sitio.
-        No compartimos datos personales con terceros.
-        Podés aceptar o rechazar su uso.
+        🍪 Usamos cookies para entender cómo navegás el sitio y mejorar la experiencia. Sin datos personales, sin terceros raros. Vos decidís.
       </p>
       <div style={{ display: 'flex', gap: '10px', flexShrink: 0 }}>
         <button
