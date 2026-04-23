@@ -43,8 +43,9 @@ export default function BotsConIAPage() {
     ]
 
     let msgIndex = 0
-    const container = document.getElementById('chat-container')
+    const container = document.getElementById('chat-container') as HTMLElement | null
     if (!container) return
+    const el = container
 
     function addMessage(from: string, text: string, cb: () => void) {
       const div = document.createElement('div')
@@ -58,8 +59,8 @@ export default function BotsConIAPage() {
         }
       `
       div.textContent = text
-      container.appendChild(div)
-      container.scrollTop = container.scrollHeight
+      el.appendChild(div)
+      el.scrollTop = el.scrollHeight
       setTimeout(cb, 800)
     }
 
@@ -68,7 +69,7 @@ export default function BotsConIAPage() {
         const typing = document.createElement('div')
         typing.style.cssText = 'display:flex;align-items:center;gap:4px;padding:12px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);border-radius:10px;border-bottom-left-radius:3px;align-self:flex-start;'
         typing.innerHTML = `<span style="width:6px;height:6px;border-radius:50%;background:var(--muted);animation:pulse 1.2s infinite"></span><span style="width:6px;height:6px;border-radius:50%;background:var(--muted);animation:pulse 1.2s .2s infinite"></span><span style="width:6px;height:6px;border-radius:50%;background:var(--muted);animation:pulse 1.2s .4s infinite"></span>`
-        container.appendChild(typing)
+        el.appendChild(typing)
         return
       }
       const m = msgs[msgIndex]
