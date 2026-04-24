@@ -149,7 +149,7 @@ export default function BotsConIAPage() {
 
           {/* MOCKUP CHAT */}
           <div style={{
-            background: 'radial-gradient(ellipse at 20% 20%, rgba(0,166,126,0.4) 0%, transparent 50%), radial-gradient(ellipse at 80% 80%, rgba(180,160,100,0.3) 0%, transparent 50%), radial-gradient(ellipse at 60% 30%, rgba(100,140,180,0.3) 0%, transparent 50%), #1a1a1a',
+            background: 'url(/chat-bg.svg) center/cover no-repeat',
             border: '1px solid var(--border)',
             borderRadius: '8px', overflow: 'hidden',
           }}>
