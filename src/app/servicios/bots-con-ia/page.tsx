@@ -147,27 +147,30 @@ export default function BotsConIAPage() {
             </div>
           </div>
 
-          {/* MOCKUP CHAT */}
-          <div style={{
-            background: 'url(/chat-bg.svg) center/cover no-repeat',
-            border: '1px solid var(--border)',
-            borderRadius: '8px', overflow: 'hidden',
-          }}>
+          {/* MOCKUP CHAT — phone */}
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <div style={{
-              background: 'var(--surface2)', padding: '12px 16px',
-              display: 'flex', alignItems: 'center', gap: '6px',
-              borderBottom: '1px solid var(--border)',
+              width: '280px', height: '520px', borderRadius: '32px',
+              background: 'url(/chat-bg.svg) center/cover no-repeat',
+              border: '1px solid rgba(255,255,255,0.10)',
+              boxShadow: '0 24px 64px rgba(0,0,0,0.35)',
+              overflow: 'hidden', display: 'flex', flexDirection: 'column',
             }}>
-              <span style={{ width: '11px', height: '11px', borderRadius: '50%', background: '#ff5f57', display: 'inline-block' }} />
-              <span style={{ width: '11px', height: '11px', borderRadius: '50%', background: '#febc2e', display: 'inline-block' }} />
-              <span style={{ width: '11px', height: '11px', borderRadius: '50%', background: '#28c840', display: 'inline-block' }} />
-              <span style={{ fontFamily: 'var(--mono)', fontSize: '12px', color: 'var(--muted)', marginLeft: '8px' }}>NexBot — Atención al cliente</span>
-              <span style={{ fontFamily: 'var(--mono)', fontSize: '11px', color: '#4aff91', marginLeft: 'auto' }}>● en vivo</span>
+              {/* status bar */}
+              <div style={{
+                padding: '14px 20px 10px',
+                display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+              }}>
+                <span style={{ fontFamily: 'var(--mono)', fontSize: '11px', color: 'rgba(255,255,255,.5)' }}>NexBot</span>
+                <span style={{ fontFamily: 'var(--mono)', fontSize: '10px', color: '#4aff91' }}>● en vivo</span>
+              </div>
+              {/* chat messages */}
+              <div id="chat-container" style={{
+                flex: 1, padding: '8px 14px 16px',
+                display: 'flex', flexDirection: 'column',
+                gap: '10px', overflowY: 'auto',
+              }} />
             </div>
-            <div id="chat-container" style={{
-              padding: '20px 16px', display: 'flex', flexDirection: 'column',
-              gap: '10px', minHeight: '220px', maxHeight: '280px', overflowY: 'auto',
-            }} />
           </div>
         </div>
       </section>
