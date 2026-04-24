@@ -6,8 +6,11 @@ export function CookieBanner() {
   const [animIn, setAnimIn] = useState(false)
 
   useEffect(() => {
-    setVisible(true)
-    setTimeout(() => setAnimIn(true), 800)
+    const accepted = localStorage.getItem('cookies-accepted')
+    if (!accepted) {
+      setVisible(true)
+      setTimeout(() => setAnimIn(true), 800)
+    }
   }, [])
 
   const accept = () => {
