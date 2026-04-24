@@ -181,16 +181,17 @@ body::after {
 .sc:hover .sc-tag { border-color:rgba(0,85,255,.3);color:rgba(100,150,255,.8) }
 
 /* Servicios grid bloques */
-.svcs-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:52px }
-.svc-block { position:relative;overflow:hidden;aspect-ratio:4/3;text-decoration:none;display:block }
-.svc-block-img { position:absolute;inset:0 }
-.svc-block-overlay { position:absolute;inset:0;background:linear-gradient(to top, rgba(5,5,8,.95) 0%, rgba(5,5,8,.4) 50%, rgba(5,5,8,.1) 100%);transition:background .4s }
-.svc-block:hover .svc-block-overlay { background:linear-gradient(to top, rgba(5,5,8,.98) 0%, rgba(5,5,8,.7) 60%, rgba(5,5,8,.3) 100%) }
-.svc-block-content { position:absolute;bottom:0;left:0;right:0;padding:24px 28px;z-index:2 }
-.svc-block-name { font-family:var(--hl);font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:-.02em;color:var(--white);margin-bottom:6px;line-height:1.1 }
-.svc-block-desc { font-family:var(--mono);font-size:13px;color:var(--muted2);line-height:1.5;margin-bottom:12px;opacity:0;transform:translateY(8px);transition:all .3s }
-.svc-block:hover .svc-block-desc { opacity:1;transform:translateY(0) }
-.svc-block-arrow { font-family:var(--mono);font-size:12px;font-weight:700;color:var(--orange);opacity:0;transition:opacity .3s .1s }
+.svcs-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:52px }
+.svc-block { text-decoration:none;display:flex;flex-direction:column;background:var(--surface);transition:background .3s }
+.svc-block:hover { background:var(--surface2) }
+.svc-block-img { overflow:hidden;aspect-ratio:16/10;position:relative;width:100% }
+.svc-block-img img, .svc-block-img > span { width:100%!important;height:100%!important;object-fit:cover;transition:transform .6s ease }
+.svc-block:hover .svc-block-img img { transform:scale(1.04) }
+.svc-block-overlay { display:none }
+.svc-block-content { padding:20px 24px;border-top:1px solid var(--border) }
+.svc-block-name { font-family:var(--hl);font-size:18px;font-weight:700;text-transform:uppercase;letter-spacing:-.02em;color:var(--white);margin-bottom:4px }
+.svc-block-desc { font-family:var(--mono);font-size:13px;color:var(--muted);line-height:1.5;margin-bottom:8px }
+.svc-block-arrow { font-family:var(--mono);font-size:12px;font-weight:700;color:var(--blue);opacity:0;transition:opacity .3s }
 .svc-block:hover .svc-block-arrow { opacity:1 }
 
 /* Servicios alternados */
