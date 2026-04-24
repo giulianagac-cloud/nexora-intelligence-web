@@ -545,6 +545,18 @@ body::after {
 .nav-drop-item:last-child { border-bottom: none; }
 .nav-drop-item:hover { background: rgba(255,107,43,.06); color: var(--white); padding-left: 24px; }
 
+/* ══ PAGE LAYOUT UTILITIES ══ */
+.pg-hero { padding:120px 64px 80px;position:relative;overflow:hidden }
+.pg-hero-tall { padding:160px 64px 80px;position:relative;overflow:hidden }
+.pg-sec { padding:96px 64px }
+.pg-cta { padding:112px 64px;text-align:center;position:relative;overflow:hidden }
+.pg-sec-sq { padding:64px }
+.pg-footer { padding:32px 64px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px }
+.pg-grid-2c { display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center }
+.pg-grid-2c-md { display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border) }
+.pg-grid-3c { display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border) }
+.pg-grid-3c-gap { display:grid;grid-template-columns:repeat(3,1fr);gap:32px }
+
 /* ══ AUTOMATIZACION PAGE ══ */
 .auto-hero { min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:120px 64px 80px;position:relative;overflow:hidden;border-bottom:1px solid var(--border) }
 .auto-hero-grid { position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center }
@@ -600,6 +612,16 @@ body::after {
   .sec-pad { padding: 48px 20px; }
   .nexora-nav { padding: 14px 20px; }
   .nexora-nav.scrolled { padding: 10px 20px; }
+  .pg-hero { padding:100px 20px 60px }
+  .pg-hero-tall { padding:120px 20px 60px }
+  .pg-sec { padding:56px 20px }
+  .pg-cta { padding:64px 20px }
+  .pg-sec-sq { padding:40px 20px }
+  .pg-footer { padding:24px 20px }
+  .pg-grid-2c { grid-template-columns:1fr;gap:36px }
+  .pg-grid-2c-md { grid-template-columns:1fr;gap:24px }
+  .pg-grid-3c { grid-template-columns:1fr }
+  .pg-grid-3c-gap { grid-template-columns:1fr;gap:20px }
   .auto-hero { padding:100px 20px 60px }
   .auto-hero-grid { grid-template-columns:1fr;gap:36px }
   .auto-sec { padding:56px 20px }

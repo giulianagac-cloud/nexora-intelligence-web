@@ -15,11 +15,7 @@ export default function BlogPage() {
       <Nav />
 
       {/* HERO */}
-      <section style={{
-        padding: '160px 64px 80px',
-        borderBottom: '1px solid var(--border)',
-        position: 'relative', overflow: 'hidden',
-      }}>
+      <section className="pg-hero-tall" style={{ borderBottom: '1px solid var(--border)' }}>
         <div style={{
           position: 'absolute', inset: 0,
           background: 'radial-gradient(ellipse 60% 50% at 80% 30%, rgba(255,107,43,.07) 0%, transparent 60%)',
@@ -36,7 +32,7 @@ export default function BlogPage() {
             // blog
           </div>
           <h1 style={{
-            fontFamily: 'var(--hl)', fontSize: 'clamp(48px, 7vw, 88px)',
+            fontFamily: 'var(--hl)', fontSize: 'clamp(36px, 7vw, 88px)',
             fontWeight: 700, lineHeight: .95, letterSpacing: '-.04em',
             textTransform: 'uppercase', marginBottom: '20px',
           }}>
@@ -53,11 +49,8 @@ export default function BlogPage() {
       </section>
 
       {/* POSTS */}
-      <section style={{ padding: '96px 64px' }}>
-        <div style={{
-          display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: '1px', background: 'var(--border)', border: '1px solid var(--border)',
-        }}>
+      <section className="pg-sec">
+        <div className="pg-grid-3c">
           {POSTS.map((p) => (
             <a key={p.slug} href={`/blog/${p.slug}`} style={{
               background: 'var(--surface)', textDecoration: 'none',
@@ -103,11 +96,7 @@ export default function BlogPage() {
       </section>
 
       {/* FOOTER */}
-      <footer style={{
-        padding: '32px 64px', borderTop: '1px solid var(--border)',
-        display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-        flexWrap: 'wrap', gap: '12px',
-      }}>
+      <footer className="pg-footer">
         <a href="/" style={{ fontFamily: 'var(--mono)', fontWeight: 800, fontSize: '14px', color: 'var(--white)', textDecoration: 'none' }}>
           NEXORA<span style={{ color: 'var(--orange)' }}>_</span>Intelligence
         </a>

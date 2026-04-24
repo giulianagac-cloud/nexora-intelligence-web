@@ -12,22 +12,16 @@ export default function DesarrolloPage() {
       <Nav />
 
       {/* HERO */}
-      <section style={{
+      <section className="pg-hero" style={{
         minHeight: '100vh', display: 'flex', flexDirection: 'column',
-        justifyContent: 'center', padding: '120px 64px 80px',
-        position: 'relative', overflow: 'hidden',
-        borderBottom: '1px solid var(--border)',
+        justifyContent: 'center', borderBottom: '1px solid var(--border)',
       }}>
         <div style={{
           position: 'absolute', inset: 0,
           background: 'radial-gradient(ellipse 60% 50% at 80% 30%, rgba(0,85,255,.07) 0%, transparent 60%)',
           pointerEvents: 'none',
         }} />
-        <div style={{
-          position: 'relative', zIndex: 2,
-          display: 'grid', gridTemplateColumns: '1fr 1fr',
-          gap: '80px', alignItems: 'center',
-        }}>
+        <div className="pg-grid-2c" style={{ position: 'relative', zIndex: 2 }}>
           <div>
             <div style={{
               display: 'inline-flex', alignItems: 'center',
@@ -39,7 +33,7 @@ export default function DesarrolloPage() {
               // desarrollo digital
             </div>
             <h1 style={{
-              fontFamily: 'var(--hl)', fontSize: 'clamp(48px, 6vw, 80px)',
+              fontFamily: 'var(--hl)', fontSize: 'clamp(40px, 6vw, 80px)',
               fontWeight: 700, lineHeight: .95, letterSpacing: '-.04em',
               textTransform: 'uppercase', marginBottom: '28px',
             }}>
@@ -68,12 +62,12 @@ export default function DesarrolloPage() {
       </section>
 
       {/* QUÉ DESARROLLAMOS */}
-      <section style={{ padding: '96px 64px', background: 'var(--deep)', borderBottom: '1px solid var(--border)' }}>
+      <section className="pg-sec" style={{ background: 'var(--deep)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ fontFamily: 'var(--mono)', fontSize: '12px', letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '18px' }}>// qué desarrollamos</div>
-        <h2 style={{ fontFamily: 'var(--hl)', fontSize: 'clamp(32px, 4.5vw, 56px)', fontWeight: 700, lineHeight: 1, letterSpacing: '-.04em', textTransform: 'uppercase', marginBottom: '52px' }}>
+        <h2 style={{ fontFamily: 'var(--hl)', fontSize: 'clamp(28px, 4.5vw, 56px)', fontWeight: 700, lineHeight: 1, letterSpacing: '-.04em', textTransform: 'uppercase', marginBottom: '52px' }}>
           Que desarrollamos.
         </h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1px', background: 'var(--border)', border: '1px solid var(--border)' }}>
+        <div className="pg-grid-3c">
           {[
             { title: 'Landing pages', desc: 'Sitios de una página diseñados para convertir. Rápidos, optimizados para Google y con formularios de contacto.' },
             { title: 'Sitios institucionales', desc: 'Tu empresa en internet con toda la información que el cliente necesita para contactarte con confianza.' },
@@ -92,10 +86,10 @@ export default function DesarrolloPage() {
       </section>
 
       {/* CTA */}
-      <section style={{ padding: '112px 64px', background: 'var(--surface)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+      <section className="pg-cta" style={{ background: 'var(--surface)' }}>
         <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(0,85,255,.05) 0%, transparent 70%)', pointerEvents: 'none' }} />
         <div style={{ position: 'relative', zIndex: 1 }}>
-          <h2 style={{ fontFamily: 'var(--hl)', fontSize: 'clamp(32px, 4.5vw, 62px)', fontWeight: 700, letterSpacing: '-.04em', lineHeight: 1, textTransform: 'uppercase', marginBottom: '16px' }}>
+          <h2 style={{ fontFamily: 'var(--hl)', fontSize: 'clamp(28px, 4.5vw, 62px)', fontWeight: 700, letterSpacing: '-.04em', lineHeight: 1, textTransform: 'uppercase', marginBottom: '16px' }}>
             ¿Qué querés<br />construir?
           </h2>
           <p style={{ fontFamily: 'var(--mono)', fontSize: '15px', color: 'var(--muted)', marginBottom: '48px', lineHeight: 1.8 }}>
@@ -108,7 +102,7 @@ export default function DesarrolloPage() {
       </section>
 
       {/* FOOTER */}
-      <footer style={{ padding: '32px 64px', borderTop: '1px solid var(--border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
+      <footer className="pg-footer">
         <a href="/" style={{ fontFamily: 'var(--mono)', fontWeight: 800, fontSize: '14px', color: 'var(--white)', textDecoration: 'none' }}>
           NEXORA<span style={{ color: 'var(--orange)' }}>_</span>Intelligence
         </a>

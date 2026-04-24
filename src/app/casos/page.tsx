@@ -12,10 +12,7 @@ export default function CasosPage() {
       <Nav />
 
       {/* HERO */}
-      <section style={{
-        padding: '160px 64px 80px', borderBottom: '1px solid var(--border)',
-        position: 'relative', overflow: 'hidden',
-      }}>
+      <section className="pg-hero-tall" style={{ borderBottom: '1px solid var(--border)' }}>
         <div style={{
           position: 'absolute', inset: 0,
           background: 'radial-gradient(ellipse 60% 50% at 80% 30%, rgba(255,107,43,.07) 0%, transparent 60%)',
@@ -32,7 +29,7 @@ export default function CasosPage() {
             // casos reales
           </div>
           <h1 style={{
-            fontFamily: 'var(--hl)', fontSize: 'clamp(48px, 7vw, 88px)',
+            fontFamily: 'var(--hl)', fontSize: 'clamp(36px, 7vw, 88px)',
             fontWeight: 700, lineHeight: .95, letterSpacing: '-.04em',
             textTransform: 'uppercase', marginBottom: '20px',
           }}>
@@ -49,14 +46,10 @@ export default function CasosPage() {
       </section>
 
       {/* CASOS */}
-      <section style={{ padding: '96px 64px' }}>
+      <section className="pg-sec">
 
         {/* Caso 1 */}
-        <div style={{
-          display: 'grid', gridTemplateColumns: '1fr 1fr',
-          gap: '1px', background: 'var(--border)', border: '1px solid var(--border)',
-          marginBottom: '1px',
-        }}>
+        <div className="pg-grid-2c-md" style={{ marginBottom: '1px' }}>
           <div style={{ overflow: 'hidden', position: 'relative', minHeight: '360px' }}>
             <img
               src="https://api.microlink.io/?url=https://claudio-ortiz-abogado.vercel.app/&screenshot=true&meta=false&embed=screenshot.url"
@@ -68,7 +61,7 @@ export default function CasosPage() {
             <div style={{ fontFamily: 'var(--mono)', fontSize: '11px', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--orange)', marginBottom: '16px' }}>
               Estudio jurídico
             </div>
-            <div style={{ fontFamily: 'var(--hl)', fontSize: 'clamp(24px, 2.5vw, 36px)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '-.03em', marginBottom: '16px', lineHeight: 1.1 }}>
+            <div style={{ fontFamily: 'var(--hl)', fontSize: 'clamp(20px, 2.5vw, 36px)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '-.03em', marginBottom: '16px', lineHeight: 1.1 }}>
               Ortiz Alejandre Abogados
             </div>
             <div style={{ fontFamily: 'var(--mono)', fontSize: '13px', color: 'var(--muted)', borderLeft: '2px solid var(--border)', paddingLeft: '12px', marginBottom: '16px', fontStyle: 'italic', lineHeight: 1.6 }}>
@@ -89,15 +82,12 @@ export default function CasosPage() {
         </div>
 
         {/* Caso 2 */}
-        <div style={{
-          display: 'grid', gridTemplateColumns: '1fr 1fr',
-          gap: '1px', background: 'var(--border)', border: '1px solid var(--border)',
-        }}>
+        <div className="pg-grid-2c-md">
           <div style={{ background: 'var(--surface)', padding: '52px 48px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <div style={{ fontFamily: 'var(--mono)', fontSize: '11px', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--orange)', marginBottom: '16px' }}>
               Gimnasio boutique
             </div>
-            <div style={{ fontFamily: 'var(--hl)', fontSize: 'clamp(24px, 2.5vw, 36px)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '-.03em', marginBottom: '16px', lineHeight: 1.1 }}>
+            <div style={{ fontFamily: 'var(--hl)', fontSize: 'clamp(20px, 2.5vw, 36px)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '-.03em', marginBottom: '16px', lineHeight: 1.1 }}>
               OverGym
             </div>
             <div style={{ fontFamily: 'var(--mono)', fontSize: '13px', color: 'var(--muted)', borderLeft: '2px solid var(--border)', paddingLeft: '12px', marginBottom: '16px', fontStyle: 'italic', lineHeight: 1.6 }}>
@@ -119,11 +109,7 @@ export default function CasosPage() {
       </section>
 
       {/* CTA */}
-      <section style={{
-        padding: '112px 64px', background: 'var(--surface)',
-        borderTop: '1px solid var(--border)', textAlign: 'center',
-        position: 'relative', overflow: 'hidden',
-      }}>
+      <section className="pg-cta" style={{ background: 'var(--surface)', borderTop: '1px solid var(--border)' }}>
         <div style={{
           position: 'absolute', inset: 0,
           background: 'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(255,107,43,.05) 0%, transparent 70%)',
@@ -131,7 +117,7 @@ export default function CasosPage() {
         }} />
         <div style={{ position: 'relative', zIndex: 1 }}>
           <h2 style={{
-            fontFamily: 'var(--hl)', fontSize: 'clamp(32px, 4.5vw, 62px)',
+            fontFamily: 'var(--hl)', fontSize: 'clamp(28px, 4.5vw, 62px)',
             fontWeight: 700, letterSpacing: '-.04em', lineHeight: 1,
             textTransform: 'uppercase', marginBottom: '16px',
           }}>
@@ -155,11 +141,7 @@ export default function CasosPage() {
       </section>
 
       {/* FOOTER */}
-      <footer style={{
-        padding: '32px 64px', borderTop: '1px solid var(--border)',
-        display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-        flexWrap: 'wrap', gap: '12px',
-      }}>
+      <footer className="pg-footer">
         <a href="/" style={{ fontFamily: 'var(--mono)', fontWeight: 800, fontSize: '14px', color: 'var(--white)', textDecoration: 'none' }}>
           NEXORA<span style={{ color: 'var(--orange)' }}>_</span>Intelligence
         </a>

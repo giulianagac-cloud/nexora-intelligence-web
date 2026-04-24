@@ -86,22 +86,16 @@ export default function BotsConIAPage() {
       <Nav />
 
       {/* HERO */}
-      <section style={{
+      <section className="pg-hero" style={{
         minHeight: '100vh', display: 'flex', flexDirection: 'column',
-        justifyContent: 'center', padding: '120px 64px 80px',
-        position: 'relative', overflow: 'hidden',
-        borderBottom: '1px solid var(--border)',
+        justifyContent: 'center', borderBottom: '1px solid var(--border)',
       }}>
         <div style={{
           position: 'absolute', inset: 0,
           background: 'radial-gradient(ellipse 60% 50% at 80% 30%, rgba(139,92,246,.07) 0%, transparent 60%)',
           pointerEvents: 'none',
         }} />
-        <div style={{
-          position: 'relative', zIndex: 2,
-          display: 'grid', gridTemplateColumns: '1fr 1fr',
-          gap: '80px', alignItems: 'center',
-        }}>
+        <div className="pg-grid-2c" style={{ position: 'relative', zIndex: 2 }}>
           <div>
             <div style={{
               display: 'inline-flex', alignItems: 'center',
@@ -113,7 +107,7 @@ export default function BotsConIAPage() {
               // bots con ia
             </div>
             <h1 style={{
-              fontFamily: 'var(--hl)', fontSize: 'clamp(48px, 6vw, 80px)',
+              fontFamily: 'var(--hl)', fontSize: 'clamp(40px, 6vw, 80px)',
               fontWeight: 700, lineHeight: .95, letterSpacing: '-.04em',
               textTransform: 'uppercase', marginBottom: '28px',
             }}>
@@ -148,111 +142,68 @@ export default function BotsConIAPage() {
           </div>
 
           {/* MOCKUP CELULAR */}
-          <div style={{
-            position: 'relative',
-            width: '300px',
-            height: '600px',
-            flexShrink: 0,
-          }}>
-            {/* Marco del iPhone */}
-            <div style={{
-              position: 'absolute', inset: 0,
-              border: '10px solid #1a1a1a',
-              borderRadius: '44px',
-              boxShadow: '0 0 0 2px #3a3a3a, 0 24px 60px rgba(0,0,0,0.4), inset 0 0 0 1px #2a2a2a',
-              zIndex: 3,
-              pointerEvents: 'none',
-            }} />
-            {/* Notch */}
-            <div style={{
-              position: 'absolute', top: '10px', left: '50%',
-              transform: 'translateX(-50%)',
-              width: '80px', height: '24px',
-              background: '#1a1a1a', borderRadius: '0 0 16px 16px',
-              zIndex: 4,
-            }} />
-            {/* Botones laterales */}
-            <div style={{ position: 'absolute', left: '-13px', top: '100px', width: '4px', height: '32px', background: '#2a2a2a', borderRadius: '2px 0 0 2px' }} />
-            <div style={{ position: 'absolute', left: '-13px', top: '145px', width: '4px', height: '52px', background: '#2a2a2a', borderRadius: '2px 0 0 2px' }} />
-            <div style={{ position: 'absolute', left: '-13px', top: '210px', width: '4px', height: '52px', background: '#2a2a2a', borderRadius: '2px 0 0 2px' }} />
-            <div style={{ position: 'absolute', right: '-13px', top: '160px', width: '4px', height: '72px', background: '#2a2a2a', borderRadius: '0 2px 2px 0' }} />
-
-            {/* Pantalla */}
-            <div style={{
-              position: 'absolute', inset: '10px',
-              borderRadius: '34px',
-              overflow: 'hidden',
-              background: `url('/chat-bg.svg') center/cover no-repeat`,
-              display: 'flex', flexDirection: 'column',
-            }}>
-              {/* Status bar */}
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div style={{ position: 'relative', width: '300px', height: '600px', flexShrink: 0 }}>
+              {/* Marco del iPhone */}
               <div style={{
-                padding: '14px 20px 8px',
-                display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-                flexShrink: 0,
-              }}>
-                <span style={{ fontFamily: 'var(--mono)', fontSize: '11px', fontWeight: 700, color: '#fff' }}>9:41</span>
-                <div style={{ display: 'flex', gap: '5px', alignItems: 'center' }}>
-                  <span style={{ fontSize: '10px', color: '#fff' }}>●●●</span>
-                  <span style={{ fontSize: '10px', color: '#fff' }}>WiFi</span>
-                  <span style={{ fontSize: '10px', color: '#fff' }}>🔋</span>
-                </div>
-              </div>
-
-              {/* Header del chat */}
+                position: 'absolute', inset: 0,
+                border: '10px solid #1a1a1a',
+                borderRadius: '44px',
+                boxShadow: '0 0 0 2px #3a3a3a, 0 24px 60px rgba(0,0,0,0.4), inset 0 0 0 1px #2a2a2a',
+                zIndex: 3, pointerEvents: 'none',
+              }} />
+              {/* Notch */}
               <div style={{
-                padding: '8px 16px 10px',
-                display: 'flex', alignItems: 'center', gap: '10px',
-                borderBottom: '1px solid rgba(255,255,255,.1)', flexShrink: 0,
-                background: 'rgba(0,0,0,.2)',
+                position: 'absolute', top: '10px', left: '50%',
+                transform: 'translateX(-50%)',
+                width: '80px', height: '24px',
+                background: '#1a1a1a', borderRadius: '0 0 16px 16px', zIndex: 4,
+              }} />
+              {/* Botones laterales */}
+              <div style={{ position: 'absolute', left: '-13px', top: '100px', width: '4px', height: '32px', background: '#2a2a2a', borderRadius: '2px 0 0 2px' }} />
+              <div style={{ position: 'absolute', left: '-13px', top: '145px', width: '4px', height: '52px', background: '#2a2a2a', borderRadius: '2px 0 0 2px' }} />
+              <div style={{ position: 'absolute', left: '-13px', top: '210px', width: '4px', height: '52px', background: '#2a2a2a', borderRadius: '2px 0 0 2px' }} />
+              <div style={{ position: 'absolute', right: '-13px', top: '160px', width: '4px', height: '72px', background: '#2a2a2a', borderRadius: '0 2px 2px 0' }} />
+
+              {/* Pantalla */}
+              <div style={{
+                position: 'absolute', inset: '10px', borderRadius: '34px', overflow: 'hidden',
+                background: `url('/chat-bg.svg') center/cover no-repeat`,
+                display: 'flex', flexDirection: 'column',
               }}>
-                <div style={{
-                  width: '32px', height: '32px', borderRadius: '50%',
-                  background: 'linear-gradient(135deg, #00a67e, #007a5e)',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: '14px', flexShrink: 0,
-                }}>N</div>
-                <div>
-                  <div style={{ fontFamily: 'var(--mono)', fontSize: '12px', fontWeight: 700, color: '#fff' }}>NexBot</div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                    <span style={{ width: '5px', height: '5px', borderRadius: '50%', background: '#4aff91', display: 'inline-block' }} />
-                    <span style={{ fontFamily: 'var(--mono)', fontSize: '10px', color: '#4aff91' }}>en vivo</span>
+                {/* Status bar */}
+                <div style={{ padding: '14px 20px 8px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexShrink: 0 }}>
+                  <span style={{ fontFamily: 'var(--mono)', fontSize: '11px', fontWeight: 700, color: '#fff' }}>9:41</span>
+                  <div style={{ display: 'flex', gap: '5px', alignItems: 'center' }}>
+                    <span style={{ fontSize: '10px', color: '#fff' }}>●●●</span>
+                    <span style={{ fontSize: '10px', color: '#fff' }}>WiFi</span>
+                    <span style={{ fontSize: '10px', color: '#fff' }}>🔋</span>
                   </div>
                 </div>
-              </div>
-
-              {/* Mensajes */}
-              <div id="chat-container" style={{
-                flex: 1, padding: '12px 14px',
-                display: 'flex', flexDirection: 'column', gap: '8px',
-                overflowY: 'auto',
-              }} />
-
-              {/* Input */}
-              <div style={{
-                padding: '10px 12px',
-                display: 'flex', alignItems: 'center', gap: '8px',
-                background: 'rgba(0,0,0,.25)',
-                borderTop: '1px solid rgba(255,255,255,.08)',
-                flexShrink: 0,
-              }}>
-                <div style={{
-                  flex: 1, background: 'rgba(255,255,255,.12)',
-                  borderRadius: '20px', padding: '8px 14px',
-                  fontFamily: 'var(--mono)', fontSize: '12px', color: 'rgba(255,255,255,.4)',
-                }}>
-                  Escribí tu consulta...
+                {/* Header del chat */}
+                <div style={{ padding: '8px 16px 10px', display: 'flex', alignItems: 'center', gap: '10px', borderBottom: '1px solid rgba(255,255,255,.1)', flexShrink: 0, background: 'rgba(0,0,0,.2)' }}>
+                  <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: 'linear-gradient(135deg, #00a67e, #007a5e)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px', flexShrink: 0 }}>N</div>
+                  <div>
+                    <div style={{ fontFamily: 'var(--mono)', fontSize: '12px', fontWeight: 700, color: '#fff' }}>NexBot</div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                      <span style={{ width: '5px', height: '5px', borderRadius: '50%', background: '#4aff91', display: 'inline-block' }} />
+                      <span style={{ fontFamily: 'var(--mono)', fontSize: '10px', color: '#4aff91' }}>en vivo</span>
+                    </div>
+                  </div>
                 </div>
-                <div style={{
-                  width: '34px', height: '34px', borderRadius: '50%',
-                  background: '#00a67e',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  cursor: 'pointer', flexShrink: 0,
-                }}>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-                    <path d="M22 2L11 13" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
-                    <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                {/* Mensajes */}
+                <div id="chat-container" style={{ flex: 1, padding: '12px 14px', display: 'flex', flexDirection: 'column', gap: '8px', overflowY: 'auto' }} />
+                {/* Input */}
+                <div style={{ padding: '10px 12px', display: 'flex', alignItems: 'center', gap: '8px', background: 'rgba(0,0,0,.25)', borderTop: '1px solid rgba(255,255,255,.08)', flexShrink: 0 }}>
+                  <div style={{ flex: 1, background: 'rgba(255,255,255,.12)', borderRadius: '20px', padding: '8px 14px', fontFamily: 'var(--mono)', fontSize: '12px', color: 'rgba(255,255,255,.4)' }}>
+                    Escribí tu consulta...
+                  </div>
+                  <div style={{ width: '34px', height: '34px', borderRadius: '50%', background: '#00a67e', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', flexShrink: 0 }}>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                      <path d="M22 2L11 13" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
+                      <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
@@ -261,9 +212,9 @@ export default function BotsConIAPage() {
       </section>
 
       {/* PLANES */}
-      <section style={{ padding: '96px 64px', background: 'var(--deep)', borderBottom: '1px solid var(--border)' }}>
+      <section className="pg-sec" style={{ background: 'var(--deep)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ fontFamily: 'var(--mono)', fontSize: '12px', letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '18px' }}>// planes</div>
-        <h2 style={{ fontFamily: 'var(--hl)', fontSize: 'clamp(32px, 4.5vw, 56px)', fontWeight: 700, lineHeight: 1, letterSpacing: '-.04em', textTransform: 'uppercase', marginBottom: '52px' }}>
+        <h2 style={{ fontFamily: 'var(--hl)', fontSize: 'clamp(28px, 4.5vw, 56px)', fontWeight: 700, lineHeight: 1, letterSpacing: '-.04em', textTransform: 'uppercase', marginBottom: '52px' }}>
           Elegí el nivel que<br />necesita tu operación.
         </h2>
         <div style={{ border: '1px solid var(--border)', display: 'flex', flexDirection: 'column', gap: '1px', background: 'var(--border)' }}>
@@ -273,16 +224,10 @@ export default function BotsConIAPage() {
               padding: '28px 40px', display: 'flex', alignItems: 'center',
               justifyContent: 'space-between', gap: '24px',
               borderLeft: c.featured ? `2px solid ${c.color}` : 'none',
-              transition: 'background .3s',
+              transition: 'background .3s', flexWrap: 'wrap',
             }}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                <span style={{
-                  display: 'inline-flex', alignItems: 'center',
-                  fontFamily: 'var(--mono)', fontSize: '11px', fontWeight: 700,
-                  letterSpacing: '.12em', textTransform: 'uppercase',
-                  padding: '4px 10px', borderRadius: '2px', border: `1px solid ${c.border}`,
-                  background: c.bg, color: c.color, alignSelf: 'flex-start',
-                }}>
+                <span style={{ display: 'inline-flex', alignItems: 'center', fontFamily: 'var(--mono)', fontSize: '11px', fontWeight: 700, letterSpacing: '.12em', textTransform: 'uppercase', padding: '4px 10px', borderRadius: '2px', border: `1px solid ${c.border}`, background: c.bg, color: c.color, alignSelf: 'flex-start' }}>
                   {c.label}
                 </span>
                 <p style={{ fontFamily: 'var(--mono)', fontSize: '14px', color: 'var(--muted)', lineHeight: 1.6, maxWidth: '480px' }}>
@@ -298,32 +243,22 @@ export default function BotsConIAPage() {
           ))}
         </div>
         <div style={{ display: 'flex', gap: '16px', marginTop: '32px', flexWrap: 'wrap' }}>
-          <a href="https://wa.me/5491133409351" target="_blank" rel="noopener noreferrer" style={{
-            background: 'var(--violet)', color: '#fff', padding: '15px 30px',
-            fontFamily: 'var(--mono)', fontWeight: 700, fontSize: '13px',
-            letterSpacing: '.1em', textTransform: 'uppercase', textDecoration: 'none',
-            borderRadius: '2px', display: 'inline-block',
-          }}>
+          <a href="https://wa.me/5491133409351" target="_blank" rel="noopener noreferrer" style={{ background: 'var(--violet)', color: '#fff', padding: '15px 30px', fontFamily: 'var(--mono)', fontWeight: 700, fontSize: '13px', letterSpacing: '.1em', textTransform: 'uppercase', textDecoration: 'none', borderRadius: '2px', display: 'inline-block' }}>
             Contame qué necesitás →
           </a>
-          <a href="https://nexora-bots-ten.vercel.app/" target="_blank" rel="noopener noreferrer" style={{
-            color: 'var(--white)', fontSize: '13px', fontFamily: 'var(--mono)',
-            textDecoration: 'none', display: 'inline-flex', alignItems: 'center',
-            border: '1px solid rgba(255,255,255,.07)', padding: '14px 28px',
-            borderRadius: '2px', letterSpacing: '.1em', textTransform: 'uppercase', fontWeight: 600,
-          }}>
+          <a href="https://nexora-bots-ten.vercel.app/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--white)', fontSize: '13px', fontFamily: 'var(--mono)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', border: '1px solid rgba(255,255,255,.07)', padding: '14px 28px', borderRadius: '2px', letterSpacing: '.1em', textTransform: 'uppercase', fontWeight: 600 }}>
             Ver demo en vivo →
           </a>
         </div>
       </section>
 
       {/* CASOS DE USO */}
-      <section style={{ padding: '96px 64px', background: 'var(--black)', borderBottom: '1px solid var(--border)' }}>
+      <section className="pg-sec" style={{ background: 'var(--black)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ fontFamily: 'var(--mono)', fontSize: '12px', letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '18px' }}>// casos de uso</div>
-        <h2 style={{ fontFamily: 'var(--hl)', fontSize: 'clamp(32px, 4.5vw, 56px)', fontWeight: 700, lineHeight: 1, letterSpacing: '-.04em', textTransform: 'uppercase', marginBottom: '52px' }}>
+        <h2 style={{ fontFamily: 'var(--hl)', fontSize: 'clamp(28px, 4.5vw, 56px)', fontWeight: 700, lineHeight: 1, letterSpacing: '-.04em', textTransform: 'uppercase', marginBottom: '52px' }}>
           Para qué los usan<br />nuestros clientes.
         </h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1px', background: 'var(--border)', border: '1px solid var(--border)' }}>
+        <div className="pg-grid-3c">
           {[
             { title: 'Atención al cliente', desc: 'Respondé preguntas frecuentes, consultá estado de pedidos y derivá casos complejos sin que nadie lo opere.' },
             { title: 'RRHH interno', desc: 'Consultas de vacaciones, licencias, políticas internas. El bot responde al instante sin interrumpir al área.' },
@@ -342,10 +277,10 @@ export default function BotsConIAPage() {
       </section>
 
       {/* CTA */}
-      <section style={{ padding: '112px 64px', background: 'var(--surface)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+      <section className="pg-cta" style={{ background: 'var(--surface)' }}>
         <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(139,92,246,.05) 0%, transparent 70%)', pointerEvents: 'none' }} />
         <div style={{ position: 'relative', zIndex: 1 }}>
-          <h2 style={{ fontFamily: 'var(--hl)', fontSize: 'clamp(32px, 4.5vw, 62px)', fontWeight: 700, letterSpacing: '-.04em', lineHeight: 1, textTransform: 'uppercase', marginBottom: '16px' }}>
+          <h2 style={{ fontFamily: 'var(--hl)', fontSize: 'clamp(28px, 4.5vw, 62px)', fontWeight: 700, letterSpacing: '-.04em', lineHeight: 1, textTransform: 'uppercase', marginBottom: '16px' }}>
             ¿Qué necesitás<br />que responda el bot?
           </h2>
           <p style={{ fontFamily: 'var(--mono)', fontSize: '15px', color: 'var(--muted)', marginBottom: '48px', lineHeight: 1.8 }}>
@@ -358,7 +293,7 @@ export default function BotsConIAPage() {
       </section>
 
       {/* FOOTER */}
-      <footer style={{ padding: '32px 64px', borderTop: '1px solid var(--border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
+      <footer className="pg-footer">
         <a href="/" style={{ fontFamily: 'var(--mono)', fontWeight: 800, fontSize: '14px', color: 'var(--white)', textDecoration: 'none' }}>
           NEXORA<span style={{ color: 'var(--orange)' }}>_</span>Intelligence
         </a>
