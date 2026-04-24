@@ -564,4 +564,9 @@ body::after {
   .faq-q { padding: 20px 20px; font-size: 14px; }
   .faq-a { padding: 0 20px 20px; }
   .nav-dropdown { display: none; }
+  .hero-title { font-size: clamp(28px, 8vw, 48px) !important; }
+  .svcs-grid { grid-template-columns: 1fr !important; }
+  .sec-pad { padding: 48px 20px; }
+  .nexora-nav { padding: 14px 20px; }
+  .nexora-nav.scrolled { padding: 10px 20px; }
 }
