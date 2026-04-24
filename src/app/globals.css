@@ -158,6 +158,9 @@ body::after {
 .mobile-cta { margin-top:28px;background:var(--blue);color:#fff;padding:16px;font-family:var(--mono);font-weight:700;font-size:14px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:3px;text-align:center;display:block }
 
 /* ══ HERO ══ */
+.hero-badge-new { display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(0,166,126,.3);background:rgba(0,166,126,.06);padding:7px 16px;border-radius:2px;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:36px;text-decoration:none;transition:background .2s }
+.hero-badge-new:hover { background:rgba(0,166,126,.1) }
+.hero-badge-dot { width:6px;height:6px;border-radius:50%;background:var(--blue);animation:pulse 2s infinite;display:inline-block;flex-shrink:0 }
 .hero-bg { position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 80% 20%,rgba(0,85,255,.08) 0%,transparent 60%);animation:glowBlue 8s ease-in-out infinite alternate;pointer-events:none }
 .hero-dots { position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px);background-size:32px 32px;mask-image:radial-gradient(ellipse 80% 70% at 50% 50%,black 20%,transparent 80%);pointer-events:none }
 .hero-badge { display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);background:rgba(255,255,255,.03);padding:7px 16px;border-radius:2px;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted2);margin-bottom:36px;opacity:0;animation:fU .7s ease .3s forwards }

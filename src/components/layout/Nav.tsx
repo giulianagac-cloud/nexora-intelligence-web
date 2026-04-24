@@ -81,6 +81,7 @@ export function Nav() {
               </div>
             )}
           </li>
+          <li><a href="/cursos">Cursos</a></li>
           <li><a href="/programadora">Programadora</a></li>
           <li><a href="/blog">Blog</a></li>
           <li><a href="/casos">Casos</a></li>
@@ -140,6 +141,7 @@ export function Nav() {
               )}
             </div>
 
+            <a href="/cursos" className="mobile-link" onClick={closeMenu}>Cursos</a>
             <a href="/programadora" className="mobile-link" onClick={closeMenu}>Programadora</a>
             <a href="/blog" className="mobile-link" onClick={closeMenu}>Blog</a>
             <a href="/casos" className="mobile-link" onClick={closeMenu}>Casos</a>

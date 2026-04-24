@@ -14,6 +14,10 @@ export function Hero() {
       <div className="hero-dots" />
 
       <div style={{ position: 'relative', zIndex: 2, maxWidth: '820px' }}>
+        <a href="/cursos" className="hero-badge-new">
+          <span className="hero-badge-dot" />
+          Próximamente — Cursos de IA y automatización →
+        </a>
         <h1 className="hero-title">
           Automatización, procesos e inteligencia aplicada para empresas reales.
         </h1>
