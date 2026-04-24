@@ -1,4 +1,3 @@
-import { IntroScreen }       from '@/components/IntroScreen'
 import { Nav }               from '@/components/layout/Nav'
 import { Footer }            from '@/components/layout/Footer'
 import { Hero }              from '@/components/sections/Hero'
@@ -12,7 +11,6 @@ import { CookieBanner }      from '@/components/CookieBanner'
 export default function Home() {
   return (
     <>
-      <IntroScreen />
       <Nav />
       <main>
         <Hero />

@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     images: ["https://www.nexoraintelligence.co/og-image.png"],
   },
   icons: {
-    icon: "/favicon.svg",
+    icon: "/icon.svg",
   },
 };
 
