@@ -54,8 +54,8 @@ export default function BotsConIAPage() {
         font-size: 14px; line-height: 1.6; font-family: var(--mono);
         animation: msgIn .3s ease;
         ${from === 'bot'
-          ? 'background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.07); border-bottom-left-radius: 3px; align-self: flex-start; color: var(--white);'
-          : 'background: var(--orange); color: #fff; border-bottom-right-radius: 3px; align-self: flex-end;'
+          ? 'background: rgba(240,237,232,0.85); border: none; border-radius: 18px; border-bottom-left-radius: 4px; align-self: flex-start; color: #1a1a1a;'
+          : 'background: transparent; border: 1.5px solid rgba(255,255,255,0.6); border-radius: 18px; border-bottom-right-radius: 4px; align-self: flex-end; color: #ffffff;'
         }
       `
       div.textContent = text
