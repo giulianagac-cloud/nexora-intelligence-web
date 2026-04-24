@@ -54,7 +54,7 @@ export default function BotsConIAPage() {
         font-size: 14px; line-height: 1.6; font-family: var(--mono);
         animation: msgIn .3s ease;
         ${from === 'bot'
-          ? 'background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.07); border-bottom-left-radius: 3px; align-self: flex-start; color: var(--white);'
+          ? 'background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.07); border-bottom-left-radius: 3px; align-self: flex-start; color: var(--white);'
           : 'background: var(--orange); color: #fff; border-bottom-right-radius: 3px; align-self: flex-end;'
         }
       `
@@ -67,7 +67,7 @@ export default function BotsConIAPage() {
     function nextMessage() {
       if (msgIndex >= msgs.length) {
         const typing = document.createElement('div')
-        typing.style.cssText = 'display:flex;align-items:center;gap:4px;padding:12px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);border-radius:10px;border-bottom-left-radius:3px;align-self:flex-start;'
+        typing.style.cssText = 'display:flex;align-items:center;gap:4px;padding:12px 16px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.07);border-radius:10px;border-bottom-left-radius:3px;align-self:flex-start;'
         typing.innerHTML = `<span style="width:6px;height:6px;border-radius:50%;background:var(--muted);animation:pulse 1.2s infinite"></span><span style="width:6px;height:6px;border-radius:50%;background:var(--muted);animation:pulse 1.2s .2s infinite"></span><span style="width:6px;height:6px;border-radius:50%;background:var(--muted);animation:pulse 1.2s .4s infinite"></span>`
         el.appendChild(typing)
         return
@@ -149,7 +149,8 @@ export default function BotsConIAPage() {
 
           {/* MOCKUP CHAT */}
           <div style={{
-            background: 'var(--surface)', border: '1px solid var(--border)',
+            background: 'radial-gradient(ellipse at 20% 20%, rgba(0,166,126,0.4) 0%, transparent 50%), radial-gradient(ellipse at 80% 80%, rgba(180,160,100,0.3) 0%, transparent 50%), radial-gradient(ellipse at 60% 30%, rgba(100,140,180,0.3) 0%, transparent 50%), #1a1a1a',
+            border: '1px solid var(--border)',
             borderRadius: '8px', overflow: 'hidden',
           }}>
             <div style={{
