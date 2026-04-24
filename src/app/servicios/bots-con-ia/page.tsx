@@ -147,29 +147,114 @@ export default function BotsConIAPage() {
             </div>
           </div>
 
-          {/* MOCKUP CHAT — phone */}
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          {/* MOCKUP CELULAR */}
+          <div style={{
+            position: 'relative',
+            width: '300px',
+            height: '600px',
+            flexShrink: 0,
+          }}>
+            {/* Marco del iPhone */}
             <div style={{
-              width: '280px', height: '520px', borderRadius: '32px',
-              background: 'url(/chat-bg.svg) center/cover no-repeat',
-              border: '1px solid rgba(255,255,255,0.10)',
-              boxShadow: '0 24px 64px rgba(0,0,0,0.35)',
-              overflow: 'hidden', display: 'flex', flexDirection: 'column',
+              position: 'absolute', inset: 0,
+              border: '10px solid #1a1a1a',
+              borderRadius: '44px',
+              boxShadow: '0 0 0 2px #3a3a3a, 0 24px 60px rgba(0,0,0,0.4), inset 0 0 0 1px #2a2a2a',
+              zIndex: 3,
+              pointerEvents: 'none',
+            }} />
+            {/* Notch */}
+            <div style={{
+              position: 'absolute', top: '10px', left: '50%',
+              transform: 'translateX(-50%)',
+              width: '80px', height: '24px',
+              background: '#1a1a1a', borderRadius: '0 0 16px 16px',
+              zIndex: 4,
+            }} />
+            {/* Botones laterales */}
+            <div style={{ position: 'absolute', left: '-13px', top: '100px', width: '4px', height: '32px', background: '#2a2a2a', borderRadius: '2px 0 0 2px' }} />
+            <div style={{ position: 'absolute', left: '-13px', top: '145px', width: '4px', height: '52px', background: '#2a2a2a', borderRadius: '2px 0 0 2px' }} />
+            <div style={{ position: 'absolute', left: '-13px', top: '210px', width: '4px', height: '52px', background: '#2a2a2a', borderRadius: '2px 0 0 2px' }} />
+            <div style={{ position: 'absolute', right: '-13px', top: '160px', width: '4px', height: '72px', background: '#2a2a2a', borderRadius: '0 2px 2px 0' }} />
+
+            {/* Pantalla */}
+            <div style={{
+              position: 'absolute', inset: '10px',
+              borderRadius: '34px',
+              overflow: 'hidden',
+              background: `url('/chat-bg.svg') center/cover no-repeat`,
+              display: 'flex', flexDirection: 'column',
             }}>
-              {/* status bar */}
+              {/* Status bar */}
               <div style={{
-                padding: '14px 20px 10px',
-                display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                padding: '14px 20px 8px',
+                display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+                flexShrink: 0,
               }}>
-                <span style={{ fontFamily: 'var(--mono)', fontSize: '11px', color: 'rgba(255,255,255,.5)' }}>NexBot</span>
-                <span style={{ fontFamily: 'var(--mono)', fontSize: '10px', color: '#4aff91' }}>● en vivo</span>
+                <span style={{ fontFamily: 'var(--mono)', fontSize: '11px', fontWeight: 700, color: '#fff' }}>9:41</span>
+                <div style={{ display: 'flex', gap: '5px', alignItems: 'center' }}>
+                  <span style={{ fontSize: '10px', color: '#fff' }}>●●●</span>
+                  <span style={{ fontSize: '10px', color: '#fff' }}>WiFi</span>
+                  <span style={{ fontSize: '10px', color: '#fff' }}>🔋</span>
+                </div>
               </div>
-              {/* chat messages */}
+
+              {/* Header del chat */}
+              <div style={{
+                padding: '8px 16px 10px',
+                display: 'flex', alignItems: 'center', gap: '10px',
+                borderBottom: '1px solid rgba(255,255,255,.1)', flexShrink: 0,
+                background: 'rgba(0,0,0,.2)',
+              }}>
+                <div style={{
+                  width: '32px', height: '32px', borderRadius: '50%',
+                  background: 'linear-gradient(135deg, #00a67e, #007a5e)',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  fontSize: '14px', flexShrink: 0,
+                }}>N</div>
+                <div>
+                  <div style={{ fontFamily: 'var(--mono)', fontSize: '12px', fontWeight: 700, color: '#fff' }}>NexBot</div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                    <span style={{ width: '5px', height: '5px', borderRadius: '50%', background: '#4aff91', display: 'inline-block' }} />
+                    <span style={{ fontFamily: 'var(--mono)', fontSize: '10px', color: '#4aff91' }}>en vivo</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mensajes */}
               <div id="chat-container" style={{
-                flex: 1, padding: '8px 14px 16px',
-                display: 'flex', flexDirection: 'column',
-                gap: '10px', overflowY: 'auto',
+                flex: 1, padding: '12px 14px',
+                display: 'flex', flexDirection: 'column', gap: '8px',
+                overflowY: 'auto',
               }} />
+
+              {/* Input */}
+              <div style={{
+                padding: '10px 12px',
+                display: 'flex', alignItems: 'center', gap: '8px',
+                background: 'rgba(0,0,0,.25)',
+                borderTop: '1px solid rgba(255,255,255,.08)',
+                flexShrink: 0,
+              }}>
+                <div style={{
+                  flex: 1, background: 'rgba(255,255,255,.12)',
+                  borderRadius: '20px', padding: '8px 14px',
+                  fontFamily: 'var(--mono)', fontSize: '12px', color: 'rgba(255,255,255,.4)',
+                }}>
+                  Escribí tu consulta...
+                </div>
+                <div style={{
+                  width: '34px', height: '34px', borderRadius: '50%',
+                  background: '#00a67e',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  cursor: 'pointer', flexShrink: 0,
+                }}>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                    <path d="M22 2L11 13" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
+                    <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
         </div>
