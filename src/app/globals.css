@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-black:   #050508;
-  --color-deep:    #0d0d14;
-  --color-surface: #12121e;
-  --color-surface2:#1a1a2e;
-  --color-white:   #f2f2f8;
-  --color-muted:   #6b6b8a;
-  --color-muted2:  #9898b0;
-  --color-blue:    #0055ff;
-  --color-orange:  #ff6b2b;
-  --color-violet:  #8b5cf6;
+  --color-black:   #f0ede8;
+  --color-deep:    #faf9f7;
+  --color-surface: #faf9f7;
+  --color-surface2:#e8e4de;
+  --color-white:   #1a1a1a;
+  --color-muted:   #4a4540;
+  --color-muted2:  #9a9180;
+  --color-blue:    #00a67e;
+  --color-orange:  #00a67e;
+  --color-violet:  #007a5e;
 
   --font-headline: var(--font-headline);
   --font-mono:     var(--font-mono);
@@ -18,18 +18,21 @@
 
 /* ── CSS Variables ── */
 :root {
-  --black:   #050508;
-  --deep:    #0d0d14;
-  --surface: #12121e;
-  --surface2:#1a1a2e;
-  --border:  rgba(255,255,255,0.07);
-  --border-h:rgba(255,255,255,0.15);
-  --white:   #f2f2f8;
-  --muted:   #6b6b8a;
-  --muted2:  #9898b0;
-  --blue:    #0055ff;
-  --orange:  #ff6b2b;
-  --violet:  #8b5cf6;
+  --black:   #f0ede8;
+  --deep:    #faf9f7;
+  --surface: #faf9f7;
+  --surface2:#e8e4de;
+  --border:  rgba(0,0,0,0.08);
+  --border-h:rgba(0,0,0,0.15);
+  --white:   #1a1a1a;
+  --muted:   #4a4540;
+  --muted2:  #9a9180;
+  --blue:    #00a67e;
+  --orange:  #00a67e;
+  --violet:  #007a5e;
+  --accent:  #00a67e;
+  --accent-dark: #007a5e;
+  --accent-bg:   #e0f5ee;
   --mono:    var(--font-mono), 'JetBrains Mono', monospace;
   --hl:      var(--font-headline), 'Roboto Condensed', sans-serif;
 }
