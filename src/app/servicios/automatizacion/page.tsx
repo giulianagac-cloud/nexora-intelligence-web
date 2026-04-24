@@ -12,22 +12,13 @@ export default function AutomatizacionPage() {
       <Nav />
 
       {/* HERO */}
-      <section style={{
-        minHeight: '100vh', display: 'flex', flexDirection: 'column',
-        justifyContent: 'center', padding: '120px 64px 80px',
-        position: 'relative', overflow: 'hidden',
-        borderBottom: '1px solid var(--border)',
-      }}>
+      <section className="auto-hero">
         <div style={{
           position: 'absolute', inset: 0,
           background: 'radial-gradient(ellipse 60% 50% at 80% 30%, rgba(255,107,43,.07) 0%, transparent 60%)',
           pointerEvents: 'none',
         }} />
-        <div style={{
-          position: 'relative', zIndex: 2,
-          display: 'grid', gridTemplateColumns: '1fr 1fr',
-          gap: '80px', alignItems: 'center',
-        }}>
+        <div className="auto-hero-grid">
           <div>
             <div style={{
               display: 'inline-flex', alignItems: 'center',
@@ -39,7 +30,7 @@ export default function AutomatizacionPage() {
               // automatización
             </div>
             <h1 style={{
-              fontFamily: 'var(--hl)', fontSize: 'clamp(48px, 6vw, 80px)',
+              fontFamily: 'var(--hl)', fontSize: 'clamp(40px, 6vw, 80px)',
               fontWeight: 700, lineHeight: .95, letterSpacing: '-.04em',
               textTransform: 'uppercase', marginBottom: '28px',
             }}>
@@ -61,19 +52,19 @@ export default function AutomatizacionPage() {
               Quiero automatizar →
             </a>
           </div>
-          <div style={{ overflow: 'hidden', borderRadius: '4px', border: '1px solid var(--border)' }}>
-            <img src="/automatizacion.png" alt="Automatización Nexora" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+          <div className="auto-hero-img">
+            <img src="/automatizacion.png" alt="Automatización Nexora" />
           </div>
         </div>
       </section>
 
       {/* QUÉ AUTOMATIZAMOS */}
-      <section style={{ padding: '96px 64px', background: 'var(--deep)', borderBottom: '1px solid var(--border)' }}>
+      <section className="auto-sec">
         <div style={{ fontFamily: 'var(--mono)', fontSize: '12px', letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '18px' }}>// qué automatizamos</div>
-        <h2 style={{ fontFamily: 'var(--hl)', fontSize: 'clamp(32px, 4.5vw, 56px)', fontWeight: 700, lineHeight: 1, letterSpacing: '-.04em', textTransform: 'uppercase', marginBottom: '52px' }}>
+        <h2 style={{ fontFamily: 'var(--hl)', fontSize: 'clamp(28px, 4.5vw, 56px)', fontWeight: 700, lineHeight: 1, letterSpacing: '-.04em', textTransform: 'uppercase', marginBottom: '52px' }}>
           Los procesos que más<br />tiempo te roban, los podes automatizar.
         </h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1px', background: 'var(--border)', border: '1px solid var(--border)' }}>
+        <div className="auto-cards">
           {[
             { title: 'Reportes automáticos', desc: 'Datos de múltiples fuentes convertidos en reportes listos cuando los necesitás. Sin que nadie los arme a mano.' },
             { title: 'Notificaciones y alertas', desc: 'Avisos automáticos por email o WhatsApp cuando pasa algo importante. Vencimientos, pagos, stock bajo.' },
@@ -92,10 +83,10 @@ export default function AutomatizacionPage() {
       </section>
 
       {/* CTA */}
-      <section style={{ padding: '112px 64px', background: 'var(--surface)', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+      <section className="auto-cta">
         <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(255,107,43,.05) 0%, transparent 70%)', pointerEvents: 'none' }} />
         <div style={{ position: 'relative', zIndex: 1 }}>
-          <h2 style={{ fontFamily: 'var(--hl)', fontSize: 'clamp(32px, 4.5vw, 62px)', fontWeight: 700, letterSpacing: '-.04em', lineHeight: 1, textTransform: 'uppercase', marginBottom: '16px' }}>
+          <h2 style={{ fontFamily: 'var(--hl)', fontSize: 'clamp(28px, 4.5vw, 62px)', fontWeight: 700, letterSpacing: '-.04em', lineHeight: 1, textTransform: 'uppercase', marginBottom: '16px' }}>
             ¿Qué proceso<br />querés automatizar?
           </h2>
           <p style={{ fontFamily: 'var(--mono)', fontSize: '15px', color: 'var(--muted)', marginBottom: '48px', lineHeight: 1.8 }}>
@@ -108,7 +99,7 @@ export default function AutomatizacionPage() {
       </section>
 
       {/* FOOTER */}
-      <footer style={{ padding: '32px 64px', borderTop: '1px solid var(--border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
+      <footer className="auto-footer">
         <a href="/" style={{ fontFamily: 'var(--mono)', fontWeight: 800, fontSize: '14px', color: 'var(--white)', textDecoration: 'none' }}>
           NEXORA<span style={{ color: 'var(--orange)' }}>_</span>Intelligence
         </a>
