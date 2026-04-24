@@ -36,7 +36,7 @@ export function FAQ() {
   return (
     <section className="sec-pad faq-sec" id="faq">
       <div className="eyebrow reveal">// preguntas frecuentes</div>
-      <h2 className="sec-title reveal d1">Lo que nos preguntan<br />antes de arrancar.</h2>
+      <h2 className="sec-title reveal d1">Preguntas frecuentes.</h2>
       <div className="faq-list reveal d2">
         {FAQS.map((f, i) => (
           <div
