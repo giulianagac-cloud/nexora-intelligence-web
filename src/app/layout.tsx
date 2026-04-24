@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit, Inter, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import { CookieBanner } from "@/components/CookieBanner";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -84,6 +85,7 @@ export default function RootLayout({
         <div style={{ overflowX: "hidden", width: "100%", maxWidth: "100vw" }}>
           {children}
         </div>
+        <CookieBanner />
         {/* Widget Nexora Bot — descomentar para activar
         <Script
           src="https://nexora-bots-ten.vercel.app/widget.js"

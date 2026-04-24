@@ -31,66 +31,52 @@ export function CookieBanner() {
     <div style={{
       position: 'fixed',
       bottom: '24px',
-      left: 0,
-      right: 0,
-      background: '#0d0d14',
-      borderTop: '2px solid #0055ff',
-      padding: '20px 64px',
+      right: '24px',
+      width: '320px',
+      background: '#faf9f7',
+      border: '1px solid rgba(0,0,0,0.10)',
+      borderLeft: '3px solid #00a67e',
+      borderRadius: '8px',
+      padding: '20px 20px 16px',
       zIndex: 9998,
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'space-between',
-      gap: '24px',
-      flexWrap: 'wrap',
-      transform: animIn ? 'translateY(0)' : 'translateY(100%)',
-      transition: 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
-      boxShadow: '0 -8px 32px rgba(0,85,255,0.15)',
+      boxShadow: '0 4px 24px rgba(0,0,0,0.08)',
+      transform: animIn ? 'translateY(0)' : 'translateY(120%)',
+      opacity: animIn ? 1 : 0,
+      transition: 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease',
     }}>
-      <p style={{
-        fontFamily: 'var(--mono)',
-        fontSize: '14px',
-        color: 'rgba(242,242,248,0.7)',
-        lineHeight: 1.7,
-        margin: 0,
-        maxWidth: '680px',
+      <div style={{
+        display: 'flex', alignItems: 'flex-start',
+        justifyContent: 'space-between', marginBottom: '10px',
       }}>
-        🍪 Usamos cookies para entender cómo navegás el sitio y mejorar la experiencia. Sin datos personales, sin terceros raros. Vos decidís.
+        <span style={{ fontSize: '16px' }}>🍪</span>
+        <button onClick={decline} style={{
+          background: 'transparent', border: 'none', cursor: 'pointer',
+          color: '#9a9180', fontSize: '18px', lineHeight: 1, padding: '0',
+        }}>×</button>
+      </div>
+      <p style={{
+        fontFamily: 'var(--mono)', fontSize: '13px',
+        color: '#4a4540', lineHeight: 1.7, margin: '0 0 16px',
+      }}>
+        Usamos cookies para entender cómo navegás el sitio y mejorar la experiencia. Sin datos personales, sin terceros raros. Vos decidís.
       </p>
-      <div style={{ display: 'flex', gap: '10px', flexShrink: 0 }}>
-        <button
-          onClick={accept}
-          style={{
-            background: '#0055ff',
-            color: '#f2f2f8',
-            border: 'none',
-            padding: '10px 28px',
-            fontFamily: 'var(--mono)',
-            fontSize: '13px',
-            fontWeight: 700,
-            letterSpacing: '0.08em',
-            textTransform: 'uppercase',
-            cursor: 'pointer',
-            borderRadius: '2px',
-            transition: 'background 0.2s',
-          }}
-        >
+      <div style={{ display: 'flex', gap: '8px' }}>
+        <button onClick={accept} style={{
+          flex: 1, background: '#1a1a1a', color: '#f0ede8',
+          border: 'none', padding: '9px 0',
+          fontFamily: 'var(--mono)', fontSize: '12px',
+          fontWeight: 700, letterSpacing: '0.08em',
+          textTransform: 'uppercase', cursor: 'pointer', borderRadius: '4px',
+        }}>
           Aceptar
         </button>
-        <button
-          onClick={decline}
-          style={{
-            background: 'transparent',
-            color: 'rgba(242,242,248,0.4)',
-            border: '1px solid rgba(255,255,255,0.1)',
-            padding: '10px 28px',
-            fontFamily: 'var(--mono)',
-            fontSize: '13px',
-            letterSpacing: '0.08em',
-            textTransform: 'uppercase',
-            cursor: 'pointer',
-            borderRadius: '2px',
-          }}
-        >
+        <button onClick={decline} style={{
+          flex: 1, background: 'transparent', color: '#9a9180',
+          border: '1px solid rgba(0,0,0,0.12)', padding: '9px 0',
+          fontFamily: 'var(--mono)', fontSize: '12px',
+          letterSpacing: '0.08em', textTransform: 'uppercase',
+          cursor: 'pointer', borderRadius: '4px',
+        }}>
           Rechazar
         </button>
       </div>
