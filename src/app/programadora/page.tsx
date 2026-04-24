@@ -54,8 +54,7 @@ export default function ProgramadoraPage() {
               fontWeight: 700, lineHeight: .95, letterSpacing: '-.04em',
               textTransform: 'uppercase', marginBottom: '28px',
             }}>
-              Hecho por una<br />
-              <span style={{ color: 'var(--orange)' }}>programadora.</span>
+              <span style={{ color: 'var(--orange)' }}>Programadora.</span>
             </h1>
             <p style={{ fontFamily: 'var(--mono)', fontSize: '15px', color: 'var(--muted)', lineHeight: 1.85, marginBottom: '24px' }}>
               Soy consultora SAP y profesional orientada al análisis funcional, la tecnología y la mejora de procesos, con una mirada que combina negocio, sistemas y visión estratégica.
