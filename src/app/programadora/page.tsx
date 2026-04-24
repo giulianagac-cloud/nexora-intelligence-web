@@ -113,7 +113,7 @@ export default function ProgramadoraPage() {
       <section className="pg-sec" style={{ background: 'var(--black)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ fontFamily: 'var(--mono)', fontSize: '12px', letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '18px' }}>// cómo trabajo</div>
         <h2 style={{ fontFamily: 'var(--hl)', fontSize: 'clamp(28px, 4.5vw, 56px)', fontWeight: 700, lineHeight: 1, letterSpacing: '-.04em', textTransform: 'uppercase', marginBottom: '52px' }}>
-          Sin humo.<br />Sin promesas vacías.
+          Cómo trabajo.
         </h2>
         <div className="pg-grid-2c-md">
           {[
