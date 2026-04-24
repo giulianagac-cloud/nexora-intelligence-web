@@ -71,7 +71,7 @@ export default function DesarrolloPage() {
       <section style={{ padding: '96px 64px', background: 'var(--deep)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ fontFamily: 'var(--mono)', fontSize: '12px', letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '18px' }}>// qué desarrollamos</div>
         <h2 style={{ fontFamily: 'var(--hl)', fontSize: 'clamp(32px, 4.5vw, 56px)', fontWeight: 700, lineHeight: 1, letterSpacing: '-.04em', textTransform: 'uppercase', marginBottom: '52px' }}>
-          De la idea al sistema<br />funcionando.
+          Que desarrollamos.
         </h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1px', background: 'var(--border)', border: '1px solid var(--border)' }}>
           {[
