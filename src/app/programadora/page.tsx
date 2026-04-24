@@ -109,27 +109,6 @@ export default function ProgramadoraPage() {
         </div>
       </section>
 
-      {/* EXPERIENCIA */}
-      <section className="pg-sec" style={{ background: 'var(--deep)', borderBottom: '1px solid var(--border)' }}>
-        <div style={{ fontFamily: 'var(--mono)', fontSize: '12px', letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '18px' }}>// experiencia</div>
-        <h2 style={{ fontFamily: 'var(--hl)', fontSize: 'clamp(28px, 4.5vw, 56px)', fontWeight: 700, lineHeight: 1, letterSpacing: '-.04em', textTransform: 'uppercase', marginBottom: '52px' }}>
-          14 años resolviendo<br />problemas reales.
-        </h2>
-        <div className="pg-grid-3c">
-          {[
-            { num: '14+', label: 'Años de experiencia', desc: 'Trabajando con sistemas SAP HCM en empresas con operaciones complejas y procesos críticos.' },
-            { num: '100%', label: 'Orientada a resultados', desc: 'Cada proyecto arranca con una pregunta: ¿qué problema real estamos resolviendo? No al revés.' },
-            { num: '24/7', label: 'Sistemas que no duermen', desc: 'Las soluciones que construyo funcionan solas. Automatizaciones, bots y sistemas que corren sin intervención.' },
-          ].map((item) => (
-            <div key={item.num} style={{ background: 'var(--surface)', padding: '40px 34px' }}>
-              <div style={{ fontFamily: 'var(--hl)', fontSize: '52px', fontWeight: 700, color: 'var(--orange)', letterSpacing: '-.04em', lineHeight: 1, marginBottom: '12px' }}>{item.num}</div>
-              <div style={{ fontFamily: 'var(--hl)', fontSize: '16px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '-.02em', marginBottom: '10px' }}>{item.label}</div>
-              <p style={{ fontFamily: 'var(--mono)', fontSize: '14px', color: 'var(--muted)', lineHeight: 1.75 }}>{item.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* FORMA DE TRABAJO */}
       <section className="pg-sec" style={{ background: 'var(--black)', borderBottom: '1px solid var(--border)' }}>
         <div style={{ fontFamily: 'var(--mono)', fontSize: '12px', letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--muted)', marginBottom: '18px' }}>// cómo trabajo</div>
