@@ -55,7 +55,7 @@ export default function CursosPage() {
         <h2 style={{ fontFamily: 'var(--hl)', fontSize: 'clamp(28px, 4.5vw, 56px)', fontWeight: 700, lineHeight: 1, letterSpacing: '-.04em', textTransform: 'uppercase', marginBottom: '52px' }}>
           IA para principiantes.
         </h2>
-        <div className="pg-grid-2c-md">
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1px', background: 'var(--border)', border: '1px solid var(--border)' }}>
           <div style={{ background: 'var(--surface)', padding: '48px 44px' }}>
             <div style={{
               display: 'inline-flex', alignItems: 'center', gap: '8px',
@@ -112,7 +112,7 @@ export default function CursosPage() {
         <h2 style={{ fontFamily: 'var(--hl)', fontSize: 'clamp(28px, 4.5vw, 56px)', fontWeight: 700, lineHeight: 1, letterSpacing: '-.04em', textTransform: 'uppercase', marginBottom: '52px' }}>
           La hoja de ruta.
         </h2>
-        <div className="pg-grid-3c">
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1px', background: 'var(--border)', border: '1px solid var(--border)' }}>
           {[
             { nivel: 'Nivel 1', titulo: 'IA para principiantes', desc: 'Qué es, cómo funciona y cómo usarla hoy sin saber programar.', estado: 'En preparación' },
             { nivel: 'Nivel 2', titulo: 'Automatización práctica', desc: 'Herramientas para automatizar procesos en tu negocio paso a paso.', estado: 'Próximamente' },

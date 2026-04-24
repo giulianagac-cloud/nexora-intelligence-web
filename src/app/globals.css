@@ -615,6 +615,7 @@ body::after {
   .sec-pad { padding: 48px 20px; }
   .nexora-nav { padding: 14px 20px; }
   .nexora-nav.scrolled { padding: 10px 20px; }
+  .hero-badge-new { font-size: 11px; padding: 6px 12px; }
   .pg-hero { padding:100px 20px 60px }
   .pg-hero-tall { padding:120px 20px 60px }
   .pg-sec { padding:56px 20px }
