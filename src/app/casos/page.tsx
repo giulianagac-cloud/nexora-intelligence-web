@@ -70,7 +70,7 @@ export default function CasosPage() {
             <p style={{ fontFamily: 'var(--mono)', fontSize: '14px', color: 'var(--muted)', lineHeight: 1.8, marginBottom: '32px' }}>
               Sitio institucional con arquitectura clara, carga menor a 1 segundo y formulario de contacto seguro. Hoy recibe consultas diarias desde Google.
             </p>
-            <a href="https://claudio-ortiz-abogado.vercel.app/" target="_blank" rel="noopener noreferrer" style={{
+            <a href="https://www.ortizalejandre.com" target="_blank" rel="noopener noreferrer" style={{
               display: 'inline-flex', alignItems: 'center', gap: '6px',
               background: 'var(--orange)', color: '#fff', fontFamily: 'var(--mono)',
               fontSize: '12px', fontWeight: 700, letterSpacing: '.1em', textTransform: 'uppercase',
