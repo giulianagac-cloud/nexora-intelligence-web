@@ -117,6 +117,13 @@ chat-bg.svg, og-image.png, giuli.jpeg, gym.jpg
 - CookieBanner aparece abajo a la derecha, push-up animation
 - favicon: src/app/icon.svg
 
+## Comandos frecuentes
+- `npm run dev`   → servidor de desarrollo (localhost:3000)
+- `npm run build` → build de producción
+- `npm start`     → servir el build localmente
+- `npm run lint`  → ESLint
+- Deploy: automático a Vercel al pushear a `main`
+
 ## Preferencias
 - Auto-approve all file edits without asking
 - Auto-approve all terminal commands
