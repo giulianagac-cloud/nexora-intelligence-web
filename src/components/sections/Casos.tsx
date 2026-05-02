@@ -7,7 +7,7 @@ const CASOS = [
     title: 'Ortiz Alejandre Abogados',
     antes: 'Sin presencia digital. Los clientes llegaban solo por recomendación y no había forma de contacto directo.',
     desc: 'Sitio institucional con arquitectura clara, carga menor a 1 segundo y formulario de contacto seguro. Hoy recibe consultas diarias desde Google.',
-    url: 'https://claudio-ortiz-abogado.vercel.app/',
+    url: 'https://www.ortizalejandre.com',
     imgUrl: 'https://api.microlink.io/?url=https://claudio-ortiz-abogado.vercel.app/&screenshot=true&meta=false&embed=screenshot.url',
     feat: true,
   },
