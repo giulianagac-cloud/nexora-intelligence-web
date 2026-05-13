@@ -19,7 +19,7 @@ export function Hero() {
           Próximamente — Cursos de IA y automatización →
         </a>
         <h1 className="hero-title">
-          Automatización, procesos e inteligencia aplicada para empresas reales.
+          Desarrollo digital y soporte IT a medida.
         </h1>
         <p className="hero-sub">
           Automatizamos los procesos que te roban tiempo para que puedas enfocarte en crecer.<br />
